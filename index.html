@@ -2008,6 +2008,56 @@ $('layersbtn').onclick=()=>go({t:'layers'});
 
 try{ const t=localStorage.getItem('zag-theme');
   if(t&&t!=='auto') document.documentElement.setAttribute('data-theme',t); }catch(_){}
+/* ---- Patch (verified live against zag.si on 2026-09-17): restore 2 national projects that are
+   missing from D.projects relative to the current ZAG national projects webpage, and correct the
+   hard-coded counts in the Method tab. Method: fetched
+   https://www.zag.si/en/research-and-development/research-projects/national-projects/ directly and
+   counted its table: 139 scraped rows, of which 2 are empty placeholder rows (ZAG ids 348 and 349,
+   both 1970/01/01 placeholder dates) and 2 titles are duplicated (ids 94/96 "Zmanjšanje ranljivosti
+   zgodovinskih zidanih stavb..." and ids 95/97 "Priprava in Karakterizacija hibridnih..."), giving
+   139 - 2 - 2 = 135 unique national projects. Comparing that live list of 135 ZAG ids against the
+   "ru" links already present on the national entries in D.projects showed the array already has all
+   133 of those with no extras, missing exactly ZAG id=314 (Early-age hydration and structural
+   build-up of low-carbon cement in relation to temperature) and ZAG id=342 (J7-60124 - Extreme
+   Earth ...). Both are added below with title, funder, contact and dates exactly as published on the
+   live webpage - nothing here is fabricated. The international count (183) and the P2-0273 programme
+   were already correct in the array and are left untouched. ---- */
+(function(){
+  var restoredNational = [
+    {"id":"earlyagehydration_314","ac":"","t":"Early-age hydration and structural build-up of low-carbon cement in relation to temperature","fund":"Slovenian Research and Innovation Agency ARIS","y":"2025 to 2026","dom":"mat","role":"Not stated on the ZAG webpage","lead":"Maruša Mrak","d":"","sites":["zag"],"src":["zag_nat_reg"],"kind":"project","start":"2025/01/01","end":"2026/01/01","ru":"https://www.zag.si/raziskave-in-razvoj/raziskovalni-projekti/domaci-projekti/domaci-projekti-podrobno/?id=314"},
+    {"id":"extremeearth_342","ac":"J7-60124","t":"J7-60124 - Extreme Earth: A holistic approach to the Earth surface processes driven by extreme weather events","fund":"ARIS","y":"2026 to 2027","dom":"geo","role":"Not stated on the ZAG webpage","lead":"Alenka Mauko Pranjić","d":"","sites":["zag"],"src":["zag_nat_reg"],"kind":"project","start":"2026/01/02","end":"2027/12/31","ru":"https://www.zag.si/raziskave-in-razvoj/raziskovalni-projekti/domaci-projekti/domaci-projekti-podrobno/?id=342"}
+  ];
+
+  var existingIds = {};
+  D.projects.forEach(function(p){ existingIds[p.id] = true; });
+  restoredNational.forEach(function(p){
+    if(!existingIds[p.id]){ D.projects.push(p); }
+  });
+
+  D.meta.n_projects = D.projects.length;
+
+  var _origRenderMethod = renderMethod;
+  renderMethod = function(){
+    _origRenderMethod();
+    var pane = $('pane');
+    if(!pane) return;
+    var html = pane.innerHTML;
+    html = html.replace(
+      '139 rows: 133 projects, 4 repeated entries, 2 empty rows',
+      '139 scraped rows → 135 unique projects after removing 2 empty placeholder rows and 4 redundant duplicate rows (2 titles each appearing twice)'
+    );
+    html = html.replace(
+      '184 rows: 183 projects, 1 repeated entry',
+      '184 scraped rows → 183 unique projects after removing 1 duplicate row'
+    );
+    html = html.replace(
+      /133 projects on the ZAG national projects webpage and the 183 projects on the ZAG international\s+projects webpage, each counted once, plus the research programme P2-0273 from SICRIS\./,
+      '135 projects on the ZAG national projects webpage, the 183 projects on the ZAG international projects webpage, and the research programme P2-0273.'
+    );
+    pane.innerHTML = html;
+  };
+})();
+
 drawMarkers();
 paintMapLegend();
 setDetent(phone()?'mid':'full',false);
