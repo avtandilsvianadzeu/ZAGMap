@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ZAG structures and sites</title>
+<meta name="description" content="Map of structures and sites the Slovenian National Building and Civil Engineering Institute has worked on.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --blue:#0A7CFF; --bg:#F2F2F7; --card:#fff;
+  --label:#1C1C1E; --label2:#6E6E73; --label3:#A1A1A6;
+  --sep:rgba(60,60,67,.14); --fill:rgba(118,118,128,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 18px rgba(0,0,0,.09);
+  --panel:420px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--label);
+  font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  letter-spacing:-.011em;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid rgba(10,124,255,.55);outline-offset:2px;border-radius:8px}
+
+#app{display:grid;grid-template-columns:minmax(0,1fr) var(--panel);height:100vh;height:100dvh}
+#map{height:100%;width:100%;background:#e8eaed}
+aside{display:flex;flex-direction:column;min-height:0;background:var(--bg);
+  box-shadow:-1px 0 0 var(--sep);z-index:500}
+
+header{padding:16px 18px 10px;flex:0 0 auto}
+h1{margin:0;font-size:21px;font-weight:650;letter-spacing:-.02em}
+header p{margin:3px 0 0;font-size:13.5px;color:var(--label2)}
+
+.tools{padding:0 18px 10px;flex:0 0 auto}
+.search{display:flex;align-items:center;height:36px;border-radius:100px;background:var(--card);
+  box-shadow:var(--shadow);padding:0 12px;gap:8px}
+.search input{flex:1;min-width:0;border:0;background:none;outline:none;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 11px;border-radius:100px;
+  background:var(--card);box-shadow:var(--shadow);font-size:12.5px;font-weight:600;white-space:nowrap}
+.chip i{width:9px;height:9px;border-radius:5px;flex:0 0 auto}
+.chip u{text-decoration:none;color:var(--label3);font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--blue);color:#fff}
+.chip[aria-pressed="true"] u{color:rgba(255,255,255,.75)}
+.chip[aria-pressed="true"] i{box-shadow:0 0 0 1.5px rgba(255,255,255,.85)}
+
+#list{flex:1;min-height:0;overflow-y:auto;padding:0 18px 40px}
+.sec{margin:18px 4px 8px;font-size:13px;font-weight:600;color:var(--label2)}
+.grp{background:var(--card);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.row{display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;padding:12px 15px}
+.row+.row{box-shadow:inset 0 .5px 0 var(--sep)}
+.row:hover{background:var(--fill)}
+.row.on{background:rgba(10,124,255,.10)}
+.dot{width:12px;height:12px;border-radius:7px;flex:0 0 auto;margin-top:4px;box-sizing:border-box}
+.dot.open{background:#fff!important}
+.row b{display:block;font-size:15.5px;font-weight:550;line-height:1.3}
+.row s{display:block;text-decoration:none;font-size:13px;color:var(--label2);margin-top:2px;line-height:1.35}
+.empty{padding:16px;font-size:14.5px;color:var(--label2)}
+
+.leaflet-popup-content-wrapper{border-radius:14px;box-shadow:var(--shadow)}
+.leaflet-popup-content{margin:14px 16px;font:inherit;width:270px!important}
+.pop h2{margin:0 0 2px;font-size:17px;font-weight:650;letter-spacing:-.02em;line-height:1.25}
+.pop .sl{font-size:13px;color:var(--label2);margin:0 0 9px}
+.pop .role{margin:0 0 10px;font-size:14.5px;line-height:1.45}
+.pop dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px}
+.pop dt{color:var(--label2)}
+.pop dd{margin:0;text-align:right}
+.pop .tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+  padding:3px 9px;border-radius:100px;background:var(--fill);margin-bottom:9px}
+.pop .tag i{width:8px;height:8px;border-radius:4px}
+
+@media (max-width:860px){
+  #app{display:block;position:relative}
+  #map{position:absolute;inset:0 0 46% 0;height:auto}
+  aside{position:absolute;left:0;right:0;bottom:0;height:46%;
+    border-radius:18px 18px 0 0;box-shadow:0 -6px 30px rgba(0,0,0,.18)}
+  header{padding:12px 15px 6px}
+  .tools{padding:0 15px 8px}
+  #list{padding:0 15px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <div id="map" role="application" aria-label="Map of ZAG structures and sites in Slovenia"></div>
+  <aside>
+    <header>
+      <h1>ZAG structures and sites</h1>
+      <p id="count"></p>
+    </header>
+    <div class="tools">
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="#A1A1A6">
+          <path d="M7 1a6 6 0 104.24 10.24l3.26 3.26 1.06-1.06-3.26-3.26A6 6 0 007 1zm0 1.5A4.5 4.5 0 112.5 7 4.5 4.5 0 017 2.5z"/></svg>
+        <input id="q" type="search" placeholder="Search sites, roles, clients" aria-label="Search">
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by sector"></div>
+    </div>
+    <div id="list"></div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data.js"></script>
+<script>
+const SEC = ZAG.sectors, SITES = ZAG.sites;
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent = s==null?'':String(s); return d.innerHTML; };
+
+const map = L.map('map', { zoomControl:true, minZoom:6, maxZoom:18 })
+  .setView([46.12, 14.82], 8);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+let sector = 'all', query = '', active = null;
+const markers = {};
+
+function matches(s){
+  if (sector !== 'all' && s.sector !== sector) return false;
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  return [s.name, s.name_sl, s.location, s.role, s.client, s.years, SEC[s.sector].name]
+    .filter(Boolean).join(' ').toLowerCase().includes(q);
+}
+
+function popupHTML(s){
+  const c = SEC[s.sector];
+  const rows = [
+    ['Location', s.location],
+    ['Years', s.years],
+    ['Client', s.client],
+    ['Built', s.built],
+    ['Region', s.region],
+    ['Position', s.precision === 'surveyed' || s.precision === 'address'
+      ? 'Published coordinate' : 'Approximate']
+  ].filter(r => r[1]);
+  return `<div class="pop">
+    <h2>${esc(s.name)}</h2>
+    ${s.name_sl ? `<p class="sl">${esc(s.name_sl)}</p>` : ''}
+    <span class="tag"><i style="background:${c.colour}"></i>${esc(c.name)}</span>
+    ${s.role ? `<p class="role">${esc(s.role)}</p>` : ''}
+    <dl>${rows.map(r => `<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl>
+  </div>`;
+}
+
+SITES.forEach(s => {
+  const c = SEC[s.sector], doc = s.evidence === 'doc';
+  const m = L.circleMarker([s.lat, s.lon], {
+    radius: 7, color: c.colour, weight: 2.4,
+    fillColor: doc ? c.colour : '#ffffff',
+    fillOpacity: 1, opacity: 1
+  }).bindPopup(popupHTML(s), { maxWidth: 300, autoPanPadding: [30, 30] });
+  m.on('click', () => select(s.id, false));
+  markers[s.id] = m;
+});
+
+function select(id, fly){
+  active = id;
+  const s = SITES.find(x => x.id === id);
+  if (fly) map.flyTo([s.lat, s.lon], Math.max(map.getZoom(), 12), { duration: .7 });
+  markers[id].openPopup();
+  draw();
+  const row = document.querySelector(`[data-id="${id}"]`);
+  if (row) row.scrollIntoView({ block: 'nearest' });
+}
+
+function draw(){
+  const vis = SITES.filter(matches);
+  vis.forEach(s => { if (!map.hasLayer(markers[s.id])) markers[s.id].addTo(map); });
+  SITES.filter(s => !matches(s)).forEach(s => {
+    if (map.hasLayer(markers[s.id])) map.removeLayer(markers[s.id]);
+  });
+
+  $('count').textContent = vis.length === SITES.length
+    ? `${SITES.length} places, mapped from published sources`
+    : `${vis.length} of ${SITES.length} shown`;
+
+  [...$('chips').children].forEach(b => {
+    b.setAttribute('aria-pressed', b.dataset.sec === sector);
+    const u = b.querySelector('u');
+    if (u) u.textContent = b.dataset.sec === 'all'
+      ? SITES.length : SITES.filter(s => s.sector === b.dataset.sec).length;
+  });
+
+  const order = Object.keys(SEC)
+    .filter(k => vis.some(s => s.sector === k))
+    .sort((a,b) => vis.filter(s=>s.sector===b).length - vis.filter(s=>s.sector===a).length);
+
+  $('list').innerHTML = vis.length ? order.map(k => {
+    const g = vis.filter(s => s.sector === k).sort((a,b) => a.name.localeCompare(b.name));
+    return `<div class="sec">${esc(SEC[k].name)}, ${g.length}</div><div class="grp">${
+      g.map(s => `<button class="row ${s.id===active?'on':''}" data-id="${esc(s.id)}">
+        <span class="dot ${s.evidence==='doc'?'':'open'}"
+              style="background:${SEC[k].colour};border:2px solid ${SEC[k].colour}"></span>
+        <span><b>${esc(s.name)}</b><s>${esc([s.location, s.years].filter(Boolean).join(' · '))}</s></span>
+      </button>`).join('')}</div>`;
+  }).join('') : `<div class="grp"><p class="empty">Nothing matches. Clear the search box, or set the sector filter back to All.</p></div>`;
+
+  $('list').querySelectorAll('[data-id]').forEach(b =>
+    b.onclick = () => select(b.dataset.id, true));
+}
+
+$('chips').innerHTML = `<button class="chip" data-sec="all" aria-pressed="true">All <u></u></button>` +
+  Object.keys(SEC).sort((a,b) =>
+    SITES.filter(s=>s.sector===b).length - SITES.filter(s=>s.sector===a).length)
+  .map(k => `<button class="chip" data-sec="${k}" aria-pressed="false">
+    <i style="background:${SEC[k].colour}"></i>${esc(SEC[k].name)} <u></u></button>`).join('');
+
+$('chips').querySelectorAll('[data-sec]').forEach(b => b.onclick = () => {
+  sector = b.dataset.sec; draw();
+});
+
+let t;
+$('q').addEventListener('input', e => {
+  clearTimeout(t);
+  t = setTimeout(() => { query = e.target.value; draw(); }, 130);
+});
+
+map.on('popupclose', () => { active = null; draw(); });
+
+draw();
+map.fitBounds(L.latLngBounds(SITES.map(s => [s.lat, s.lon])), { padding: [40, 40] });
+</script>
+</body>
+</html>
