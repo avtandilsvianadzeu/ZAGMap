@@ -68,7 +68,7 @@ function showInfo(id,opts){
   if(!ready) return;
   const e=EBY[id], x={id,lat:p.latitude,lon:p.longitude,prec:p.position_precision,cat:e?e.cat:'build',addr:p.address};
   setSel({id,ll:[p.longitude,p.latitude],label:p.name_en||p.name,glyph:'pin'});
-  showLine(p.line||null);
+  showLine(p.line?[p.line]:null);
   if(x.addr) geocodeAddress(x.addr);
   const snapable=!!SNAP[p.object_type]&&!p.line;
   const settle=()=>{ if(curId!==id) return;
@@ -97,7 +97,7 @@ function showInfo(id,opts){
 function fitLines(lines,id,cb){
   const all=lines.flat(), b=all.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(all[0],all[0]));
   const cam=map.cameraForBounds(b,{padding:padNow(),maxZoom:16.5}); orbitOn=false; userMoved=false;
-  moveThen('flyTo',{center:cam?cam.center:all[0],zoom:cam?cam.zoom:15,pitch:is3d?55:0,bearing:is3d?bearingFor(id):0,padding:{top:0,bottom:0,left:0,right:0},duration:reduced?0:1800,essential:true},cb);
+  moveThen('flyTo',{center:b.getCenter(),zoom:cam?cam.zoom:15,pitch:is3d?55:0,bearing:is3d?bearingFor(id):0,padding:padNow(),duration:reduced?0:1800,essential:true},cb);
 }
 /* structure attributes from the matched OpenStreetMap feature */
 function structureData(hit,p){
