@@ -54,8 +54,7 @@ for (const e of ENTRIES) {
   hist: e.hist || null, facts: e.facts || null, people: e.people || null, partners: e.partners || null,
   structure: { crosses: e.crosses || null, carries: e.carries || null, typ: e.typ || null, built: e.opened || e.built || null, spans: e.spans || null, length_m: e.len_m || null },
   image: null, image_credit: null, source_title: s0.title || null, source_url: s0.url || null, source_type: s0.type || null, sources: srcs,
-  evidence_level: ev, position_precision: c ? 'surveyed' : e.prec, position_confidence: c ? c.confidence : null,
-  position_sources: c ? c.sources : [], position_note: c ? c.note : null, address: (c && c.addr) || e.addr || null };
+  evidence_level: ev, position_precision: c ? 'surveyed' : e.prec, position_sources: c ? c.sources : [], address: (c && c.addr) || e.addr || null };
  if (c && c.line) { p.line = c.line; p.line_labels = c.line_labels; }
  push(p, [lon, lat]);
 }
@@ -77,8 +76,7 @@ const STORY_SRC = {
    { key: 'outsider_kons', title: 'Vabilo: Razstavi KONS TR³, Konstrukcija nove ere in EDVARD (Outsider, 11 Oct 2023)', url: 'https://outsider.si/vabilo-razstavi-kons-tr%C2%B3-konstrukcija-nove-ere-in-edvard/', type: 'web' }] },
  kpd: { ev: 'referenced', inv: ['research'],
   role: 'Partner in the project CABE, Circular Approaches in the Built Environment (Driving Urban Transitions, 2025-2028), with a demonstration case in Slovenia',
-  about: 'CABE develops and pilots urban resource-sharing infrastructures and circular solutions that reuse construction and demolition waste; demonstration cases are planned in Switzerland, Slovenia and Turkey. The former prison (KPD) on Pobreška cesta is the Maribor site presented at the ZAG Open Day.',
-  note: 'The published CABE material does not name the Maribor site; the link between CABE and this building comes from the ZAG Open Day presentation.',
+  about: 'CABE develops and pilots urban resource-sharing infrastructures and circular solutions that reuse construction and demolition waste, with demonstration cases planned in Switzerland, Slovenia and Turkey. The former prison (KPD) on Pobreška cesta is the Maribor site presented at the ZAG Open Day.',
   sources: [
    { key: 'zhaw_cabe', title: 'Circular Approaches in the Built Environment (CABE), project page', url: 'https://www.zhaw.ch/en/research/project/76605', type: 'web' },
    { key: 'zag_circular', title: 'Za ZAG krožno gradbeništvo ni samo krilatica', url: 'https://www.zag.si/za-zag-krozno-gradbenistvo-ni-samo-krilatica/', type: 'zag_publication' },
@@ -96,17 +94,15 @@ for (const s of Z.stories) {
   year: s.year, built: null, year_start: +s.year || null, year_end: +s.year || null, municipality: s.town, locality: s.loc, latitude: c ? c.lat : s.lat, longitude: c ? c.lon : s.lon,
   zag_involvement_type: SS.inv[0] || null, zag_involvement_types: SS.inv, zag_role: SS.role, description: SS.about || null, image: 'img/ph/' + s.key + '.webp', image_credit: null,
   source_title: s0.title || null, source_url: s0.url || null, source_type: s0.type || null, sources: SS.sources,
-  evidence_level: SS.ev, position_precision: c ? 'surveyed' : s.prec, position_confidence: c ? c.confidence : null,
-  position_sources: c ? c.sources : [], position_note: c ? c.note : null, address: s.addr || null, story: s.key, data_note: SS.note };
+  evidence_level: SS.ev, position_precision: c ? 'surveyed' : s.prec, position_sources: c ? c.sources : [], address: s.addr || null, story: s.key };
  push(p, [p.longitude, p.latitude]);
 }
-if (byKey.kpd) { const f = feats.find(f => f.properties.id === 'kpd'); f.properties.locality = 'Pobreška cesta 20, Maribor'; f.properties.position_note = (f.properties.position_note || '') + ' Location text corrected: the building is not on the Drava bank.'; }
+if (byKey.kpd) { const f = feats.find(f => f.properties.id === 'kpd'); f.properties.locality = 'Pobreška cesta 20, Maribor'; }
 // verified against the ZAG 2019 bulletin (pp. 32-33 as reported; captions "point cloud (lidar + scanner)", "view from unmanned aerial vehicle", ">200 sensors")
 const BULLETIN = { key: 'zag_bulletin_2019', title: 'ZAG Bulletin 2019 (English), Digitalisation of the built environment', url: 'https://www.zag.si/wp-content/uploads/2022/08/ZAG-bulletin-2019-ANG-min.pdf', type: 'zag_publication' };
 const rav = feats.find(f => f.properties.id === 'ravbarkomanda').properties;
 rav.zag_involvement_types = ['monitoring', 'LiDAR', 'UAV']; rav.zag_involvement_type = 'monitoring';
 rav.sources.unshift(BULLETIN); rav.source_title = BULLETIN.title; rav.source_url = BULLETIN.url; rav.source_type = BULLETIN.type;
-rav.data_note = 'Bulletin year of the point-cloud/UAV work is not stated. Dataset says 588 m / 15 spans, a secondary source says about 560 m / 16 spans: check against DARS/DRSI before showing dimensions. Marker position unresolved (old point is probably about 4 km too far north).';
 const str = feats.find(f => f.properties.id === 'strunjan').properties;
 str.image_credit = 'Mihael Simonič, CC BY-SA 3.0 (Wikimedia Commons)';
 for (const f of feats) if (!f.properties.zag_involvement_types) f.properties.zag_involvement_types = f.properties.zag_involvement_type ? [f.properties.zag_involvement_type] : [];

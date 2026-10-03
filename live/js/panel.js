@@ -1,9 +1,10 @@
 'use strict';
 /* Info panel: one selected object (ZAG record, address or building) with provenance. */
 const info=$('info');
+const srcHost=u=>{try{return new URL(u).hostname.replace(/^www\./,'');}catch(_){return u;}};
 const posText=(i,x)=>i.kind==='building'?(i.how==='address'?'Building footprint matched from the street address':'Building footprint at the recorded coordinate'):i.kind==='area'?`${PREC[x.prec]||'Approximate'} (shaded area)`:(PREC[x.prec]||x.prec);
 const SRC_KIND={journal:'Journal article',conference:'Conference paper',report:'Report',web:'Web page',inst:'Institutional page',enc:'Encyclopedia',
-  zag_publication:'ZAG publication',db:'Structure database'};
+  zag_publication:'ZAG publication',db:'Database',data:'Open data',reg:'Regulation',news:'News article'};
 let curId=null;
 
 function closeInfo(){
@@ -34,7 +35,8 @@ function infoHTML(f){
     p.people&&p.people.length&&`<h3>Named in the sources</h3><ul>${p.people.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`].filter(Boolean).join('');
   const sources=(p.sources&&p.sources.length)?`<h3>Data sources</h3>`+p.sources.map(srcLine).join(''):'';
   const coord=`${p.latitude.toFixed(6)}, ${p.longitude.toFixed(6)}`;
-  return `${p.image?`<img class="hero" alt="" src="${esc(p.image)}">${p.image_credit?`<div class="credit">Image: ${esc(p.image_credit)}</div>`:''}`:''}
+  const im=ZA.images[p.id], hero=p.image?{src:p.image,credit:p.image_credit?'Photo: '+p.image_credit:null}:im?{src:im.url,credit:`Photo: ${im.author||'unknown author'}, ${im.licence}, via Wikimedia Commons`,page:im.page}:null;
+  return `${hero?`<img class="hero" alt="" src="${esc(hero.src)}">${hero.credit?`<div class="credit">${esc(hero.credit)}${hero.page?` (<a href="${esc(hero.page)}" target="_blank" rel="noopener">source</a>)`:''}</div>`:''}`:''}
   <div class="body">
     <div class="kicker ${kicker[1]}">${kicker[0]}</div>
     <h1>${esc(p.name_en||p.name)}</h1>
@@ -48,10 +50,9 @@ function infoHTML(f){
     <div id="bim" class="bim"></div>
     <h3>Position</h3>
     <div class="kv"><span>Basis</span><span id="epos">${esc(PREC[p.position_precision]||p.position_precision)}</span></div>
-    ${p.position_confidence?kv('Confidence',p.position_confidence):''}
     ${kv('WGS84',coord)}
-    <p class="note" id="enote">${esc(p.position_note||'')}</p>
-    ${p.data_note?`<p class="note">${esc(p.data_note)}</p>`:''}
+    <p class="note" id="enote"></p>
+    ${(p.position_sources||[]).length?`<p class="note">Position source: ${p.position_sources.slice(0,3).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcHost(u))}</a>`).join(', ')}</p>`:''}
     <div class="btnrow"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${p.latitude},${p.longitude}" target="_blank" rel="noopener">Google Maps ↗</a>
       <button class="btn" data-copy="${coord}">Copy coordinates</button></div>
     ${more?`<details style="margin-top:14px"><summary class="note" style="cursor:pointer">More details</summary>${more}</details>`:''}
@@ -72,7 +73,7 @@ function showInfo(id,opts){
   if(x.addr) geocodeAddress(x.addr);
   const snapable=!!SNAP[p.object_type]&&!p.line;
   const settle=()=>{ if(curId!==id) return;
-    locate(x,i=>{ if(curId!==id) return; const m=$('epos'); if(m&&i.state==='done') m.textContent=posText(i,x); const n=$('enote'); if(n&&i.state==='done') n.textContent=[posNote(i,x),p.position_note].filter(Boolean).join(' ');
+    locate(x,i=>{ if(curId!==id) return; const m=$('epos'); if(m&&i.state==='done') m.textContent=posText(i,x); const n=$('enote'); if(n&&i.state==='done') n.textContent=posNote(i,x);
       if(i.state==='done'&&i.how==='address'&&selMarker) selMarker.setLngLat(i.b&&i.b.c||i.geo.ll);
       if(i.state==='done'&&i.kind==='building') buildingData(i.b,p); }); };
   if(p.line&&p.line.length>1){ fitLines([p.line],id,settle); }
