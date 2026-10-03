@@ -13,6 +13,7 @@ function closeInfo(){
 function openShell(html){
   info.innerHTML=`<button class="x" aria-label="Close panel" title="Close">✕</button>${html}`;
   info.hidden=false; info.scrollTop=0; document.body.classList.add('has-panel');
+  if(phone()){document.body.classList.add('tl-closed');$('tlToggle').setAttribute('aria-expanded',false);}
   info.querySelector('.x').onclick=closeInfo;
   info.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>copyText(b.dataset.copy,'Coordinates copied'));
 }
