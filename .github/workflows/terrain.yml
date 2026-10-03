@@ -1,0 +1,43 @@
+# Builds Terrarium-encoded terrain tiles for Slovenia from a DEM GeoTIFF and publishes them to a separate Pages repository.
+# Manual run only. Nothing in this repository changes. See tools/terrain/README.md.
+name: Build terrain tiles
+on:
+  workflow_dispatch:
+    inputs:
+      dem_urls:
+        description: Space-separated URLs of DEM GeoTIFF files (e.g. GURS DMR 1 m sheets or a national mosaic)
+        required: true
+      max_zoom:
+        description: Highest tile zoom (13 ≈ 250 MB, 14 ≈ 1 GB for Slovenia)
+        default: "13"
+      target_repo:
+        description: Repository that hosts the tiles on GitHub Pages (owner/name)
+        default: avtandilsvianadzeu/ZAGMap-terrain
+jobs:
+  tiles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: |
+          sudo apt-get update && sudo apt-get install -y gdal-bin
+          pip install rio-rgbify mbutil
+      - name: Download and mosaic
+        run: |
+          mkdir dem && cd dem
+          for u in ${{ inputs.dem_urls }}; do curl -sSLO "$u"; done
+          gdalbuildvrt mosaic.vrt *.tif
+          gdalwarp -t_srs EPSG:3857 -r bilinear -of GTiff -co TILED=YES -co COMPRESS=DEFLATE mosaic.vrt mosaic_3857.tif
+      - name: Encode terrarium tiles
+        run: |
+          # Terrarium: elevation = (R*256 + G + B/256) - 32768  ->  base -32768, interval 1/256
+          rio rgbify -b -32768 -i 0.00390625 --min-z 6 --max-z ${{ inputs.max_zoom }} dem/mosaic_3857.tif terrain.mbtiles
+          mb-util --image_format=png terrain.mbtiles tiles
+          du -sh tiles
+      - name: Publish to the tile repository
+        env: { TOKEN: "${{ secrets.TERRAIN_PAGES_TOKEN }}" }
+        run: |
+          git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${{ inputs.target_repo }}.git" out || { mkdir out && git -C out init -b main; }
+          rm -rf out/tiles && cp -r tiles out/tiles && echo '*' > out/.nojekyll
+          cd out && git add -A && git -c user.name=terrain-bot -c user.email=terrain-bot@users.noreply.github.com commit -qm "Terrain tiles z6-${{ inputs.max_zoom }}" \
+            && git push "https://x-access-token:${TOKEN}@github.com/${{ inputs.target_repo }}.git" HEAD:main
