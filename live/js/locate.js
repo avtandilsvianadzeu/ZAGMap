@@ -44,6 +44,11 @@ function findBuilding(lngLat,maxM){
   const parts=best.id!=null?feats.filter(f=>f.id===best.id):[best];
   return {feature:best,parts,g:best.geometry,dist:bd,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
 }
+function buildingFromFeature(f){
+  let feats=[]; try{feats=map.querySourceFeatures('openmaptiles',{sourceLayer:'building'});}catch(_){}
+  const parts=f.id!=null?feats.filter(x=>x.id===f.id):[f]; const best=parts[0]||f;
+  return {feature:best,parts:parts.length?parts:[f],g:best.geometry,dist:0,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
+}
 function showBuilding(b){
   const fc={type:'FeatureCollection',features:b?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+0.6,b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};
   map.getSource('hl').setData(fc);
@@ -119,7 +124,7 @@ function setSel(o){
   if(ready) map.setFilter('pt-l',selId?['all',['!',['has','point_count']],['!=',['get','id'],selId]]:['!',['has','point_count']]);
   if(!o) return;
   const el=document.createElement('div'); el.className='selpin'; el.style.setProperty('--pc',o.color||'var(--blue)');
-  el.innerHTML=`<div class="bal"><svg viewBox="-6 -6 12 12"><path d="${GL[o.glyph]||GL.pin}" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="dot"></div><div class="lbl">${esc(o.label)}</div>`;
+  el.innerHTML=`<div class="lbl">${esc(o.label)}</div><div class="lead"></div><div class="dot"></div>`;
   selMarker=new maplibregl.Marker({element:el,anchor:'bottom',offset:[0,0]}).setLngLat(o.ll).addTo(map);
 }
 /* x: entry or story-like {lat,lon,prec,cat,addr,id}. onPos(info) reports how the position was resolved */
@@ -132,7 +137,7 @@ async function locate(x,onPos){
   const wantBuilding=!!x.addr||(x.prec==='surveyed'&&/^(build|inst)$/.test(x.cat));
   let target=ll, how=null, g=null;
   if(x.addr){ onPos&&onPos({state:'busy',text:'Matching the address…'}); g=await within(geocodeAddress(x.addr),6000); if(tok!==hlToken) return;
-    if(g&&meters(g.ll,ll)<1500){target=g.ll;how='address';} }
+    if(g&&meters(g.ll,ll)<(x.tol||1500)){target=g.ll;how='address';} }
   if(how==='address'&&meters(target,ll)>25){ await new Promise(r=>moveThen('easeTo',{center:target,duration:reduced?0:900},r)); }
   if(!wantBuilding){ onPos&&onPos({state:'done',kind:unc?'area':'point'}); return; }
   await new Promise(r=>map.isMoving()?map.once('moveend',r):r()); if(tok!==hlToken) return;
@@ -143,7 +148,7 @@ async function locate(x,onPos){
   onPos&&onPos({state:'done',kind:b?'building':'point',how,dist:g?Math.round(meters(g.ll,ll)):null,b,geo:g});
   // the geocoder answered after the timeout: upgrade to the building at the address once it arrives
   if(x.addr&&!g) geocodeAddress(x.addr).then(g2=>{
-    if(!g2||tok!==hlToken||meters(g2.ll,ll)>=1500) return;
+    if(!g2||tok!==hlToken||meters(g2.ll,ll)>=(x.tol||1500)) return;
     const b2=findBuilding(g2.ll,20); if(!b2) return;
     showBuilding(b2); onPos&&onPos({state:'done',kind:'building',how:'address',dist:Math.round(meters(g2.ll,ll)),b:b2,geo:g2});
   });

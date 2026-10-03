@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ZAG Digital Atlas</title>
 <meta name="description" content="GIS atlas of buildings, bridges and infrastructure where ZAG has documented involvement.">
-<link rel="icon" href="img/logo.webp">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
 <link rel="stylesheet" href="css/atlas.css">
 </head>
@@ -15,7 +15,7 @@
 <header class="hdr">
   <div class="brand">
     <img src="img/logo.webp" alt="ZAG">
-    <div><b>ZAG DIGITAL ATLAS</b><span>Buildings · Bridges · Infrastructure · Research · Projects</span></div>
+    <div><b>ZAG DIGITAL ATLAS</b></div>
   </div>
   <nav id="nav" aria-label="Atlas sections">
     <button data-nav="projects" aria-pressed="false" title="All records"><i data-ic="projects"></i>Projects</button>
@@ -30,8 +30,8 @@
   </div>
   <div class="hright">
     <div class="seg" id="bgSeg" role="group" aria-label="Background">
-      <button data-bg="map" aria-pressed="false" title="Street map with relief"><i data-ic="map"></i>Map</button>
-      <button data-bg="sat" aria-pressed="true" title="Satellite imagery"><i data-ic="satellite"></i>Satellite</button>
+      <button data-bg="map" aria-pressed="true" title="Street map with relief"><i data-ic="map"></i>Map</button>
+      <button data-bg="sat" aria-pressed="false" title="Satellite imagery"><i data-ic="satellite"></i>Satellite</button>
     </div>
     <button class="tgl" id="b3d" aria-pressed="true" title="3D view: terrain relief and buildings. Off = flat top-down view"><i data-ic="cube"></i>3D</button>
     <button class="tgl" id="bLayers" aria-expanded="false" aria-controls="layers" title="Data layers and backgrounds"><i data-ic="layers"></i>Layers</button>
@@ -57,9 +57,17 @@
     </fieldset>
     <fieldset>
       <legend>Background</legend>
-      <label><input type="radio" name="lyBg" value="map"> Map <small>OpenStreetMap, shaded relief</small></label>
-      <label><input type="radio" name="lyBg" value="sat" checked> Satellite <small>Esri</small></label>
+      <label><input type="radio" name="lyBg" value="map" checked> Map <small>OpenStreetMap, shaded relief</small></label>
+      <label><input type="radio" name="lyBg" value="sat"> Satellite <small>Esri</small></label>
       <label><input type="radio" name="lyBg" value="dof"> Orthophoto <small>GURS DOF025, 25 cm</small></label>
+    </fieldset>
+    <fieldset>
+      <legend>Legend</legend>
+      <div class="lg"><span class="sw doc"></span>ZAG project, documented</div>
+      <div class="lg"><span class="sw ref"></span>Partner or referenced site</div>
+      <div class="lg"><span class="sw fac"></span>ZAG facility</div>
+      <div class="lg"><span class="sw line"></span>Selected structure alignment</div>
+      <div class="lg"><span class="sw area"></span>Approximate position</div>
     </fieldset>
     <fieldset>
       <legend>Visualisation</legend>
@@ -79,31 +87,22 @@
     <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia"><i data-ic="home"></i></button>
   </div>
 
-  <div class="srcnote" id="srcnote"></div>
+  <div class="status" id="status"><span id="stCoord">—</span><span id="stScale"></span><span id="stZoom"></span><span>WGS 84 · EPSG:4326</span><span id="srcnote"></span></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
 
 <dialog id="about" aria-labelledby="aboutT">
   <form method="dialog"><button class="x" aria-label="Close"><i data-ic="close"></i></button></form>
-  <h2 id="aboutT">About ZAG Digital Atlas</h2>
-  <p>A GIS atlas showing where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement: buildings, bridges, tunnels, dams, cableways and research sites, with the type of work and the source for each record.</p>
-  <p>It is a digital atlas, <b>not</b> a national BIM database. BIM/IFC information can be linked later where it is publicly available.</p>
-  <h3>How records are classified</h3>
-  <ul>
-    <li><b>Documented</b>: at least one published source describes ZAG's work (blue marker).</li>
-    <li><b>Referenced</b>: a named partner or a site mentioned in sources without a described ZAG role (grey marker).</li>
-    <li><b>ZAG facility</b>: ZAG's own premises (dark marker), kept separate from projects.</li>
-    <li>Involvement types follow the published description of each record.</li>
-    <li>Bridges, tunnels and cableways are matched at runtime to the structure in OpenStreetMap and drawn as their real alignment; buildings to their footprint. Where no match is found, the recorded position is shown with its precision and a shaded circle.</li>
-  </ul>
+  <h2 id="aboutT">ZAG Digital Atlas</h2>
+  <p>Geographic atlas of buildings, bridges, tunnels, dams, cableways and research sites in Slovenia where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement. Each record carries the type of work, a short description, the structure's attributes and the source.</p>
   <h3>Data sources</h3>
-  <ul id="aboutSrc">
-    <li>ZAG publications and the sources cited on each record.</li>
-    <li>OpenStreetMap contributors via OpenFreeMap (map and building footprints), Photon geocoder.</li>
-    <li>Terrain: Mapzen / AWS Terrain Tiles. Satellite: Esri World Imagery. Optional orthophoto: GURS DOF025 via Level2.si (CC BY).</li>
-    <li>Building attributes: GURS Kataster nepremičnin (OGC API Features, CC BY 4.0), queried for the selected building.</li>
+  <ul>
+    <li>ZAG publications and the sources cited on each record</li>
+    <li>OpenStreetMap via OpenFreeMap (map, building footprints, structure alignments); Photon geocoder</li>
+    <li>GURS Kataster nepremičnin, OGC API Features (building attributes); GURS DOF025 orthophoto via Level2.si</li>
+    <li>Terrain: Mapzen / AWS Terrain Tiles; satellite imagery: Esri World Imagery</li>
   </ul>
-  <p class="small">Dataset: <a href="../data/zag_projects.geojson" target="_blank" rel="noopener">data/zag_projects.geojson</a></p>
+  <p class="small">Coordinate reference system WGS 84 (EPSG:4326), display in Web Mercator (EPSG:3857). Dataset: <a href="../data/zag_projects.geojson" target="_blank" rel="noopener">data/zag_projects.geojson</a>.</p>
 </dialog>
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>

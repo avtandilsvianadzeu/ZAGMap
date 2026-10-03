@@ -66,7 +66,7 @@ function showInfo(id,opts){
   try{history.replaceState(null,'',location.pathname+location.search+'#'+id);}catch(_){}
   emit('selected',id);
   if(!ready) return;
-  const e=EBY[id], x={id,lat:p.latitude,lon:p.longitude,prec:p.position_precision,cat:e?e.cat:'build',addr:p.address};
+  const e=EBY[id], x={id,lat:p.latitude,lon:p.longitude,prec:p.position_precision,cat:e?e.cat:'build',addr:p.address,tol:(p.position_sources&&p.position_sources.length)?150:1500};
   setSel({id,ll:[p.longitude,p.latitude],label:p.name_en||p.name,glyph:'pin'});
   showLine(p.line?[p.line]:null);
   if(x.addr) geocodeAddress(x.addr);
@@ -139,8 +139,22 @@ function showAddress(f){
 }
 
 /* a building picked directly on the map */
-function showBuildingPick(ll){
-  const tok=++hlToken; const b=findBuilding(ll,3); if(tok!==hlToken) return; showBuilding(b);
+function showStructurePick(f,ll){
+  const q=f.properties, lines=linesOf(f.geometry);
+  hlToken++; showBuilding(null); map.getSource('unc').setData({type:'FeatureCollection',features:[]}); curId=null;
+  const parts=[]; try{ const key=[q.ref||'',q.name||'',q.class||''].join('|');
+    for(const g of map.querySourceFeatures('openmaptiles',{sourceLayer:'transportation',filter:['==',['get','brunnel'],q.brunnel||'']})) if([g.properties.ref||'',g.properties.name||'',g.properties.class||''].join('|')===key) for(const ln of linesOf(g.geometry)) if(ln.some(c=>lineDist(c,lines[0])<300)) parts.push(ln); }catch(_){}
+  const all=parts.length?parts:lines; showLine(all);
+  const name=q.name||(q.brunnel?cap(q.brunnel):'Aerialway')+(q.ref?' '+q.ref:'');
+  setSel({id:null,ll,label:name,glyph:'pin'});
+  openShell(`<div class="body"><div class="kicker ref">${q.brunnel?cap(q.brunnel):'Aerialway'}</div><h1>${esc(name)}</h1>
+    <p class="where">${esc([q.ref?'Ref '+q.ref:'',q.class?cap(q.class):''].filter(Boolean).join(' · '))}</p>
+    <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
+    <p class="note">Structure from OpenStreetMap. Not a ZAG record.</p></div>`);
+  structureData({props:q,lines:all},{});
+}
+function showBuildingPick(ll,feat){
+  const tok=++hlToken; const b=feat?buildingFromFeature(feat):findBuilding(ll,3); if(tok!==hlToken) return; showBuilding(b);
   map.getSource('unc').setData({type:'FeatureCollection',features:[]}); showLine(null); setSel(null); curId=null;
   openShell(`<div class="body"><div class="kicker ref">Building</div><h1 id="bt">Looking up the nearest address…</h1><p class="where" id="bs"></p>
     <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}

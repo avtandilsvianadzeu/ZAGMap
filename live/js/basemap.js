@@ -97,7 +97,7 @@ function applyLook(){
   const dk=theme==='dark'||base==='sat'||base==='dof';
   map.setPaintProperty('pt-l','text-color',dk?'#FFFFFF':'#1C1C1E');
   map.setPaintProperty('pt-l','text-halo-color',dk?'rgba(0,0,0,.78)':'rgba(255,255,255,.95)');
-  map.setPaintProperty('hl-ext','fill-extrusion-color',(base==='sat'||base==='dof')?'#FFB000':'#2F5597');
+  
 }
 
 /* ---------- theme / style controls ---------- */

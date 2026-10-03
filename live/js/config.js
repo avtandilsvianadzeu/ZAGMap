@@ -46,5 +46,5 @@ const SATSKY={sky:'#8FB6E3',hor:'#D9E4EE',fog:'#B9C3C9'};
 /* ---------- state ---------- */
 let theme=(()=>{const a=document.documentElement.getAttribute('data-theme');return a||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');})();
 const emit=(n,d)=>document.dispatchEvent(new CustomEvent('atlas:'+n,{detail:d}));
-let base='sat', is3d=true, selId=null, bldPref=null;
+let base='map', is3d=true, selId=null, bldPref=null;
 let map=null, ready=false, ORIG={}, TOUCHED={}, selMarker=null, hlToken=0, orbitOn=false, userMoved=false;

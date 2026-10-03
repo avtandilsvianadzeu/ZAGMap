@@ -9,10 +9,12 @@ function addAtlasLayers(){
   const firstSym=(map.getStyle().layers.find(l=>l.type==='symbol')||{}).id, fonts=['Noto Sans Bold'];
   map.addLayer({id:'unc-f',type:'fill',source:'unc',paint:{'fill-color':'#2F5597','fill-opacity':.10}},firstSym);
   map.addLayer({id:'unc-l',type:'line',source:'unc',paint:{'line-color':'#2F5597','line-width':1.5,'line-dasharray':[3,3],'line-opacity':.8}},firstSym);
-  map.addLayer({id:'hl-ext',type:'fill-extrusion',source:'hl',paint:{'fill-extrusion-color':'#2F5597','fill-extrusion-height':['get','h'],'fill-extrusion-base':['get','b'],'fill-extrusion-opacity':.9}},firstSym);
-  map.addLayer({id:'hl-line',type:'line',source:'hl',paint:{'line-color':'#FFB000','line-width':3}},firstSym);
-  map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':10}});
-  map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#FFB000','line-width':5}});
+  map.addLayer({id:'hl-ext',type:'fill-extrusion',source:'hl',paint:{'fill-extrusion-color':'#1E6FE8','fill-extrusion-height':['get','h'],'fill-extrusion-base':['get','b'],'fill-extrusion-opacity':.62,'fill-extrusion-vertical-gradient':true}},firstSym);
+  map.addLayer({id:'hl-glow',type:'line',source:'hl',paint:{'line-color':'#4CC2FF','line-width':9,'line-blur':8,'line-opacity':.7}},firstSym);
+  map.addLayer({id:'hl-line',type:'line',source:'hl',paint:{'line-color':'#8FDDFF','line-width':1.6}},firstSym);
+  map.addLayer({id:'sel-g',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#4CC2FF','line-width':14,'line-blur':10,'line-opacity':.55}});
+  map.addLayer({id:'sel-c',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#fff','line-width':6}});
+  map.addLayer({id:'sel-l',type:'line',source:'sel',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#1E6FE8','line-width':3.5}});
   map.addLayer({id:'clu',type:'circle',source:'sites',filter:['has','point_count'],paint:{'circle-color':'#2F5597','circle-radius':['step',['get','point_count'],15,5,18,12,22],'circle-stroke-color':'#fff','circle-stroke-width':2.5}});
   map.addLayer({id:'clu-n',type:'symbol',source:'sites',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count']],'text-font':fonts,'text-size':12.5,'text-allow-overlap':true},paint:{'text-color':'#fff'}});
   map.addLayer({id:'pt',type:'symbol',source:'sites',filter:['!',['has','point_count']],layout:{'icon-image':['get','ic'],'icon-allow-overlap':true,'icon-size':['interpolate',['linear'],['zoom'],7,.75,13,.95,17,1.1]}});
@@ -57,4 +59,24 @@ function snapStructure(p){
   const all=parts.flat(); const far=all.reduce((m,c)=>Math.max(m,meters(c,pt)),0);
   const lines=parts.length?parts:[best.ln], longest=lines.reduce((m,l)=>lineLen(l)>lineLen(m)?l:m,lines[0]);
   return {lines,mid:midpoint(longest),dist:Math.round(best.d),refOk:best.refOk,props:best.f.properties,extent:far};
+}
+
+/* ---- what did the user click: a ZAG record's structure, any OSM structure, or a building ---- */
+function recordNear(ll,types,maxM){
+  let best=null;
+  for(const f of ZA.features){ const p=f.properties; if(!types.includes(p.object_type)) continue;
+    const d=meters([p.longitude,p.latitude],ll); const lim=Math.min(maxM,SNAP_R[p.position_precision]||800); if(d<lim&&(!best||d<best.d)) best={d,id:p.id}; }
+  return best&&best.id;
+}
+function pickAt(point,ll){
+  const box=[[point.x-5,point.y-5],[point.x+5,point.y+5]];
+  const hit=map.queryRenderedFeatures(box).filter(f=>f.source==='openmaptiles'||f.source==='hl'||f.source==='sel');
+  if(!hit.length) return null;
+  if(hit.some(f=>f.source==='hl'||f.source==='sel')&&curId) return {kind:'current'};
+  const tr=hit.find(f=>f.sourceLayer==='transportation'&&(f.properties.brunnel==='bridge'||f.properties.brunnel==='tunnel'||f.properties.class==='aerialway'));
+  if(tr){ const types=tr.properties.class==='aerialway'?['cableway']:tr.properties.brunnel==='tunnel'?['tunnel']:['bridge','footbridge','road structure'];
+    const id=recordNear(ll,types,2500); return id?{kind:'record',id}:{kind:'structure',f:tr}; }
+  const bl=hit.find(f=>f.sourceLayer==='building');
+  if(bl){ const id=recordNear(ll,['building','institution'],120); return id?{kind:'record',id}:{kind:'building',f:bl}; }
+  return null;
 }

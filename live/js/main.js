@@ -24,11 +24,17 @@ async function boot(){
     map.on('click','clu',async ev=>{ev.preventDefault();const f=ev.features[0];
       const z=await map.getSource('sites').getClusterExpansionZoom(f.properties.cluster_id);map.easeTo({center:f.geometry.coordinates,zoom:z+0.3,duration:700});});
     map.on('click',ev=>{
-      if(ev.defaultPrevented||map.getZoom()<15.5) return;
-      const hit=map.queryRenderedFeatures(ev.point,{layers:['building-3d','building','hl-ext'].filter(l=>map.getLayer(l))});
-      if(!hit.length) return;
-      orbitOn=false; showBuildingPick([ev.lngLat.lng,ev.lngLat.lat]);
+      if(ev.defaultPrevented||map.getZoom()<12) return;
+      const ll=[ev.lngLat.lng,ev.lngLat.lat], pick=pickAt(ev.point,ll); if(!pick) return;
+      orbitOn=false;
+      if(pick.kind==='record') showInfo(pick.id);
+      else if(pick.kind==='structure') showStructurePick(pick.f,ll);
+      else if(pick.kind==='building'&&map.getZoom()>=14.5) showBuildingPick(ll,pick.f);
     });
+    map.on('mousemove',ev=>{ const c=$('stCoord'); if(c) c.textContent=`${ev.lngLat.lat.toFixed(5)}° N, ${ev.lngLat.lng.toFixed(5)}° E`; });
+    const stZoom=()=>{ const z=$('stZoom'); if(z) z.textContent=`Zoom ${map.getZoom().toFixed(1)}`; const lat=map.getCenter().lat, mpp=156543.03*Math.cos(lat*Math.PI/180)/Math.pow(2,map.getZoom()); const s=$('stScale'); if(s) s.textContent=`1 : ${Math.round(mpp*96/0.0254).toLocaleString('en')}`; };
+    map.on('move',stZoom); stZoom();
+    map.addControl(new maplibregl.ScaleControl({maxWidth:140,unit:'metric'}),'bottom-right');
     ['dragstart','wheel','touchstart','mousedown'].forEach(t=>map.on(t,ev=>{if(ev.originalEvent){userMoved=true;orbitOn=false;}}));
     // MapLibre 5.x leaves the terrain elevation frozen after a programmatic flyTo/easeTo, so terrain tiles that arrive
     // after the flight never lift the camera. On real hills that leaves the camera under the ground. Release it.
