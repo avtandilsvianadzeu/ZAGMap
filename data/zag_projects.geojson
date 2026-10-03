@@ -1,0 +1,4699 @@
+{
+ "type": "FeatureCollection",
+ "name": "zag_projects",
+ "_meta": {
+  "generated_by": "tools/build_geojson.js",
+  "note": "involvement type is derived from the role text of each legacy record and needs ZAG review; image credits are not yet verified except where stated."
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.53642,
+     46.0856
+    ]
+   },
+   "properties": {
+    "id": "tomacevo",
+    "category": "zag_project",
+    "name": "Tomačevo Bridge",
+    "name_sl": "Most čez Savo v Tomačevem",
+    "name_en": "Tomačevo Bridge",
+    "object_type": "bridge",
+    "year": "2023-2025",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 46.0856,
+    "longitude": 14.53642,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Bridge weigh-in-motion and structural health monitoring",
+    "description": "Elastomeric bearings at the piers and guided unidirectional pot bearings at the abutments. ZAG, Cestel and Dewesoft Monitoring instrumented the bridge for combined bridge weigh-in-motion and structural health monitoring. A controlled load test in May 2024 ran two pre-weighed calibration trucks over 72 passages across two nights, recording strain, acceleration, temperature and displacement at 500 Hz. During normal operation in March 2023 the system captured a 13-axle vehicle weighing over 200 tonnes.",
+    "image": "img/ph/tom.webp",
+    "image_credit": null,
+    "source_title": "Model updating of bridges using measured influence lines",
+    "source_url": "https://doi.org/10.3390/app15084514",
+    "source_type": "journal",
+    "sources": [
+     {
+      "key": "appsci2025",
+      "title": "Model updating of bridges using measured influence lines",
+      "url": "https://doi.org/10.3390/app15084514",
+      "type": "journal"
+     },
+     {
+      "key": "dewesoft",
+      "title": "Bridge weigh-in-motion and structural health monitoring on Tomačevo bridge",
+      "url": "https://dewesoft.com/blog/bridge-weigh-in-motion-structural-health-monitoring-tomacevo-bridge",
+      "type": "web"
+     },
+     {
+      "key": "cestel",
+      "title": "SiWIM bridge weigh-in-motion system",
+      "url": "https://cestel.si/en/siwim/",
+      "type": "web"
+     },
+     {
+      "key": "zagbridges",
+      "title": "The Section for Bridges and Other Civil Engineering Structures",
+      "url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "derived",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "story": "tom",
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.24,
+     45.821
+    ]
+   },
+   "properties": {
+    "id": "ravbarkomanda",
+    "category": "zag_project",
+    "name": "Ravbarkomanda Viaduct",
+    "name_sl": "Viadukt Ravbarkomanda",
+    "name_en": "Ravbarkomanda Viaduct",
+    "object_type": "bridge",
+    "year": "2023-2024",
+    "municipality": "A1 between Planina and Postojna",
+    "locality": "A1 between Planina and Postojna",
+    "latitude": 45.821,
+    "longitude": 14.24,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Long-term structural health monitoring and bridge weigh-in-motion",
+    "description": "Two parallel structures carrying one direction each, built in 1972 on what is now the Venice to Lviv corridor. ZAG instrumented span P14D of the right-hand viaduct with strain gauges on the bottom flange of four main girders at mid-span, and triaxial accelerometers across several spans for ambient and traffic-induced modal testing. A bridge weigh-in-motion system supplies the traffic loading, and the measured response is used to update a finite element model of the structure. Both viaducts were fully rehabilitated between May 2017 and July 2019, including carbon fibre strengthening of the cantilevers, bearing replacement and a one metre deck widening.",
+    "image": "img/ph/rav.webp",
+    "image_credit": null,
+    "source_title": "ZAG Bulletin 2019 (English), Digitalisation of the built environment",
+    "source_url": "https://www.zag.si/wp-content/uploads/2022/08/ZAG-bulletin-2019-ANG-min.pdf",
+    "source_type": "zag_publication",
+    "sources": [
+     {
+      "key": "zag_bulletin_2019",
+      "title": "ZAG Bulletin 2019 (English), Digitalisation of the built environment",
+      "url": "https://www.zag.si/wp-content/uploads/2022/08/ZAG-bulletin-2019-ANG-min.pdf",
+      "type": "zag_publication"
+     },
+     {
+      "key": "sensors2023",
+      "title": "Model updating concept using bridge weigh-in-motion data",
+      "url": "https://doi.org/10.3390/s23042067",
+      "type": "journal"
+     },
+     {
+      "key": "sensors2024",
+      "title": "Improved finite element model updating of a highway viaduct using acceleration and strain data",
+      "url": "https://doi.org/10.3390/s24092788",
+      "type": "journal"
+     },
+     {
+      "key": "kolektor",
+      "title": "Rekonstrukcija avtoceste Unec-Postojna z rehabilitacijo viadukta Ravbarkomanda",
+      "url": "https://www.kolektorgradbenistvo.si/reference/rekonstrukcija-avtoceste-unec-postojna-z-rehabilitacijo-viadukta-ravbarkomanda",
+      "type": "web"
+     },
+     {
+      "key": "stareslike",
+      "title": "1971 Ravbarkomanda, avtocestni viadukt",
+      "url": "https://stareslike.cerknica.org/2023/03/21/1971-ravbarkomanda-avtocestni-viadukt/",
+      "type": "web"
+     },
+     {
+      "key": "mapcarta_rk",
+      "title": "Ravbarkomanda, Postojna",
+      "url": "https://mapcarta.com/W279720823",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "approximate",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "story": "rav",
+    "zag_involvement_types": [
+     "monitoring",
+     "LiDAR",
+     "UAV"
+    ],
+    "data_note": "Bulletin year of the point-cloud/UAV work is not stated. Dataset says 588 m / 15 spans, a secondary source says about 560 m / 16 spans: check against DARS/DRSI before showing dimensions. Marker position unresolved (old point is probably about 4 km too far north)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.94472,
+     46.25111
+    ]
+   },
+   "properties": {
+    "id": "vransko",
+    "category": "zag_project",
+    "name": "Vransko Bridge",
+    "name_sl": "Most pri Vranskem",
+    "name_en": "Vransko Bridge",
+    "object_type": "road structure",
+    "year": "2006-2009",
+    "municipality": "Vransko",
+    "locality": "Vransko",
+    "latitude": 46.25111,
+    "longitude": 14.94472,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Bridge weigh-in-motion measurement and direct measurement of dynamic amplification",
+    "description": "One of the earliest long SiWIM deployments. Strain was recorded continuously for 58 days, from 25 September to 21 November 2006, capturing 147,524 vehicles including roughly 74,000 five-axle articulated trucks. Total and static bending moments at mid-span were separated to measure the dynamic amplification directly from traffic rather than inferring it from a code factor. The work was done with University College Dublin.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Direct measurement of dynamics in road bridges using a bridge weigh-in-motion system",
+    "source_url": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+    "source_type": "conference",
+    "sources": [
+     {
+      "key": "ucd2009",
+      "title": "Direct measurement of dynamics in road bridges using a bridge weigh-in-motion system",
+      "url": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+      "type": "conference"
+     },
+     {
+      "key": "cestel",
+      "title": "SiWIM bridge weigh-in-motion system",
+      "url": "https://cestel.si/en/siwim/",
+      "type": "web"
+     },
+     {
+      "key": "zagbridges",
+      "title": "The Section for Bridges and Other Civil Engineering Structures",
+      "url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "locality",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.152007,
+     45.801095
+    ]
+   },
+   "properties": {
+    "id": "nm_brv",
+    "category": "zag_project",
+    "name": "Novo Mesto Stress Ribbon Footbridge",
+    "name_sl": "Brv čez Krko, Novo mesto",
+    "name_en": "Novo Mesto Stress Ribbon Footbridge",
+    "object_type": "footbridge",
+    "year": "2023",
+    "municipality": "Novo mesto",
+    "locality": "Novo mesto",
+    "latitude": 45.801095,
+    "longitude": 15.152007,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Static and dynamic load testing, and validation of the finite element model",
+    "description": "The first bridge in Slovenia built with stress ribbon technology. ZAG carried out the load test in March 2023: static loading in three stages, dynamic testing with a light truck driven over artificial obstacles, and ambient vibration measurement. Vertical displacements, natural frequencies and mode shapes were compared against a finite element model and agreed well. The reported deflection was 130 mm under a 70 tonne load. Client was the City Municipality of Novo mesto, built by CGP Novo mesto with Freyssinet Adria, designed by Ponting Bridges and Pipenbaher Consulting Engineers.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Load testing of the first stress ribbon bridge in Slovenia",
+    "source_url": "https://dirros.openscience.si/IzpisGradiva.php?lang=eng&id=20205",
+    "source_type": "conference",
+    "sources": [
+     {
+      "key": "iabmas2024",
+      "title": "Load testing of the first stress ribbon bridge in Slovenia",
+      "url": "https://dirros.openscience.si/IzpisGradiva.php?lang=eng&id=20205",
+      "type": "conference"
+     },
+     {
+      "key": "freyssinet",
+      "title": "Krka river stress-ribbon footbridge, Novo mesto",
+      "url": "https://www.freyssinet.com/case-study/krka-river-stress-ribbon-footbridge/",
+      "type": "web"
+     },
+     {
+      "key": "pont_nm",
+      "title": "Foot and cycle bridge in Irca vas",
+      "url": "https://www.ponting.si/en/projects/foot-and-cycle-bridge-in-irca-vas-92.html",
+      "type": "web"
+     },
+     {
+      "key": "zagbridges",
+      "title": "The Section for Bridges and Other Civil Engineering Structures",
+      "url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.8489639,
+     46.4697417
+    ]
+   },
+   "properties": {
+    "id": "crna",
+    "category": "zag_project",
+    "name": "Črna na Koroškem Bridge",
+    "name_sl": "Most v Črni na Koroškem",
+    "name_en": "Črna na Koroškem Bridge",
+    "object_type": "bridge",
+    "year": "2023-2024",
+    "municipality": "Črna na Koroškem",
+    "locality": "Črna na Koroškem",
+    "latitude": 46.4697417,
+    "longitude": 14.8489639,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Structural reuse of salvaged girders",
+    "description": "Built under the CIRCUIT project, which demonstrates circular practice in construction. The girders were recovered from a bridge that was being demolished, assessed for residual capacity, and reused in the new structure rather than being crushed for aggregate. ZAG carried out the assessment work.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Bridge in Črna na Koroškem, reconstruction, sustainability and circularity",
+    "source_url": "https://www.zag.si/en/bridge-crna-na-koroskem-slovenia-reconstruction-sustainability-circularity/",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "zag_crna",
+      "title": "Bridge in Črna na Koroškem, reconstruction, sustainability and circularity",
+      "url": "https://www.zag.si/en/bridge-crna-na-koroskem-slovenia-reconstruction-sustainability-circularity/",
+      "type": "web"
+     },
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "zag_bridges_svc",
+      "title": "Bridges, areas of expertise",
+      "url": "https://www.zag.si/en/areas-of-expertise/bridges/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "locality",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.30524,
+     45.95555
+    ]
+   },
+   "properties": {
+    "id": "verd",
+    "category": "zag_project",
+    "name": "Verd Viaduct",
+    "name_sl": "Viadukt Verd",
+    "name_en": "Verd Viaduct",
+    "object_type": "bridge",
+    "year": null,
+    "municipality": "Vrhnika",
+    "locality": "Verd, Vrhnika",
+    "latitude": 45.95555,
+    "longitude": 14.30524,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "First Slovenian application of an expansive grout additive",
+    "description": "The first structure on which the Ikaton expansive additive was used for grouting prestressing cable ducts. The additive compensates for the shrinkage of cement grout so that the duct fills completely and the tendon is protected from corrosion. Built by Beograjska Mostogradnja. The additive line was developed at ZAG.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "zag_bridges_svc",
+      "title": "Bridges, areas of expertise",
+      "url": "https://www.zag.si/en/areas-of-expertise/bridges/",
+      "type": "inst"
+     },
+     {
+      "key": "gv_verd",
+      "title": "Viadukt Verd, Vrhnika",
+      "url": "https://si.geoview.info/viadukt_verd,8080626w",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.654795,
+     45.984358
+    ]
+   },
+   "properties": {
+    "id": "he_solkan",
+    "category": "zag_project",
+    "name": "HE Solkan",
+    "name_sl": "Hidroelektrarna Solkan",
+    "name_en": "HE Solkan",
+    "object_type": "dam / hydropower",
+    "year": 1984,
+    "municipality": "Nova Gorica",
+    "locality": "Solkan, Nova Gorica",
+    "latitude": 45.984358,
+    "longitude": 13.654795,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Expansive and non-shrink cement grouts",
+    "description": "One of the hydroelectric plants where ZAG grout formulations were used for cable duct grouting and non-shrink structural grouting.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "seng_solkan",
+      "title": "Brošura HE Solkan",
+      "url": "https://www.seng.si/file/8543466636805785_brosura-he-solkan.pdf",
+      "type": "report"
+     },
+     {
+      "key": "seng_he",
+      "title": "Velike hidroelektrarne",
+      "url": "https://www.seng.si/hidroelektrarne/",
+      "type": "web"
+     },
+     {
+      "key": "gd2025_dams",
+      "title": "Tehnično opazovanje pregradnih objektov slovenskih hidroelektrarn",
+      "url": "https://app.gis.si/gd2025/14-GD2025-%C5%A0tefan-Tehni%C4%8Dno%20opazovanje%20pregradnih%20objektov%20slovenskih%20hidroelektrarn.pdf",
+      "type": "conference"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W427961750",
+     "https://openinframap.org/stats/area/Slovenia/plants/427961750"
+    ],
+    "position_note": "Centroid of the OSM power-plant polygon (way 427961750) for HE Solkan on the Soča, operated by Soške elektrarne Nova Gorica; the dam and powerhouse sit together, so this is on the dam/plant complex, not necessarily the exact crest centre. Old point was the Solkan settlement, about 1.6 km to the south. Crest ends not found in an openable source, so no line.",
+    "address": "Soška cesta 44, 5250 Solkan",
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.786634,
+     46.448073
+    ]
+   },
+   "properties": {
+    "id": "he_zlatolicje",
+    "category": "zag_project",
+    "name": "HE Zlatoličje",
+    "name_sl": "Hidroelektrarna Zlatoličje",
+    "name_en": "HE Zlatoličje",
+    "object_type": "dam / hydropower",
+    "year": "2006-2009",
+    "municipality": "Starše",
+    "locality": "Zlatoličje, Starše",
+    "latitude": 46.448073,
+    "longitude": 15.786634,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Expansive and non-shrink cement grouts",
+    "description": "Named in ZAG material as one of the hydroelectric plants where ZAG expansive and non-shrink grouts were applied. The plant works from a diversion canal rather than directly on the Drava channel. ZAG also lists third party quality control of the materials used in the upgrading of the Zlatoličje HPP, for Dravske elektrarne Maribor, 2006 to 2009.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "wp_zlat",
+      "title": "Zlatoličje",
+      "url": "https://en.wikipedia.org/wiki/Zlatoli%C4%8Dje",
+      "type": "web"
+     },
+     {
+      "key": "dem_zlat",
+      "title": "Hidroelektrarna Zlatoličje",
+      "url": "https://www.dem.si/sl/elektrarne-in-proizvodnja/elektrarne/?id=2019090508585647",
+      "type": "web"
+     },
+     {
+      "key": "hse_zlat",
+      "title": "Pol stoletja največje slovenske hidroelektrarne Zlatoličje",
+      "url": "https://www.hse.si/sl/pol-stoletja-najvecje-slovenske-hidroelektrarne-zlatolicje/",
+      "type": "web"
+     },
+     {
+      "key": "ep_zlat",
+      "title": "Projekt prenove hidroelektrarne Zlatoličje, jezu Melje in izgradnje male hidroelektrarne Melje je zaključen",
+      "url": "https://www.energetika-portal.si/nc/novica/n/projekt-prenove-hidroelektrarne-zlatolicje-jezu-melje-in-izgradnje-male-hidroelektrarne-m-2832/",
+      "type": "news"
+     },
+     {
+      "key": "gd2025_dams",
+      "title": "Tehnično opazovanje pregradnih objektov slovenskih hidroelektrarn",
+      "url": "https://app.gis.si/gd2025/14-GD2025-%C5%A0tefan-Tehni%C4%8Dno%20opazovanje%20pregradnih%20objektov%20slovenskih%20hidroelektrarn.pdf",
+      "type": "conference"
+     },
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/W170978399",
+     "https://openinframap.org/stats/area/Slovenia/plants/170978399"
+    ],
+    "position_note": "Centroid of the OSM power-plant polygon (way 170978399), operated by Dravske elektrarne Maribor; agrees with the old point to within about 30 m. This is the powerhouse on the Zlatoličje diversion canal. There is no dam across the Drava here; the weir that feeds it is Jez Melje (see jez_melje). The upgrade ZAG worked on was this plant, so the powerhouse is the right anchor. Dataset issues: 'crosses: Drava' is misleading (it sits on the canal), and OpenInfraMap lists 126 MW, not the 136 MW in 'typ'. The '17.2 km upstream' distance to Melje in the old note was not checked.",
+    "address": null,
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.275795,
+     46.587269
+    ]
+   },
+   "properties": {
+    "id": "he_vuhred",
+    "category": "zag_project",
+    "name": "HE Vuhred",
+    "name_sl": "Hidroelektrarna Vuhred",
+    "name_en": "HE Vuhred",
+    "object_type": "dam / hydropower",
+    "year": 1956,
+    "municipality": "Podvelka",
+    "locality": "Vuhred, Podvelka",
+    "latitude": 46.587269,
+    "longitude": 15.275795,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Expansive and non-shrink cement grouts",
+    "description": "Named in ZAG material alongside Zlatoličje and Solkan as a site where ZAG grout formulations were used.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "wp_vuh",
+      "title": "Vuhred",
+      "url": "https://en.wikipedia.org/wiki/Vuhred",
+      "type": "web"
+     },
+     {
+      "key": "dem_vuh",
+      "title": "Hidroelektrarna Vuhred",
+      "url": "https://www.dem.si/sl/elektrarne-in-proizvodnja/elektrarne/?id=2019090409033163",
+      "type": "web"
+     },
+     {
+      "key": "dem_lp19",
+      "title": "Letno poročilo 2019",
+      "url": "https://www.dem.si/mma/LETNO_PORO__ILO_DEM_2019.pdf/2020050515361134/1588685771",
+      "type": "report"
+     },
+     {
+      "key": "gd2025_dams",
+      "title": "Tehnično opazovanje pregradnih objektov slovenskih hidroelektrarn",
+      "url": "https://app.gis.si/gd2025/14-GD2025-%C5%A0tefan-Tehni%C4%8Dno%20opazovanje%20pregradnih%20objektov%20slovenskih%20hidroelektrarn.pdf",
+      "type": "conference"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W422536532",
+     "https://openinframap.org/stats/area/Slovenia/plants/422536532"
+    ],
+    "position_note": "Centroid of the OSM power-plant polygon (way 422536532), operated by DEM; same as the old point. Vuhred is a dam-type plant on the Drava, so the polygon covers the weir and powerhouse, but the point is a polygon centroid, not a surveyed crest centre. Crest ends not sourced. The polygon lies in the Municipality of Podvelka, so the dataset's 'Vuhred, Radlje ob Dravi' is not quite right for the structure. The 'built: 1956' year was not verified.",
+    "address": null,
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.610151,
+     45.537465
+    ]
+   },
+   "properties": {
+    "id": "strunjan",
+    "category": "zag_project",
+    "name": "Sveti Križ Bay Cliff",
+    "name_sl": "Zaliv Sv. Križa v Strunjanu",
+    "name_en": "Sveti Križ Bay Cliff",
+    "object_type": "geotechnical site",
+    "year": "2019-2021",
+    "municipality": "Piran",
+    "locality": "Strunjan, Piran",
+    "latitude": 45.537465,
+    "longitude": 13.610151,
+    "zag_involvement_type": "research",
+    "zag_role": "Rockfall investigation and slope characterisation",
+    "description": "ZAG investigated a coastal rockfall of roughly 2,000 cubic metres between 2019 and 2021, combining geological mapping, geodetic remote sensing and geomechanical laboratory testing of samples taken from the cliff. The University of Ljubljana reports this work as part of the project on erosion of the coastal flysch cliffs with risk assessment.",
+    "image": "img/ph/str.webp",
+    "image_credit": "Mihael Simonič, CC BY-SA 3.0 (Wikimedia Commons)",
+    "source_title": "Letno poročilo za leto 2021",
+    "source_url": "https://www.zag.si/wp-content/uploads/2022/09/Letno-porocilo-2021.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "lp2021",
+      "title": "Letno poročilo za leto 2021",
+      "url": "https://www.zag.si/wp-content/uploads/2022/09/Letno-porocilo-2021.pdf",
+      "type": "report"
+     },
+     {
+      "key": "ksp_klif",
+      "title": "Cliff",
+      "url": "https://parkstrunjan.si/en/experience/cliff/",
+      "type": "web"
+     },
+     {
+      "key": "ulj_klif",
+      "title": "Sončiti se pod klifom je nevarno",
+      "url": "https://www.uni-lj.si/novice/2024-12-09-sonciti-se-pod-klifom-je-nevarno",
+      "type": "news"
+     },
+     {
+      "key": "ags_klif",
+      "title": "Influencing factors of the rockwall retreat of flysch cliffs on the Slovenian coast",
+      "url": "https://ojs.zrc-sazu.si/ags/article/view/1358",
+      "type": "journal"
+     },
+     {
+      "key": "drones_klif",
+      "title": "Combining UAV photogrammetry and TLS for change detection on Slovenian coastal cliffs",
+      "url": "https://www.mdpi.com/2504-446X/9/4/228",
+      "type": "journal"
+     },
+     {
+      "key": "ksp_nu",
+      "title": "Načrt upravljanja Krajinskega parka Strunjan 2018 to 2027",
+      "url": "https://parkstrunjan.si/wp-content/uploads/2019/04/NUKPS_2018_2027.pdf",
+      "type": "report"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "story": "str",
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.8296475,
+     46.0498537
+    ]
+   },
+   "properties": {
+    "id": "sitarjevec",
+    "category": "zag_project",
+    "name": "Sitarjevec Mine",
+    "name_sl": "Rudnik Sitarjevec v Litiji",
+    "name_en": "Sitarjevec Mine",
+    "object_type": "geotechnical site",
+    "year": "2021",
+    "municipality": "Litija",
+    "locality": "Litija",
+    "latitude": 46.0498537,
+    "longitude": 14.8296475,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Characterisation of mine ochre as a pigment",
+    "description": "ZAG characterised the yellow limonite mud that forms in the mine and assessed it as a source of natural pigment for artistic and textile use. The work is an example of the institute's materials side rather than its structures side.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Letno poročilo za leto 2021",
+    "source_url": "https://www.zag.si/wp-content/uploads/2022/09/Letno-porocilo-2021.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "lp2021",
+      "title": "Letno poročilo za leto 2021",
+      "url": "https://www.zag.si/wp-content/uploads/2022/09/Letno-porocilo-2021.pdf",
+      "type": "report"
+     },
+     {
+      "key": "rs_mine",
+      "title": "Razišči zanimivosti in posebnosti litijskega podzemlja",
+      "url": "https://rudniksitarjevec.si/razisci-rudnik-sitarjevec",
+      "type": "web"
+     },
+     {
+      "key": "lit_mine",
+      "title": "Rudnik Sitarjevec Litija",
+      "url": "https://www.litija.si/objava/111990",
+      "type": "web"
+     },
+     {
+      "key": "lit_minetour",
+      "title": "MINE TOUR, Labin to Litija",
+      "url": "https://www.litija.si/post/160984",
+      "type": "web"
+     },
+     {
+      "key": "vl_mine",
+      "title": "Rudnik Sitarjevec Litija",
+      "url": "https://www.visitljubljana.com/sl/poi/rudnik-sitarjevec-litija",
+      "type": "web"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://srce-slovenije.si/en/predmet/mine-sitarjevec-litija/",
+     "https://rudniksitarjevec.si/en/contact-and-information",
+     "https://mapcarta.com/N9173909694",
+     "https://mapcarta.com/N1896706866"
+    ],
+    "position_note": "Point is the GPS position published by the Srce Slovenije tourist board for the mine at Sitarjevska cesta 46 (the old point, said to be from the same source, was ~90 m off). Visitors enter via the Izvozni rov (export tunnel). Other sourced points: visitor centre/TIC at Valvazorjev trg 10 (mapcarta 46.04978, 14.83038); OSM 'Rudnik svinca in cinka Sitarjevec' mineshaft node 46.05194, 14.82547. The tourist board mentions limonite stalactites and fabrics dyed with mine water, consistent with ZAG's ochre work.",
+    "address": "Sitarjevska cesta 46, 1270 Litija",
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.513951,
+     46.070442
+    ]
+   },
+   "properties": {
+    "id": "zag",
+    "category": "zag_facility",
+    "name": "ZAG",
+    "name_sl": "Zavod za gradbeništvo Slovenije",
+    "name_en": "ZAG",
+    "object_type": "institution",
+    "year": "1952",
+    "municipality": "Ljubljana",
+    "locality": "Dimičeva ulica 12, Ljubljana",
+    "latitude": 46.070442,
+    "longitude": 14.513951,
+    "zag_involvement_type": null,
+    "zag_role": "Slovenian National Building and Civil Engineering Institute",
+    "description": "Founded 1994. 255 staff, six research and testing departments, a metrology department and three notified-body services under the Construction Products Regulation. Home of SiWIM bridge weigh-in-motion and of the BrAId project applying machine learning to B-WIM data quality.",
+    "image": "img/ph/lab.webp",
+    "image_credit": null,
+    "source_title": "The Section for Bridges and Other Civil Engineering Structures",
+    "source_url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zagbridges",
+      "title": "The Section for Bridges and Other Civil Engineering Structures",
+      "url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+      "type": "inst"
+     },
+     {
+      "key": "zag_bridges_svc",
+      "title": "Bridges, areas of expertise",
+      "url": "https://www.zag.si/en/areas-of-expertise/bridges/",
+      "type": "inst"
+     },
+     {
+      "key": "zag_about",
+      "title": "About us",
+      "url": "https://www.zag.si/en/about-us/",
+      "type": "web"
+     },
+     {
+      "key": "zag_hist",
+      "title": "History",
+      "url": "https://www.zag.si/en/about-us/history/",
+      "type": "web"
+     },
+     {
+      "key": "zag_cert",
+      "title": "Certification Service",
+      "url": "https://www.zag.si/en/certificates-and-approvals/certification-service/",
+      "type": "web"
+     },
+     {
+      "key": "sa_lp005",
+      "title": "Zavod za gradbeništvo Slovenije, accreditation LP-005",
+      "url": "https://www.slo-akreditacija.si/acreditation/zavod-za-gradbenistvo-slovenije/",
+      "type": "reg"
+     },
+     {
+      "key": "sicris_org",
+      "title": "Zavod za gradbeništvo Slovenije, organisation record 743",
+      "url": "https://cris.cobiss.net/ecris/si/sl/organization/743",
+      "type": "report"
+     },
+     {
+      "key": "zag_contact",
+      "title": "Contacts",
+      "url": "https://www.zag.si/en/about-us/contacts/",
+      "type": "web"
+     },
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/N1665982327",
+     "https://itis.siol.net/zavod-za-gradbenistvo-slovenije",
+     "https://www.zag.si/en/about-us/contacts/",
+     "https://mapcarta.com/W194663488"
+    ],
+    "position_note": "Point is the OpenStreetMap POI node 1665982327 'Zavod za gradbeništvo Slovenije' (via mapcarta), which sits on the ZAG premises. Cross-checks: the TIS directory geocode of Dimičeva ulica 12 is 46.0703, 14.51387 (about 15 m away), and the Google Maps link on ZAG's own contacts page is centred at 46.069743, 14.513651 (about 80 m away). The old point (46.0657, 14.5128) was about 520 m too far south, so it was not on ZAG. This is a POI node, not a surveyed building centroid. The 'founded 1994, 255 staff' facts in the dataset were not checked here; ZAG's identity-card page gives neither. [old→new shift 535 m]",
+    "address": "Dimičeva ulica 12, 1000 Ljubljana",
+    "story": "lab",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.24163,
+     45.91795
+    ]
+   },
+   "properties": {
+    "id": "zag_logatec",
+    "category": "zag_facility",
+    "name": "ZAG Fire Laboratory Logatec",
+    "name_sl": "Požarni laboratorij ZAG Logatec",
+    "name_en": "ZAG Fire Laboratory Logatec",
+    "object_type": "institution",
+    "year": "2022-",
+    "municipality": "Logatec",
+    "locality": "Logatec",
+    "latitude": 45.91795,
+    "longitude": 14.24163,
+    "zag_involvement_type": null,
+    "zag_role": "Fire resistance and reaction to fire testing",
+    "description": "Opened in 2022 and staffed by around twenty five people. It carries out fire resistance and reaction to fire testing on construction products and assemblies, including large scale furnace tests that the older Gameljne facility could not accommodate.",
+    "image": "img/ph/log.webp",
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "zag_pozar_odp",
+      "title": "ZAG je odprl nov Požarni laboratorij",
+      "url": "https://www.zag.si/zag-je-odprl-nov-pozarni-laboratorij/",
+      "type": "news"
+     },
+     {
+      "key": "pl_logatec",
+      "title": "O projektu, Požarni laboratorij Logatec",
+      "url": "https://pozarni-laboratorij-logatec.zag.si/o-projektu",
+      "type": "web"
+     },
+     {
+      "key": "zag_fireres",
+      "title": "Preskušanja požarne odpornosti",
+      "url": "https://www.zag.si/organizacijske-enote/oddelek-za-gradbeno-fiziko/pozarni-laboratorij-in-pozarno-inzenirstvo/preskusanja-pozarne-odpornosti/",
+      "type": "web"
+     },
+     {
+      "key": "zag_contact",
+      "title": "Contacts",
+      "url": "https://www.zag.si/en/about-us/contacts/",
+      "type": "web"
+     },
+     {
+      "key": "tis_logatec",
+      "title": "Zavod za gradbeništvo Slovenije, Požarni laboratorij Logatec",
+      "url": "https://itis.siol.net/pozarni-laboratorij?4655267=",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "address",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": "Obrtna cona 35, Logatec",
+    "story": "log",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.4907,
+     46.1216
+    ]
+   },
+   "properties": {
+    "id": "zag_gameljne",
+    "category": "zag_facility",
+    "name": "ZAG Fire Laboratory Gameljne",
+    "name_sl": "Požarni laboratorij ZAG Gameljne",
+    "name_en": "ZAG Fire Laboratory Gameljne",
+    "object_type": "institution",
+    "year": "1986-",
+    "municipality": "Ljubljana",
+    "locality": "Zgornje Gameljne, Ljubljana",
+    "latitude": 46.1216,
+    "longitude": 14.4907,
+    "zag_involvement_type": null,
+    "zag_role": "Fire testing, original ZAG fire facility",
+    "description": "ZAG built its first dedicated fire laboratory here in 1986. It remained the institute's fire testing base until the Logatec laboratory opened.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "zag_contact",
+      "title": "Contacts",
+      "url": "https://www.zag.si/en/about-us/contacts/",
+      "type": "web"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "locality",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.70206,
+     46.48223
+    ]
+   },
+   "properties": {
+    "id": "zag_maribor",
+    "category": "zag_facility",
+    "name": "ZAG Maribor Unit",
+    "name_sl": "ZAG enota Maribor, Dobrovce",
+    "name_en": "ZAG Maribor Unit",
+    "object_type": "institution",
+    "year": "2021-",
+    "municipality": "Miklavž na Dravskem polju",
+    "locality": "Dobrovce, Miklavž na Dravskem polju",
+    "latitude": 46.48223,
+    "longitude": 15.70206,
+    "zag_involvement_type": null,
+    "zag_role": "ZAG regional unit for north-east Slovenia",
+    "description": "Opened in 2021, replacing the 1972 Maribor premises. It serves construction testing and site work across Podravska and Pomurska.",
+    "image": "img/ph/mbu.webp",
+    "image_credit": null,
+    "source_title": "ZAG bilten 2024",
+    "source_url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+    "source_type": "report",
+    "sources": [
+     {
+      "key": "bilten2024",
+      "title": "ZAG bilten 2024",
+      "url": "https://www.zag.si/dl/ZAG-bilten-2024.pdf",
+      "type": "report"
+     },
+     {
+      "key": "zag_contact",
+      "title": "Contacts",
+      "url": "https://www.zag.si/en/about-us/contacts/",
+      "type": "web"
+     },
+     {
+      "key": "vecer_mb",
+      "title": "Zavod za gradbeništvo Slovenije ima nove prostore v Miklavžu",
+      "url": "https://vecer.com/maribor/aktualno/zavod-za-gradbenistvo-slovenije-ima-nove-prostore-v-miklavzu-10255790",
+      "type": "news"
+     },
+     {
+      "key": "tis_mb",
+      "title": "Zavod za gradbeništvo Slovenije, poslovna enota Maribor",
+      "url": "https://itis.siol.net/zavod-za-gradbenistvo-slovenije-poslovna-enota-maribor",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "address",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": "Kidričeva cesta 47, Dobrovce",
+    "story": "mbu",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.54599,
+     46.11727
+    ]
+   },
+   "properties": {
+    "id": "cestel",
+    "category": "partner",
+    "name": "Cestel d.o.o.",
+    "name_sl": "Cestel cestni inženiring d.o.o.",
+    "name_en": "Cestel d.o.o.",
+    "object_type": "institution",
+    "year": null,
+    "municipality": "Trzin",
+    "locality": "Trzin",
+    "latitude": 46.11727,
+    "longitude": 14.54599,
+    "zag_involvement_type": null,
+    "zag_role": "Industrial partner on bridge weigh-in-motion work",
+    "description": "SiWIM grew out of the weigh-in-motion research ZAG has run since the 1990s. Cestel supplies and operates the systems, and is a partner alongside ZAG in the BRIDGITISE doctoral network and on the Tomačevo bridge installation.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "SiWIM bridge weigh-in-motion system",
+    "source_url": "https://cestel.si/en/siwim/",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "cestel",
+      "title": "SiWIM bridge weigh-in-motion system",
+      "url": "https://cestel.si/en/siwim/",
+      "type": "web"
+     },
+     {
+      "key": "cordis_bridgitise",
+      "title": "Industrial Doctoral Network on Bridge Digitalised Integrity Management, BRIDGITISE",
+      "url": "https://cordis.europa.eu/project/id/101119554",
+      "type": "report"
+     },
+     {
+      "key": "iswim_cestel",
+      "title": "Cestel, vendor record",
+      "url": "https://www.is-wim.net/colleges/vendors-consultants/cestel/",
+      "type": "web"
+     },
+     {
+      "key": "ucd2009",
+      "title": "Direct measurement of dynamics in road bridges using a bridge weigh-in-motion system",
+      "url": "https://researchrepository.ucd.ie/rest/bitstreams/17030/retrieve",
+      "type": "conference"
+     },
+     {
+      "key": "dewesoft",
+      "title": "Bridge weigh-in-motion and structural health monitoring on Tomačevo bridge",
+      "url": "https://dewesoft.com/blog/bridge-weigh-in-motion-structural-health-monitoring-tomacevo-bridge",
+      "type": "web"
+     },
+     {
+      "key": "mp_cestel",
+      "title": "Cestel cestni inženiring d.o.o., company record",
+      "url": "https://www.moje-podjetje.net/cestel-cestni-inzeniring-doo/",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "referenced",
+    "position_precision": "address",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": "Špruha 32, Trzin",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.656828,
+     45.530336
+    ]
+   },
+   "properties": {
+    "id": "innorenew",
+    "category": "partner",
+    "name": "InnoRenew CoE",
+    "name_sl": "InnoRenew CoE, Izola",
+    "name_en": "InnoRenew CoE",
+    "object_type": "institution",
+    "year": "2017 to 2022",
+    "municipality": "Izola",
+    "locality": "Izola",
+    "latitude": 45.530336,
+    "longitude": 13.656828,
+    "zag_involvement_type": null,
+    "zag_role": "Partner institute, ZAG is a founding partner",
+    "description": "Set up under the Horizon 2020 teaming action with ZAG among the partners. It works on renewable building materials and healthy indoor environments. Friderik Knez led ZAG's side of the project from 2017 to 2022.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "InnoRenew CoE, institute",
+    "source_url": "https://innorenew.eu/about/institute/",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "innorenew",
+      "title": "InnoRenew CoE, institute",
+      "url": "https://innorenew.eu/about/institute/",
+      "type": "web"
+     },
+     {
+      "key": "zag_intl",
+      "title": "International research projects",
+      "url": "https://www.zag.si/en/research-and-development/research-projects/international-projects/",
+      "type": "inst"
+     },
+     {
+      "key": "innorenew_prj",
+      "title": "Project",
+      "url": "https://innorenew.eu/about/project/",
+      "type": "web"
+     },
+     {
+      "key": "innorenew_up",
+      "title": "A new milestone in the development of InnoRenew CoE, now within University of Primorska",
+      "url": "https://innorenew.eu/2025/09/new-milestone-development-innorenew-coe-now-within-university-primorska/",
+      "type": "news"
+     },
+     {
+      "key": "pl_logatec",
+      "title": "O projektu, Požarni laboratorij Logatec",
+      "url": "https://pozarni-laboratorij-logatec.zag.si/o-projektu",
+      "type": "web"
+     },
+     {
+      "key": "innorenew_c",
+      "title": "Contact",
+      "url": "https://innorenew.eu/contact/",
+      "type": "web"
+     }
+    ],
+    "evidence_level": "referenced",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/W931297859",
+     "https://innorenew.eu/contact/"
+    ],
+    "position_note": "The point is the OSM building outline way 931297859 'InnoRenew Center of Excelence', tagged addr Livade 6A (via mapcarta). The old point (45.53022, 13.64899) came from the Google embed on the contact page, which is labelled 'Livade 6', a different address on the university campus. That point was about 610 m west of the InnoRenew building. The registered address is Livade 6a. [old→new shift 611 m]",
+    "address": "Livade 6a, 6310 Izola",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.494947,
+     46.045752
+    ]
+   },
+   "properties": {
+    "id": "ulfgg",
+    "category": "partner",
+    "name": "UL FGG",
+    "name_sl": "Fakulteta za gradbeništvo in geodezijo",
+    "name_en": "UL FGG",
+    "object_type": "institution",
+    "year": null,
+    "municipality": "Ljubljana",
+    "locality": "Jamova cesta 2, Ljubljana",
+    "latitude": 46.045752,
+    "longitude": 14.494947,
+    "zag_involvement_type": null,
+    "zag_role": "Faculty of Civil and Geodetic Engineering, University of Ljubljana",
+    "description": "ZAG's nearest academic partner, five kilometres away. Co-supervises BRIDGITISE doctoral candidates and co-authors the Tomačevo influence-line work.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "UL FGG",
+    "source_url": "https://www.fgg.uni-lj.si/en/",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "ulfgg_s0",
+      "title": "UL FGG",
+      "url": "https://www.fgg.uni-lj.si/en/",
+      "type": "web"
+     },
+     {
+      "key": "ulfgg_hist",
+      "title": "History of the Faculty of Civil and Geodetic Engineering",
+      "url": "https://www.en.fgg.uni-lj.si/about/history/",
+      "type": "web"
+     },
+     {
+      "key": "ulfgg_dep",
+      "title": "Departments and chairs",
+      "url": "https://www.en.fgg.uni-lj.si/departments-and-chairs/",
+      "type": "web"
+     },
+     {
+      "key": "sensors2023",
+      "title": "Model updating concept using bridge weigh-in-motion data",
+      "url": "https://doi.org/10.3390/s23042067",
+      "type": "journal"
+     }
+    ],
+    "evidence_level": "referenced",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://odpiralnicasi.com/spots/fakulteta-za-gradbenistvo-in-geodezijo-fgg-ljubljana-jamova-cesta-503505d81e",
+     "https://itis.siol.net/zemljevid/X=461284&Y=100299&n=UNIVERZA%20V%20LJUBLJANI,%20FAKULTETA%20ZA%20GRADBENI%C5%A0TVO%20IN%20GEODEZIJO&a=Jamova%20cesta%202,%20Ljubljana&p=&t=&r=0,304498081702971&pid=4558864"
+    ],
+    "position_note": "The point is the address geocode of Jamova cesta 2 given by odpiralnicasi.com (46.0457523, 14.4949466). The TIS directory gives the same point in D48/GK (X=461284, Y=100299); I converted it to WGS84 with pyproj (EPSG:3912 to 4326) and got 46.045753, 14.494946, so the two agree. The old point was about 40 m away. Caution: OSM/mapcarta 'Fakulteta za gradbeništvo in geodezijo' (way 173139349, 46.0419, 14.49244) is a different FGG building at Hajdrihova ulica 28. Do not use it for the Jamova 2 main building. The dataset's 'five kilometres away' from ZAG is not checked; the straight-line distance between the two points is about 3 km. [old→new shift 44 m]",
+    "address": "Jamova cesta 2, 1000 Ljubljana",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.990164,
+     46.453408
+    ]
+   },
+   "properties": {
+    "id": "karavanke_c",
+    "category": "zag_project",
+    "name": "Karavanke Motorway Tunnel",
+    "name_sl": "Predor Karavanke, avtocesta",
+    "name_en": "Karavanke Motorway Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2014",
+    "municipality": "Jesenice",
+    "locality": "Hrušica, Jesenice",
+    "latitude": 46.453408,
+    "longitude": 13.990164,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the repair works, and geological-geotechnical investigations for the design",
+    "description": "External control of the repair works and repair of several sections, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/de/bauwerke/karawankentunnel-autobahn",
+     "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(motorway)",
+     "https://www.dars.si/Infrastrukturni_projekti/Predor_Karavanke_-_druga_cev",
+     "https://www.gov.si/en/news/2026-03-19-new-tube-opens-in-motorway-tunnel-linking-slovenia-and-austria/"
+    ],
+    "position_note": "Anchor = Slovenian (south) portal at Hrušica, chosen because ZAG's client was DARS, which manages the Slovenian part; the true midpoint lies on the state border under the ridge. Portal coordinates are Structurae's for the 1991 (west) tube; the old dataset point (46.45371, 13.99048) is ~40 m from it, consistent with being the adjacent east-tube portal, but no source confirming which tube that point belongs to was found. The east (second) tube is 7,948 m; per gov.si it opened to traffic on 20 March 2026 and the west tube is now under reconstruction until end-2028. Slovenian side 3,546 m (DARS). Lengths quoted vary (7,864 m tunnel / 8,019 m between portals including portal structures).",
+    "address": null,
+    "line": [
+     [
+      13.990164,
+      46.453408
+     ],
+     [
+      14.023275,
+      46.519656
+     ]
+    ],
+    "line_labels": [
+     "south portal (Hrušica, Slovenia)",
+     "north portal (Sankt Jakob im Rosental, Austria)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.01555,
+     46.449242
+    ]
+   },
+   "properties": {
+    "id": "karavanke_r",
+    "category": "zag_project",
+    "name": "Karavanke Railway Tunnel",
+    "name_sl": "Predor Karavanke, zeleznica",
+    "name_en": "Karavanke Railway Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Jesenice",
+    "locality": "Jesenice",
+    "latitude": 46.449242,
+    "longitude": 14.01555,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the repair works",
+    "description": "External control of the repair works.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/karawanks-tunnel-rail",
+     "https://austria-forum.org/af/AustriaWiki/Karawankentunnel_(Eisenbahn)",
+     "https://mapcarta.com/26228020"
+    ],
+    "position_note": "Old dataset point (46.44924, 14.01555) is exactly the south portal per Structurae; Austria-Forum (de.wikipedia copy) gives 46.449306, 14.015472, ~8 m away, and Mapcarta's GeoNames point (46.44931, 14.01554) agrees. Anchor kept at the Slovenian south portal (Slovenian-side works); midpoint would be on the border. Length: Structurae/Austria-Forum 7,976 m; en.wikipedia quotes 8,176 m.",
+    "address": null,
+    "line": [
+     [
+      14.01555,
+      46.449242
+     ],
+     [
+      14.025775,
+      46.520486
+     ]
+    ],
+    "line_labels": [
+     "south portal (Jesenice/Hrušica, Slovenia)",
+     "north portal (Rosenbach, Austria)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.561342,
+     46.019563
+    ]
+   },
+   "properties": {
+    "id": "golovec",
+    "category": "zag_project",
+    "name": "Golovec Tunnel",
+    "name_sl": "Predor Golovec",
+    "name_en": "Golovec Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2014",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 46.019563,
+    "longitude": 14.561342,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
+    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/golovec-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of the two Structurae portal coordinates (derived). Old point was the south portal (matches Structurae to <1 m).",
+    "address": null,
+    "line": [
+     [
+      14.558933,
+      46.017394
+     ],
+     [
+      14.56375,
+      46.021731
+     ]
+    ],
+    "line_labels": [
+     "south portal (Malence side)",
+     "north portal (Bizovik/Zadobrova side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.463244,
+     46.094348
+    ]
+   },
+   "properties": {
+    "id": "sentvid",
+    "category": "zag_project",
+    "name": "Šentvid Tunnel",
+    "name_sl": "Predor Šentvid",
+    "name_en": "Šentvid Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2014",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 46.094348,
+    "longitude": 14.463244,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
+    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/sentvid-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived). Old point was the south portal. Tube lengths include the underground Celovska interchange; AARoads Wiki quotes 1,072/1,047 m for the mainline tubes alone, so lengths differ by definition.",
+    "address": null,
+    "line": [
+     [
+      14.466006,
+      46.100533
+     ],
+     [
+      14.460481,
+      46.088164
+     ]
+    ],
+    "line_labels": [
+     "north portal (Šentvid/Vižmarje side)",
+     "south portal (Koseze/Podutik side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.878642,
+     46.186749
+    ]
+   },
+   "properties": {
+    "id": "trojane",
+    "category": "zag_project",
+    "name": "Trojane Tunnel",
+    "name_sl": "Predor Trojane",
+    "name_en": "Trojane Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2014",
+    "municipality": "Lukovica",
+    "locality": "Trojane, Lukovica",
+    "latitude": 46.186749,
+    "longitude": 14.878642,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
+    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/trojane-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived). Old point was the west portal.",
+    "address": null,
+    "line": [
+     [
+      14.860403,
+      46.183647
+     ],
+     [
+      14.896881,
+      46.18985
+     ]
+    ],
+    "line_labels": [
+     "west portal (Blagovica side)",
+     "east portal (Vransko side, at V Zideh)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.845321,
+     46.182301
+    ]
+   },
+   "properties": {
+    "id": "podmilj",
+    "category": "zag_project",
+    "name": "Podmilj Tunnel",
+    "name_sl": "Predor Podmilj",
+    "name_en": "Podmilj Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Lukovica",
+    "locality": "Podmilj, Lukovica",
+    "latitude": 46.182301,
+    "longitude": 14.845321,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/podmilj-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html",
+     "https://en.wikipedia.org/wiki/Podmilj"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived); was the Podmilj settlement centre (~700 m south). East portal is ~0.9 km west of the Trojane west portal, consistent with the dataset description.",
+    "address": null,
+    "line": [
+     [
+      14.841531,
+      46.183203
+     ],
+     [
+      14.849111,
+      46.1814
+     ]
+    ],
+    "line_labels": [
+     "west portal (Blagovica side)",
+     "east portal (Trojane side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.8933,
+     46.1884
+    ]
+   },
+   "properties": {
+    "id": "vzideh",
+    "category": "zag_project",
+    "name": "V Zideh Tunnel",
+    "name_sl": "Predor V Zideh",
+    "name_en": "V Zideh Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Lukovica",
+    "locality": "V Zideh, Lukovica",
+    "latitude": 46.1884,
+    "longitude": 14.8933,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.88629,
+     45.580948
+    ]
+   },
+   "properties": {
+    "id": "kastelec",
+    "category": "zag_project",
+    "name": "Kastelec Tunnel",
+    "name_sl": "Predor Kastelec",
+    "name_en": "Kastelec Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Koper",
+    "locality": "Kastelec, Koper",
+    "latitude": 45.580948,
+    "longitude": 13.88629,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/kastelec-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived). Old point was the west portal. Lotsberg gives 2,303/2,195 m.",
+    "address": null,
+    "line": [
+     [
+      13.873719,
+      45.577239
+     ],
+     [
+      13.898861,
+      45.584656
+     ]
+    ],
+    "line_labels": [
+     "west portal (Črni Kal side)",
+     "east portal (Kozina side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.816932,
+     45.552993
+    ]
+   },
+   "properties": {
+    "id": "dekani",
+    "category": "zag_project",
+    "name": "Dekani Tunnel",
+    "name_sl": "Predor Dekani",
+    "name_en": "Dekani Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Koper",
+    "locality": "Dekani, Koper",
+    "latitude": 45.552993,
+    "longitude": 13.816932,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/dekani-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived). Old point was the east portal.",
+    "address": null,
+    "line": [
+     [
+      13.830397,
+      45.551611
+     ],
+     [
+      13.803467,
+      45.554375
+     ]
+    ],
+    "line_labels": [
+     "east portal (Črni Kal side)",
+     "west portal (Srmin/Koper side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.702539,
+     45.541261
+    ]
+   },
+   "properties": {
+    "id": "markovec",
+    "category": "zag_project",
+    "name": "Markovec Tunnel",
+    "name_sl": "Predor Markovec",
+    "name_en": "Markovec Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Koper",
+    "locality": "Koper",
+    "latitude": 45.541261,
+    "longitude": 13.702539,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/monte-san-marco-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived; Structurae lists it as 'Monte San Marco Tunnel', alt. Markovec). Old point was the east portal. Opened 2013, so ZAG's 1998-2014 quality-control window is consistent.",
+    "address": null,
+    "line": [
+     [
+      13.715906,
+      45.543178
+     ],
+     [
+      13.689172,
+      45.539344
+     ]
+    ],
+    "line_labels": [
+     "east portal (Koper side)",
+     "west portal (Izola side)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.7844,
+     45.9159
+    ]
+   },
+   "properties": {
+    "id": "lescevje",
+    "category": "zag_project",
+    "name": "Leščevje Tunnel",
+    "name_sl": "Predor Leščevje",
+    "name_en": "Leščevje Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Trebnje",
+    "locality": "Leščevje, Trebnje",
+    "latitude": 45.9159,
+    "longitude": 14.7844,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.9389,
+     46.577131
+    ]
+   },
+   "properties": {
+    "id": "cenkova",
+    "category": "zag_project",
+    "name": "Cenkova Tunnel",
+    "name_sl": "Predor Cenkova",
+    "name_en": "Cenkova Tunnel",
+    "object_type": "tunnel",
+    "year": "1998-2014",
+    "municipality": "Cerkvenjak",
+    "locality": "Cenkova, Cerkvenjak",
+    "latitude": 46.577131,
+    "longitude": 15.9389,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction",
+    "description": "External control of the quality of construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "ul_2005_1282",
+      "title": "Uredba o državnem lokacijskem načrtu Spodnja Senarska Cogetinci",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2005-01-1282/uredba-o-drzavnem-lokacijskem-nacrtu-za-avtocesto-na-odseku-spodnja-senarska-cogetinci",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/cenkova-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html",
+     "https://en.wikipedia.org/wiki/Cenkova"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived); old point was Cenkova village centre (~300 m away). Structurae files it under Lenart; Cenkova village is in the Municipality of Cerkvenjak (en.wikipedia). Lotsberg gives 615/602 m.",
+    "address": null,
+    "line": [
+     [
+      15.935642,
+      46.575431
+     ],
+     [
+      15.942158,
+      46.578831
+     ]
+    ],
+    "line_labels": [
+     "west portal (Lenart side)",
+     "east portal"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.440759,
+     46.294949
+    ]
+   },
+   "properties": {
+    "id": "pletovarje",
+    "category": "zag_project",
+    "name": "Pletovarje Tunnel",
+    "name_sl": "Predor Pletovarje",
+    "name_en": "Pletovarje Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2013",
+    "municipality": "Šentjur",
+    "locality": "Pletovarje, Šentjur",
+    "latitude": 46.294949,
+    "longitude": 15.440759,
+    "zag_involvement_type": "research",
+    "zag_role": "Geological-geotechnical investigations for the design",
+    "description": "Geological-geotechnical investigations for the design.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "dars_hist",
+      "title": "Zgodovina gradnje, A1 Šentilj to Srmin",
+      "url": "https://www.dars.si/Zgodovina_gradnje/A1_sentilj_-_Srmin?zid=172",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://structurae.net/en/structures/pletovarje-tunnel",
+     "https://www.lotsberg.net/data/slovenia/list.html",
+     "https://en.wikipedia.org/wiki/Pletovarje"
+    ],
+    "position_note": "Anchor = midpoint of Structurae portals (derived); old point was Pletovarje village centre (~1.3 km SW). DATASET ERROR: Pletovarje is in the Municipality of Šentjur, not Slovenske Konjice (en.wikipedia). Structurae says the 743 m tube dates from 1976 with a second tube in 1996; Lotsberg instead lists 745 m (1996) and 708 m (1976), so which tube is which length is unresolved.",
+    "address": null,
+    "line": [
+     [
+      15.43905,
+      46.291903
+     ],
+     [
+      15.442469,
+      46.297994
+     ]
+    ],
+    "line_labels": [
+     "south portal (Dramlje/Celje side)",
+     "north portal (Žiče/Slovenske Konjice side)"
+    ],
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.9679,
+     45.808
+    ]
+   },
+   "properties": {
+    "id": "tabor_h4",
+    "category": "zag_project",
+    "name": "Tabor Tunnel",
+    "name_sl": "Predor Tabor",
+    "name_en": "Tabor Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2014",
+    "municipality": "Vipava",
+    "locality": "Podnanos, Vipava",
+    "latitude": 45.808,
+    "longitude": 13.9679,
+    "zag_involvement_type": "inspection",
+    "zag_role": "External control of the quality of construction, and geological-geotechnical investigations for the design",
+    "description": "External control of the quality of construction, DARS 1998 to 2014. Geological-geotechnical investigations for the design, DARS 1990 to 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "ul_1999_3560",
+      "title": "Uredba o lokacijskem načrtu za hitro cesto Razdrto Vipava",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/1999-01-3560/uredba-o-lokacijskem-nacrtu-za-primorski-krak-avtoceste-na-odseku-hitre-ceste-razdrto-vipava",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.223618,
+     46.044155
+    ]
+   },
+   "properties": {
+    "id": "he_vrhovo",
+    "category": "zag_project",
+    "name": "HE Vrhovo",
+    "name_sl": "Hidroelektrarna Vrhovo",
+    "name_en": "HE Vrhovo",
+    "object_type": "dam / hydropower",
+    "year": "2012",
+    "municipality": "Radeče",
+    "locality": "Vrhovo, Radeče",
+    "latitude": 46.044155,
+    "longitude": 15.223618,
+    "zag_involvement_type": "research",
+    "zag_role": "Numerical modelling of the dam structure",
+    "description": "Numerical modelling of the dam structure.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gem_wiki",
+      "title": "Hydropower plant records for Slovenia",
+      "url": "https://www.gem.wiki/",
+      "type": "db"
+     },
+     {
+      "key": "sel_obj",
+      "title": "Proizvodni objekti",
+      "url": "https://www.sel.si/proizvodni-objekti/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W288156826",
+     "https://openinframap.org/stats/area/Slovenia/plants/288156826"
+    ],
+    "position_note": "Centroid of the OSM plant polygon (way 288156826), operated by Savske elektrarne Ljubljana; same as the old point. This is a run-of-river dam on the Sava with the powerhouse built into the dam, so the point is on the structure but is not a surveyed crest centre. Crest ends not sourced.",
+    "address": null,
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.67375,
+     46.56027
+    ]
+   },
+   "properties": {
+    "id": "jez_melje",
+    "category": "zag_project",
+    "name": "Melje Dam and Small HPP",
+    "name_sl": "Jez Melje in MHE Melje",
+    "name_en": "Melje Dam and Small HPP",
+    "object_type": "dam / hydropower",
+    "year": "2006-2009",
+    "municipality": "Maribor",
+    "locality": "Melje, Maribor",
+    "latitude": 46.56027,
+    "longitude": 15.67375,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Third party quality control of the materials used in the upgrading of the Zlatoličje HPP, the Melje Dam and the Melje Small HPP",
+    "description": "Third party quality control of the materials used in the upgrading of the Zlatoličje HPP, the Melje Dam and the Melje Small HPP.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "dem_melje",
+      "title": "Jez Melje",
+      "url": "https://www.dem.si/sl/elektrarne-in-proizvodnja/elektrarne/?id=2019102209110173",
+      "type": "inst"
+     },
+     {
+      "key": "slocold_melje",
+      "title": "Pregrada Melje",
+      "url": "https://www.slocold.si/galerija/melje/melje.htm",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W1250436908",
+     "https://mapcarta.com/W1346871612",
+     "https://openinframap.org/stats/area/Slovenia/plants/1250436908"
+    ],
+    "position_note": "Centroid of the OSM polygon 'Jez Melje in mala hidroelektrarna Melje' (way 1250436908), which includes the Jez Melje weir on the Drava in Melje, Maribor. The mHE Melje service building is about 80 m away, at 46.559677, 15.674457 (way 1346871612). The old point was the centroid of Maribor municipality, about 2.3 km away. The separate OSM dam way was not reachable, so the crest ends are not sourced. Mapcarta gives 2009 as the start of operation for the small HPP.",
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.2812,
+     46.01712
+    ]
+   },
+   "properties": {
+    "id": "he_bostanj",
+    "category": "zag_project",
+    "name": "HE Boštanj",
+    "name_sl": "Hidroelektrarna Boštanj",
+    "name_en": "HE Boštanj",
+    "object_type": "dam / hydropower",
+    "year": "2007-2013",
+    "municipality": "Sevnica",
+    "locality": "Boštanj, Sevnica",
+    "latitude": 46.01712,
+    "longitude": 15.2812,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
+    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gem_wiki",
+      "title": "Hydropower plant records for Slovenia",
+      "url": "https://www.gem.wiki/",
+      "type": "db"
+     },
+     {
+      "key": "hess_bostanj",
+      "title": "HE Boštanj",
+      "url": "https://www.he-ss.si/projekti/hidroelektrarne/he-bostanj/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae",
+      "title": "Structure database entries for Slovenian tunnels and dams",
+      "url": "https://structurae.net/",
+      "type": "db"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W965129575",
+     "https://openinframap.org/stats/area/Slovenia/plants/965129575"
+    ],
+    "position_note": "OSM plant polygon (way 965129575), operated by HESS; same as the old point. Dam-type plant on the Sava. Mapcarta gives the start of operation as 5 June 2006, so ZAG's 2007-2013 work there postdates first operation (the end of construction and monitoring). Crest ends not sourced.",
+    "address": "Boštanj 3, 8294 Boštanj",
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.38142,
+     45.98992
+    ]
+   },
+   "properties": {
+    "id": "he_arto",
+    "category": "zag_project",
+    "name": "HE Arto Blanca",
+    "name_sl": "Hidroelektrarna Arto Blanca",
+    "name_en": "HE Arto Blanca",
+    "object_type": "dam / hydropower",
+    "year": "2007-2013",
+    "municipality": "Krško",
+    "locality": "Blanca, Krško",
+    "latitude": 45.98992,
+    "longitude": 15.38142,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
+    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gem_wiki",
+      "title": "Hydropower plant records for Slovenia",
+      "url": "https://www.gem.wiki/",
+      "type": "db"
+     },
+     {
+      "key": "hess_arto",
+      "title": "HE Arto Blanca",
+      "url": "https://www.he-ss.si/projekti/hidroelektrarne/he-arto-blanca/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W325991561",
+     "https://openinframap.org/stats/area/Slovenia/plants/325991561"
+    ],
+    "position_note": "OSM plant polygon (way 325991561, tagged 'HE Blanca'), operated by HESS; same as the old point. The dam spans the Sava between Blanca (left bank) and Arto (right bank). Mapcarta gives 3 December 2009 as the start of operation. The polygon is in the Municipality of Krško, not Sevnica; the dataset's 'Blanca, Sevnica' refers to the left-bank village only. Crest ends not sourced.",
+    "address": "Arto 23, 8293 Studenec",
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.481543,
+     45.974846
+    ]
+   },
+   "properties": {
+    "id": "he_krsko",
+    "category": "zag_project",
+    "name": "HE Krško",
+    "name_sl": "Hidroelektrarna Krško",
+    "name_en": "HE Krško",
+    "object_type": "dam / hydropower",
+    "year": "2007-2013",
+    "municipality": "Krško",
+    "locality": "Krško",
+    "latitude": 45.974846,
+    "longitude": 15.481543,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction",
+    "description": "Third party quality control of the materials used to construct the dams and other structures, and monitoring during and after construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gem_wiki",
+      "title": "Hydropower plant records for Slovenia",
+      "url": "https://www.gem.wiki/",
+      "type": "db"
+     },
+     {
+      "key": "hess_krsko",
+      "title": "HE Krško",
+      "url": "https://www.he-ss.si/projekti/hidroelektrarne/he-krsko/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W651093189",
+     "https://openinframap.org/stats/area/Slovenia/plants/651093189"
+    ],
+    "position_note": "OSM plant polygon (way 651093189) on the Sava at Krško, 260 m north of Krško Castle; same as the old point. Dam-type plant. Crest ends not sourced. Do not confuse it with Krško Nuclear Power Plant, which is about 4 km to the SE.",
+    "address": null,
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.67073,
+     46.10258
+    ]
+   },
+   "properties": {
+    "id": "che_avce",
+    "category": "zag_project",
+    "name": "CHE Avče",
+    "name_sl": "Črpalna hidroelektrarna Avče",
+    "name_en": "CHE Avče",
+    "object_type": "dam / hydropower",
+    "year": "2007-2009",
+    "municipality": "Kanal ob Soči",
+    "locality": "Avče, Kanal ob Soči",
+    "latitude": 46.10258,
+    "longitude": 13.67073,
+    "zag_involvement_type": "monitoring",
+    "zag_role": "Third party quality control of the materials used to construct the dam and other structures, and monitoring during and after construction",
+    "description": "Third party quality control of the materials used to construct the dam and other structures, and monitoring during and after construction.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Dams, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/dams/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_dams",
+      "title": "Dams, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/dams/",
+      "type": "inst"
+     },
+     {
+      "key": "gem_wiki",
+      "title": "Hydropower plant records for Slovenia",
+      "url": "https://www.gem.wiki/",
+      "type": "db"
+     },
+     {
+      "key": "seng_che",
+      "title": "Črpalna hidroelektrarna Avče",
+      "url": "https://www.seng.si/sl/nase-elektrarne/crpalna-hidroelektrarna/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/W689751423",
+     "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+     "https://www.seng.si/sl/nase-elektrarne/crpalna-hidroelektrarna/",
+     "https://de.wikipedia.org/wiki/Pumpspeicherkraftwerk_Av%C4%8De",
+     "https://en.wikipedia.org/wiki/Kanalski_Vrh"
+    ],
+    "position_note": "Anchor: the powerhouse polygon centroid (OSM way 689751423); SENG puts the machine hall on the left bank of the Soča at the mouth of the Avšček stream. Upper-reservoir end: the only coordinate in the en.wikipedia infobox (46°5'1.89\"N 13°39'59.94\"E). The article does not label it, but it lies about 0.8 km north of Kanalski Vrh village (46.07713, 13.66251), which matches de.wikipedia ('north of Kanalski Vrh on the Banjšice plateau'). It is also about 2.1 km from the powerhouse, consistent with SENG's 697 m intake tunnel plus 1,567 m penstock. So it is treated as the reservoir, with medium confidence. The upper reservoir has two embankment dams (SENG: 23 m and 17 m high), whose positions were not sourced. mojekarte.si gives 46.1013, 13.6837 for the reservoir, but that is in the Soča valley near Avče and is clearly a mis-geocode, so it was rejected. The plant was finished in 2009 and entered commercial operation in April 2010.",
+    "address": null,
+    "line": [
+     [
+      13.67073,
+      46.10258
+     ],
+     [
+      13.66665,
+      46.0838583
+     ]
+    ],
+    "line_labels": [
+     "powerhouse (left bank of the Soča)",
+     "upper reservoir north of Kanalski Vrh"
+    ],
+    "zag_involvement_types": [
+     "monitoring"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.865278,
+     45.913056
+    ]
+   },
+   "properties": {
+    "id": "slano_blato",
+    "category": "zag_project",
+    "name": "Slano Blato Landslide",
+    "name_sl": "Plaz Slano blato",
+    "name_en": "Slano Blato Landslide",
+    "object_type": "landslide",
+    "year": "2001-2004",
+    "municipality": "Ajdovščina",
+    "locality": "Lokavec, Ajdovščina",
+    "latitude": 45.913056,
+    "longitude": 13.865278,
+    "zag_involvement_type": "research",
+    "zag_role": "Geological-geomechanical investigations for the Slano blato landslide",
+    "description": "Geological-geomechanical investigations for the Slano blato landslide.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Landslides, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/landslides/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_slides",
+      "title": "Landslides, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/landslides/",
+      "type": "inst"
+     },
+     {
+      "key": "rs_slano",
+      "title": "Kinematics of the Slano Blato landslide from remote sensing",
+      "url": "https://www.mdpi.com/2072-4292/11/24/2946",
+      "type": "journal"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+     "https://nhess.copernicus.org/articles/5/447/2005/"
+    ],
+    "position_note": "Wikipedia coordinate 45°54'47\"N 13°51'55\"E. The landslide runs along the Grajšček stream from below Čaven (~660 m) down toward Lokavec (~360 m), 1,010–1,300 m long, 60–250 m wide, ~15 ha; NHESS 2005: >1290 m long, 60–200 m wide, 3–11 m deep, ~700,000 m3, toe ~220 m from Lokavec. Wikipedia does not say whether its point is the body centre; ~550 m NW of the old point, which lay nearer Lokavec. Major activation Nov 2000, with a further flow in Sept 2001.",
+    "address": null,
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.60312,
+     46.40591
+    ]
+   },
+   "properties": {
+    "id": "stoze",
+    "category": "zag_project",
+    "name": "Stože Landslide",
+    "name_sl": "Plaz Stože pod Mangartom",
+    "name_en": "Stože Landslide",
+    "object_type": "landslide",
+    "year": "2002",
+    "municipality": "Bovec",
+    "locality": "Log pod Mangartom, Bovec",
+    "latitude": 46.40591,
+    "longitude": 13.60312,
+    "zag_involvement_type": "research",
+    "zag_role": "Investigations of the shear properties of the Stože pod Mangrtom landslide mass",
+    "description": "Investigations of the shear properties of the Stože pod Mangrtom landslide mass.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Landslides, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/landslides/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_slides",
+      "title": "Landslides, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/landslides/",
+      "type": "inst"
+     },
+     {
+      "key": "nhess_stoze",
+      "title": "The Stože landslide and the Log pod Mangartom debris flow",
+      "url": "https://nhess.copernicus.org/articles/13/2543/2013/nhess-13-2543-2013.pdf",
+      "type": "journal"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.49792,
+     46.28479
+    ]
+   },
+   "properties": {
+    "id": "krvavec",
+    "category": "zag_project",
+    "name": "Krvavec Cableway",
+    "name_sl": "Žičnice Krvavec",
+    "name_en": "Krvavec Cableway",
+    "object_type": "cableway",
+    "year": null,
+    "municipality": "Cerklje na Gorenjskem",
+    "locality": "Grad, Cerklje na Gorenjskem",
+    "latitude": 46.28479,
+    "longitude": 14.49792,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations",
+    "description": "Periodical technical inspections of cableway installations.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "krvavec_kam",
+      "title": "Kako do nas",
+      "url": "https://www.rtc-krvavec.si/kako-do-nas",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://www.trailforks.com/trails/kabinska--i-nica-krvavec/",
+     "https://www.hribi.net/izhodisce/spodnja_postaja_zicnice_na_krvavec/46.2849/14.4968",
+     "https://www.rtc-krvavec.si/kako-do-nas",
+     "https://en.wikipedia.org/wiki/Krvavec_Ski_Resort"
+    ],
+    "position_note": "Point = valley (lower) station of the main Krvavec gondola, from the Trailforks lift entry (OSM-derived) start 46.284790, 14.497920; hribi.net trailhead 'Spodnja postaja žičnice na Krvavec' 46.2849, 14.4968 agrees within ~80 m. The old point (46.28495, 14.49594) is ~150 m west, likely the parking. Top station coordinates not found in an openable source, so no line. Wikipedia: Garaventa circular gondola, opened 1999 (replaced the older lift). Trailforks gives length ~2 km (rounded, not used as a fact).",
+    "address": "Grad 76, 4207 Cerklje na Gorenjskem (operator RTC Krvavec, lower station)",
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.608634,
+     46.305534
+    ]
+   },
+   "properties": {
+    "id": "velikaplanina",
+    "category": "zag_project",
+    "name": "Velika Planina Cableway",
+    "name_sl": "Žičnica Velika planina",
+    "name_en": "Velika Planina Cableway",
+    "object_type": "cableway",
+    "year": null,
+    "municipality": "Kamnik",
+    "locality": "Kamniška Bistrica, Kamnik",
+    "latitude": 46.305534,
+    "longitude": 14.608634,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations",
+    "description": "Periodical technical inspections of cableway installations.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "vp_najdete",
+      "title": "Kako nas najdete",
+      "url": "https://www.velikaplanina.si/o-nas/kako-nas-najdete/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://www.velikaplanina.si/o-nas/kako-nas-najdete/",
+     "https://mapcarta.com/N828760697",
+     "https://mapcarta.com/W446837829"
+    ],
+    "position_note": "Valley station coordinates and address from the operator's access page (46.305534, 14.6086337), identical to the old point. Top station 'Zgornja postaja' from Mapcarta/OSM (46.303726, 14.625989), the upper end of the OSM way 'Nihalka Velika planina' (elev. ~1410 m). Not the separate Šimnovec–Gradišče chairlift (its top station is at ~46.30025, 14.64009 per komoot.com/highlight/3334443).",
+    "address": "Kamniška Bistrica 2, 1242 Stahovica",
+    "line": [
+     [
+      14.608634,
+      46.305534
+     ],
+     [
+      14.625989,
+      46.303726
+     ]
+    ],
+    "line_labels": [
+     "valley station Kamniška Bistrica",
+     "top station Šimnovec"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.509677,
+     46.050132
+    ]
+   },
+   "properties": {
+    "id": "grad_vzpenjaca",
+    "category": "zag_project",
+    "name": "Ljubljana Castle Funicular",
+    "name_sl": "Tirna vzpenjača na Ljubljanski grad",
+    "name_en": "Ljubljana Castle Funicular",
+    "object_type": "cableway",
+    "year": "2006",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 46.050132,
+    "longitude": 14.509677,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations",
+    "description": "Periodical technical inspections of cableway installations.",
+    "image": "img/ph/cas.webp",
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "vl_vzpenjaca",
+      "title": "Tirna vzpenjača na Ljubljanski grad",
+      "url": "https://www.visitljubljana.com/sl/poi/tirna-vzpenjaca-na-ljubljanski-grad",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/W187058682",
+     "https://mapcarta.com/W270479187",
+     "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2005-01-3030/odlok-o-tirni-vzpenjaci-na-ljubljanski-grad",
+     "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular"
+    ],
+    "position_note": "Lower and upper stations from Mapcarta/OSM. The 2005 municipal ordinance (Odlok o tirni vzpenjači na Ljubljanski grad, Uradni list) puts the lower station on Krekov trg (294.5 m) and the upper station in the castle's archaeological level (365 m), with a 118.21 m track and 70.05 m rise. These are design figures from the ordinance. English Wikipedia gives '70 m' as the length, which looks like it is actually the height difference. Opened 28 Dec 2006 (Wikipedia).",
+    "address": "Krekov trg, 1000 Ljubljana (lower station)",
+    "line": [
+     [
+      14.509677,
+      46.050132
+     ],
+     [
+      14.509009,
+      46.049267
+     ]
+    ],
+    "line_labels": [
+     "lower station Krekov trg",
+     "upper station (castle)"
+    ],
+    "story": "cas",
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.7871,
+     46.48537
+    ]
+   },
+   "properties": {
+    "id": "kranjskagora_z",
+    "category": "zag_project",
+    "name": "Kranjska Gora Cableways",
+    "name_sl": "Žičnice Kranjska Gora",
+    "name_en": "Kranjska Gora Cableways",
+    "object_type": "cableway",
+    "year": "2013",
+    "municipality": "Kranjska Gora",
+    "locality": "Kranjska Gora",
+    "latitude": 46.48537,
+    "longitude": 13.7871,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "skg_kontakt",
+      "title": "Kontakt",
+      "url": "https://ski-kranjska-gora.com/sl/zima/kontakt",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.82933,
+     46.27717
+    ]
+   },
+   "properties": {
+    "id": "vogel",
+    "category": "zag_project",
+    "name": "Vogel Cableway",
+    "name_sl": "Žičnica Vogel",
+    "name_en": "Vogel Cableway",
+    "object_type": "cableway",
+    "year": "2012",
+    "municipality": "Bohinj",
+    "locality": "Ukanc, Bohinj",
+    "latitude": 46.27717,
+    "longitude": 13.82933,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "vogel_kontakt",
+      "title": "Kontakt",
+      "url": "https://vogel.si/kontakt/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.05896,
+     46.15026
+    ]
+   },
+   "properties": {
+    "id": "cerkno_z",
+    "category": "zag_project",
+    "name": "Cerkno Cableways",
+    "name_sl": "Žičnice Cerkno",
+    "name_en": "Cerkno Cableways",
+    "object_type": "cableway",
+    "year": "2013",
+    "municipality": "Cerkno",
+    "locality": "Gorenji Novaki, Cerkno",
+    "latitude": 46.15026,
+    "longitude": 14.05896,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2013.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.931761,
+     46.355978
+    ]
+   },
+   "properties": {
+    "id": "golte",
+    "category": "zag_project",
+    "name": "Golte Cableway",
+    "name_sl": "Žičnica Golte",
+    "name_en": "Golte Cableway",
+    "object_type": "cableway",
+    "year": "2012-2014",
+    "municipality": "Mozirje",
+    "locality": "Radegunda, Mozirje",
+    "latitude": 46.355978,
+    "longitude": 14.931761,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012 to 2014.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://www.golte.si/en/winter/discover/how-to-reach-us/",
+     "https://www.golte.si/en/winter/discover/pendulum-and-plateau/"
+    ],
+    "position_note": "Operator golte.si: the gondola runs from the lower station in Žekovec to the upper station at 1410 m 'at Hotel Montis reception', 3265 m long, about 1000 m rise ('longest gondola lift in Slovenia'). Valley point = operator GPS for the lower-station parking (Radegunda 19c), so it is the car park beside the station, not the station building itself. Top point = operator GPS for Hotel Montis, which the operator says is where the upper station is. The geometry checks out: ~3.1 km horizontal for 3265 m of rope with 1000 m rise. 'Radegunda' in the old location is the settlement; the station area is called Žekovec.",
+    "address": "Radegunda 19c, 3330 Mozirje (lower station parking)",
+    "line": [
+     [
+      14.931761,
+      46.355978
+     ],
+     [
+      14.894859,
+      46.368696
+     ]
+    ],
+    "line_labels": [
+     "valley station Žekovec (parking)",
+     "top station at Hotel Montis (1410 m)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.5424,
+     46.33392
+    ]
+   },
+   "properties": {
+    "id": "kanin_z",
+    "category": "zag_project",
+    "name": "Kanin Cableway",
+    "name_sl": "Žičnica Kanin",
+    "name_en": "Kanin Cableway",
+    "object_type": "cableway",
+    "year": "2012",
+    "municipality": "Bovec",
+    "locality": "Bovec",
+    "latitude": 46.33392,
+    "longitude": 13.5424,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012. Inspection of the support columns of the Kanin aerial ropeway, ATC Kanin d.o.o., 2012 (transmission and other towers page).",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "soca_kanin",
+      "title": "Kanin for hikers",
+      "url": "https://www.soca-valley.com/en/in-search-of-adventure/activities/2021011814241833/kanin-for-hikers/",
+      "type": "inst"
+     },
+     {
+      "key": "zag_towers",
+      "title": "Transmission and other towers, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/N89237467",
+     "https://mapcarta.com/W331502261",
+     "https://mapcarta.com/W331502259",
+     "https://en.wikipedia.org/wiki/Kanin-Sella_Nevea_Ski_Resort"
+    ],
+    "position_note": "ZAG's detail refers to the 'Kanin aerial ropeway' support columns (ATC Kanin d.o.o., 2012), so this is the main ropeway from Bovec. Valley = 'Postaja A - Dvor' and top = 'Postaja D - Podi' (~2200 m), both from Mapcarta/OSM. The line is drawn A→D straight. The real route also passes intermediate stations B and C; C 'Skripi' is at 46.35161, 13.48857 (~1649 m, mapcarta W331502261). Wikipedia says the Slovenian side closed in 2013 and was expected to reopen in 2016/17, so the 2012 inspection predates the closure. The installation may have been modified since then, and the current OSM stations reflect today's layout.",
+    "address": null,
+    "line": [
+     [
+      13.5424,
+      46.33392
+     ],
+     [
+      13.47665,
+      46.35869
+     ]
+    ],
+    "line_labels": [
+     "station A (Bovec, Dvor)",
+     "station D (Podi, 2200 m)"
+    ],
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.11396,
+     46.3688
+    ]
+   },
+   "properties": {
+    "id": "straza_bled",
+    "category": "zag_project",
+    "name": "Straža Bled Cableway",
+    "name_sl": "Žičnica Straža Bled",
+    "name_en": "Straža Bled Cableway",
+    "object_type": "cableway",
+    "year": "2012",
+    "municipality": "Bled",
+    "locality": "Bled",
+    "latitude": 46.3688,
+    "longitude": 14.11396,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations, and special inspections of sub-systems and safety devices",
+    "description": "Periodical technical inspections of cableway installations. Special inspections of sub-systems and safety devices, 2012.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.71314,
+     46.4965
+    ]
+   },
+   "properties": {
+    "id": "planica_z",
+    "category": "zag_project",
+    "name": "Planica Cableway",
+    "name_sl": "Žičnica Planica",
+    "name_en": "Planica Cableway",
+    "object_type": "cableway",
+    "year": null,
+    "municipality": "Kranjska Gora",
+    "locality": "Rateče, Kranjska Gora",
+    "latitude": 46.4965,
+    "longitude": 13.71314,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Periodical technical inspections of cableway installations",
+    "description": "Periodical technical inspections of cableway installations.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "ncp_info",
+      "title": "Poslovne informacije",
+      "url": "https://www.nc-planica.si/poslovne-informacije/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.66857,
+     45.95914
+    ]
+   },
+   "properties": {
+    "id": "rtp_gorica",
+    "category": "zag_project",
+    "name": "RTP Gorica Substation",
+    "name_sl": "RTP 110/20/10 kV Gorica",
+    "name_en": "RTP Gorica Substation",
+    "object_type": "tower / mast",
+    "year": "2006, 2012",
+    "municipality": "Nova Gorica",
+    "locality": "Kromberk, Nova Gorica",
+    "latitude": 45.95914,
+    "longitude": 13.66857,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Inspection of the quality of steel structures belonging to the RTP 110/20/10 kV Gorica TR-1 power distribution sub-station",
+    "description": "Inspection of the quality of steel structures belonging to the RTP 110/20 kV Gorica TR-1 power distribution sub-station.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Transmission and other towers, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_towers",
+      "title": "Transmission and other towers, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "ep_rtp",
+      "title": "Tehnična okvara v RTP Gorica odpravljena",
+      "url": "https://elektro-primorska.si/aktualno/tehnicna-okvara-v-rtp-gorica-odpravljena/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.21366,
+     45.77585
+    ]
+   },
+   "properties": {
+    "id": "pecna_reber",
+    "category": "zag_project",
+    "name": "Pečna Reber Broadcasting Tower",
+    "name_sl": "Oddajni stolp Pečna reber",
+    "name_en": "Pečna Reber Broadcasting Tower",
+    "object_type": "tower / mast",
+    "year": "2006",
+    "municipality": "Postojna",
+    "locality": "Postojna",
+    "latitude": 45.77585,
+    "longitude": 14.21366,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Inspection of the Pečna reber broadcasting tower near Postojna",
+    "description": "Inspection of the Pečna reber broadcasting tower near Postojna.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Transmission and other towers, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_towers",
+      "title": "Transmission and other towers, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.19421,
+     45.57377
+    ]
+   },
+   "properties": {
+    "id": "livarna_crnomelj",
+    "category": "zag_project",
+    "name": "Livarna Črnomelj Chimney",
+    "name_sl": "Jekleni dimnik, Livarna Črnomelj",
+    "name_en": "Livarna Črnomelj Chimney",
+    "object_type": "tower / mast",
+    "year": "2009",
+    "municipality": "Črnomelj",
+    "locality": "Črnomelj",
+    "latitude": 45.57377,
+    "longitude": 15.19421,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Inspection of the steel chimney at the Livarna Črnomelj foundry",
+    "description": "Inspection of the steel chimney at the Livarna Črnomelj foundry.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Transmission and other towers, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_towers",
+      "title": "Transmission and other towers, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.22167,
+     45.77318
+    ]
+   },
+   "properties": {
+    "id": "sz_masts",
+    "category": "zag_project",
+    "name": "Railway Electrification Masts",
+    "name_sl": "Drogovi elektrifikacije SZ",
+    "name_en": "Railway Electrification Masts",
+    "object_type": "tower / mast",
+    "year": "2014",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 45.77318,
+    "longitude": 14.22167,
+    "zag_involvement_type": "other",
+    "zag_role": "Analysis of railway electrification masts, mitigation of the consequences of the February 2014 ice storm",
+    "description": "Analysis of railway electrification masts, mitigation of the consequences of the February 2014 ice storm.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Transmission and other towers, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_towers",
+      "title": "Transmission and other towers, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/transmission-and-other-towers/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://www.sz.si/wp-content/uploads/2024/03/12.-Nova-Proga-POSEBNA-STEVILKA-predogled-.pdf",
+     "https://mapcarta.com/18783596",
+     "https://en.wikipedia.org/wiki/Borovnica_railway_station",
+     "https://mapcarta.com/N275403880"
+    ],
+    "position_note": "This is not a single structure, so kind stays 'area'. Per SŽ's 'Nova proga' special issue, the February 2014 ice storm hit the overhead line hardest on the Borovnica–Divača section of the Ljubljana–Sežana main line. At Postojna, Logatec and Verd stations, and on the Verd–Logatec and Borovnica–Verd sections, the damage was so severe that a new overhead line had to be built. Lesser damage occurred on the Ljubljana–Jesenice, Ljubljana–Dobova and Zidani Most–Maribor lines. Anchor: Postojna railway station (mapcarta), one of the named worst-hit stations, chosen as a representative point. The line gives the section's extent (Borovnica station from en.wikipedia, Divača station from mapcarta); it is not a structure. The old point (Ljubljana centre) was not on the damaged section. The ZAG source does not say which masts were analysed.",
+    "address": null,
+    "line": [
+     [
+      14.36778,
+      45.92139
+     ],
+     [
+      13.96548,
+      45.68135
+     ]
+    ],
+    "line_labels": [
+     "Borovnica railway station (start of worst-hit section)",
+     "Divača railway station (end of worst-hit section)"
+    ],
+    "zag_involvement_types": [
+     "other"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.85788,
+     45.64107
+    ]
+   },
+   "properties": {
+    "id": "ss_kocevje",
+    "category": "zag_project",
+    "name": "Kočevje Secondary School",
+    "name_sl": "Gimnazija in srednja sola Kočevje",
+    "name_en": "Kočevje Secondary School",
+    "object_type": "building",
+    "year": "2013",
+    "municipality": "Kočevje",
+    "locality": "Kočevje",
+    "latitude": 45.64107,
+    "longitude": 14.85788,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Report about the condition of the part of the building of the Kočevje Secondary School which was exposed to fire",
+    "description": "Report about the condition of the part of the building of the Kočevje Secondary School which was exposed to fire.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Fire, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_fire_ref",
+      "title": "Fire, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://itis.siol.net/gimnazija-in-srednja-sola-kocevje_kocevje_ljubljanska-cesta",
+     "https://gssk.si/kontakti/",
+     "https://www.ribnica24.eu/crna-kronika/pozar-unicil-srednjo-solo-v-kocevju-skode-za-vec-mio-evrov/"
+    ],
+    "position_note": "The point is the TIS geocode of the school's only listed address, Ljubljanska cesta 12; gssk.si lists just this one location. The fire was in the early morning of 27 December 2012 and destroyed the wooden roof and several rooms of 'the Srednja šola Kočevje building' (ribnica24). The ZAG report year of 2013 is therefore consistent, but the fire was in 2012. Caveat: news reports name 'the building of Srednja šola Kočevje'. I could not confirm that this was the Ljubljanska cesta 12 building rather than a separate vocational-school building, so it is not surveyed. Name fix: 'Gimnazija in srednja šola Kočevje' (the dataset has 'sola' without the háček). [old→new shift 240 m]",
+    "address": "Ljubljanska cesta 12, 1330 Kočevje",
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.84096,
+     45.66936
+    ]
+   },
+   "properties": {
+    "id": "os_stara_cerkev",
+    "category": "zag_project",
+    "name": "Stara Cerkev Elementary School",
+    "name_sl": "Osnovna sola Stara Cerkev",
+    "name_en": "Stara Cerkev Elementary School",
+    "object_type": "building",
+    "year": "2013",
+    "municipality": "Kočevje",
+    "locality": "Stara Cerkev, Kočevje",
+    "latitude": 45.66936,
+    "longitude": 14.84096,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Report about the condition of the part of the building of the Stara cerkev Elementary School in Kočevje which was exposed to fire",
+    "description": "Report about the condition of the part of the building of the Stara cerkev Elementary School in Kočevje which was exposed to fire.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Fire, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_fire_ref",
+      "title": "Fire, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "os_stara",
+      "title": "Osnovni podatki",
+      "url": "https://www.osstaracerkev.si/osnovni-podatki/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://itis.siol.net/osnovna-sola-stara-cerkev",
+     "https://www.ribnica24.eu/crna-kronika/pozar-unicil-osrednji-del-osnovne-sole-stara-cerkev/"
+    ],
+    "position_note": "The point is the TIS geocode of Stara Cerkev 21, the school's address, about 80 m from the old point. Stara Cerkev has only one primary school, so the building is unambiguous. The fire was on 9 June 2013 at 03:20 and destroyed the central, prefabricated part of the school: 11 classrooms (about 1,000 m2), the roof, the main staircase and the hall. Damage was over EUR 1.5 million. Name fix: 'Osnovna šola Stara Cerkev' (the dataset has 'sola'). [old→new shift 81 m]",
+    "address": "Stara Cerkev 21, 1332 Stara Cerkev",
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.2637,
+     46.23011
+    ]
+   },
+   "properties": {
+    "id": "rakuschev_mlin",
+    "category": "zag_project",
+    "name": "Rakuschev Mlin",
+    "name_sl": "Rakuschev mlin",
+    "name_en": "Rakuschev Mlin",
+    "object_type": "building",
+    "year": "2014",
+    "municipality": "Celje",
+    "locality": "Celje",
+    "latitude": 46.23011,
+    "longitude": 15.2637,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Report about the condition of the building known as Rakuschev mlin, after exposure to fire",
+    "description": "Report about the condition of the building known as Rakuschev mlin, after exposure to fire.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Fire, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_fire_ref",
+      "title": "Fire, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "celje_spom",
+      "title": "Odlok o razglasitvi kulturnih spomenikov lokalnega pomena, Mestna občina Celje",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2002-01-2664/odlok-o-razglasitvi-kulturnih-spomenikov-lokalnega-pomena-na-obmocju-mestne-obcine-celje",
+      "type": "reg"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "municipality",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.42295,
+     46.24378
+    ]
+   },
+   "properties": {
+    "id": "p2b3_sencur",
+    "category": "zag_project",
+    "name": "P2B3 Commercial Building",
+    "name_sl": "Poslovni objekt P2B3",
+    "name_en": "P2B3 Commercial Building",
+    "object_type": "building",
+    "year": "2014",
+    "municipality": "Šenčur",
+    "locality": "Šenčur",
+    "latitude": 46.24378,
+    "longitude": 14.42295,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Report about the condition of the commercial building P2B3 in the trade and business zone P2B near Šenčur, after exposure to fire",
+    "description": "Report about the condition of the commercial building P2B3 in the trade and business zone P2B near Šenčur, after exposure to fire.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Fire, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_fire_ref",
+      "title": "Fire, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.62693,
+     45.76607
+    ]
+   },
+   "properties": {
+    "id": "fibran_sodrazica",
+    "category": "zag_project",
+    "name": "Fibran Nord Sodražica",
+    "name_sl": "Fibran Nord Sodražica",
+    "name_en": "Fibran Nord Sodražica",
+    "object_type": "building",
+    "year": "2013",
+    "municipality": "Sodražica",
+    "locality": "Sodražica",
+    "latitude": 45.76607,
+    "longitude": 14.62693,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Report about the condition of the production hall (production line No. 1) of the Fibran Nord factory at Sodražica, after exposure to fire",
+    "description": "Report about the condition of the production hall (production line No. 1) of the Fibran Nord factory at Sodražica, after exposure to fire.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Fire, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_fire_ref",
+      "title": "Fire, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/fire/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     },
+     {
+      "key": "ribnica_fibran",
+      "title": "Fibran Nord po požaru",
+      "url": "https://www.ribnica24.eu/sodrazica/fibran-nord-po-pozaru-najvec-skode-je-nastalo-na-strehi-proizvodne-hale/",
+      "type": "news"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://itis.siol.net/proizvodni-obrat-sodrazica",
+     "https://www.moje-podjetje.net/fibran-nord-doo-proizvodni-obrat-sodrazica/",
+     "https://www.gov.si/assets/ministrstva/MOP/Okolje/CPVO/Javne-razgrnitve/FIBRAN/Javno_naznanilo-obrat_Fibran.pdf",
+     "https://www.rtvslo.si/crna-kronika/pozar-v-tovarni-izolacijskega-materiala/327481"
+    ],
+    "position_note": "The point is the address geocode of Cesta Notranjskega odreda 45, from TIS and moje-podjetje.net (45.76607, 14.62693). TIS also gives D48/GK X=471354, Y=69160, which I converted with pyproj to the same point. The site spans parcels 2140/1 to 2158/14, k.o. 1619 Sodražica (MOP public notice). The point is an address point, not production hall no. 1 itself. The old point (Sodražica centre) was about 850 m south-east. The plant had a major fire in early September 2013, which matches the dataset's 2013. RTV reports a second, smaller roof fire on 16 January 2014. [old→new shift 879 m]",
+    "address": "Cesta Notranjskega odreda 45, 1317 Sodražica",
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.5524,
+     46.3386
+    ]
+   },
+   "properties": {
+    "id": "bovec_quake",
+    "category": "zag_project",
+    "name": "Bovec Earthquake Response",
+    "name_sl": "Potres v Bovcu",
+    "name_en": "Bovec Earthquake Response",
+    "object_type": "study area (earthquake)",
+    "year": "1998-2000",
+    "municipality": "Bovec",
+    "locality": "Bovec",
+    "latitude": 46.3386,
+    "longitude": 13.5524,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Effect of the Bovec earthquake of 12 April 1998 on buildings, people and the environment",
+    "description": "Effect of the Bovec earthquake of 12 April 1998 on buildings, people and the environment.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Earthquakes, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_quake",
+      "title": "Earthquakes, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/Bovec",
+     "https://en.wikipedia.org/wiki/List_of_earthquakes_in_Slovenia"
+    ],
+    "position_note": "This is an area, not a building. The point is a representative centre (Bovec town, from mapcarta), not a site or the epicentre, which was in the Krn mountains. The old point was about 230 m off the town centre. Wikipedia's list of earthquakes in Slovenia gives 12 April 1998, M 5.7, intensity VII–VIII, upper Soča Valley. [old→new shift 230 m]",
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.57799,
+     46.24643
+    ]
+   },
+   "properties": {
+    "id": "soca_quake",
+    "category": "zag_project",
+    "name": "Upper Soča Valley Earthquake Repairs",
+    "name_sl": "Obnova po potresu v Zgornjem Posocju",
+    "name_en": "Upper Soča Valley Earthquake Repairs",
+    "object_type": "study area (earthquake)",
+    "year": "2004-",
+    "municipality": "Kobarid",
+    "locality": "Kobarid",
+    "latitude": 46.24643,
+    "longitude": 13.57799,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Analysis of the condition of buildings damaged by the earthquake of 12 July 2004, and review of design projects and third party surveillance of the repair and strengthening of damaged buildings",
+    "description": "Analysis of the condition of buildings damaged by the earthquake of 12 July 2004 (2004). Review of design projects and third party surveillance of the repair and strengthening of the damaged buildings (2005, ongoing according to the ZAG page).",
+    "image": "img/ph/kob.webp",
+    "image_credit": null,
+    "source_title": "Earthquakes, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_quake",
+      "title": "Earthquakes, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "story": "kob",
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.50504,
+     46.05237
+    ]
+   },
+   "properties": {
+    "id": "lj_seismic",
+    "category": "zag_project",
+    "name": "Ljubljana Seismic Risk",
+    "name_sl": "Potresno tveganje v Ljubljani",
+    "name_en": "Ljubljana Seismic Risk",
+    "object_type": "study area (earthquake)",
+    "year": "2000-2012",
+    "municipality": "Ljubljana",
+    "locality": "Ljubljana",
+    "latitude": 46.05237,
+    "longitude": 14.50504,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Seismic risk to buildings in the Municipality of Ljubljana",
+    "description": "Seismic risk to buildings in the Municipality of Ljubljana.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Earthquakes, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_quake",
+      "title": "Earthquakes, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.0273,
+     46.0024
+    ]
+   },
+   "properties": {
+    "id": "idrija_cherplan",
+    "category": "zag_project",
+    "name": "Idrija Seismic Risk, CHERPLAN",
+    "name_sl": "Potresno tveganje v Idriji, CHERPLAN",
+    "name_en": "Idrija Seismic Risk, CHERPLAN",
+    "object_type": "study area (earthquake)",
+    "year": "2013",
+    "municipality": "Idrija",
+    "locality": "Idrija",
+    "latitude": 46.0024,
+    "longitude": 14.0273,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "CHERPLAN, strengthening of the cultural heritage through environmental planning and management, assessment of the seismic risk to buildings in the municipality of Idrija",
+    "description": "CHERPLAN, strengthening of the cultural heritage through environmental planning and management, assessment of the seismic risk to buildings in the municipality of Idrija.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Earthquakes, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_quake",
+      "title": "Earthquakes, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/natural-disasters-and-other-kinds-of-emergencies/earthquakes/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": "medium",
+    "position_sources": [
+     "https://mapcarta.com/Idrija"
+    ],
+    "position_note": "This is an area (the Municipality of Idrija). The point is a representative centre (Idrija town, from mapcarta), about 420 m from the old point. It is representative only. [old→new shift 420 m]",
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.6562,
+     45.95512
+    ]
+   },
+   "properties": {
+    "id": "grosuplje_most",
+    "category": "zag_project",
+    "name": "Grosuplje Bridge",
+    "name_sl": "Most v Grosupljem",
+    "name_en": "Grosuplje Bridge",
+    "object_type": "bridge",
+    "year": "2012",
+    "municipality": "Grosuplje",
+    "locality": "Grosuplje",
+    "latitude": 45.95512,
+    "longitude": 14.6562,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Bridge safety analysis",
+    "description": "Analysis of the safety of the bridge for traffic loadings.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Bridges, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/bridges/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_bridges_ref",
+      "title": "Bridges, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/bridges/",
+      "type": "inst"
+     },
+     {
+      "key": "gurs_rpe",
+      "title": "Register prostorskih enot, settlement centroids",
+      "url": "https://github.com/stefanb/gurs-rpe",
+      "type": "data"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.59788,
+     45.8926
+    ]
+   },
+   "properties": {
+    "id": "catez_bridge",
+    "category": "zag_project",
+    "name": "Čatež Bridge over the Sava",
+    "name_sl": "Most čez Savo pri Čatežu",
+    "name_en": "Čatež Bridge over the Sava",
+    "object_type": "bridge",
+    "year": "2022-2025",
+    "municipality": "Brežice",
+    "locality": "Čatež ob Savi, Brežice",
+    "latitude": 45.8926,
+    "longitude": 15.59788,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Combined earthquake and flood vulnerability assessment",
+    "description": "Within the CROSScade project the bridge was selected as the most critical of seven bridges in the Sava reach below the Brežice hydropower plant. Reasons given were its role on a key regional route, the lack of adequate scour protection and a design that predates modern performance-based seismic provisions. The first half of the bridge was modelled in Midas Civil and OpenSeesPy with soil-structure interaction, and fragility curves were derived for sequential ground shaking, flood loading and local pier scour.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cross-border cascading hazard scenarios and vulnerability assessment of levees and bridges in the Sava River Basin",
+    "source_url": "https://www.mdpi.com/2412-3811/10/8/214",
+    "source_type": "journal",
+    "sources": [
+     {
+      "key": "crosscade_2025",
+      "title": "Cross-border cascading hazard scenarios and vulnerability assessment of levees and bridges in the Sava River Basin",
+      "url": "https://www.mdpi.com/2412-3811/10/8/214",
+      "type": "journal"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.64398,
+     46.56247
+    ]
+   },
+   "properties": {
+    "id": "maribor_pilots",
+    "category": "zag_project",
+    "name": "Maribor circular economy pilot sites",
+    "name_sl": "Pilotne lokacije krožnega gospodarstva, Maribor",
+    "name_en": "Maribor circular economy pilot sites",
+    "object_type": "other",
+    "year": "2017-2022",
+    "municipality": "Maribor",
+    "locality": "Maribor",
+    "latitude": 46.56247,
+    "longitude": 15.64398,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Demonstration of secondary raw materials in urban construction and urban soil",
+    "description": "CINDERELA, coordinated by ZAG, established a pilot production plant for construction products from waste in Maribor, planned a one storey demonstration building made with recycled aggregates and recycled soil, and carried out preliminary geotechnical investigation for revitalising a degraded area. URBAN SOIL 4 FOOD, an Urban Innovative Actions project led by the City of Maribor with ZAG as a partner, tested a pilot system for producing certified urban soil from city waste and used it in community gardens.",
+    "image": "img/ph/cin.webp",
+    "image_credit": null,
+    "source_title": "Pilots",
+    "source_url": "https://www.cinderela.eu/Pilots",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "cinderela_pilots",
+      "title": "Pilots",
+      "url": "https://www.cinderela.eu/Pilots",
+      "type": "web"
+     },
+     {
+      "key": "cinderela_demo4",
+      "title": "Demo 4: Construction of a building with SRM-based materials",
+      "url": "https://www.cinderela.eu/Pilots/Demo-4-Construction-of-a-building-with-SRM-based-materials",
+      "type": "web"
+     },
+     {
+      "key": "uia_us4f",
+      "title": "The URBAN SOIL 4 FOOD project, Journal 4",
+      "url": "https://uia.urban-initiative.eu/sites/default/files/2020-06/Maribor_UrbanSoil4Food_Journal%204.pdf",
+      "type": "report"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "story": "cin",
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.61083,
+     46.22608
+    ]
+   },
+   "properties": {
+    "id": "kamnik_bridges",
+    "category": "zag_project",
+    "name": "Kamnik Municipal Bridges",
+    "name_sl": "Mostovi v Občini Kamnik",
+    "name_en": "Kamnik Municipal Bridges",
+    "object_type": "bridge",
+    "year": "2015",
+    "municipality": "Kamnik",
+    "locality": "Kamnik",
+    "latitude": 46.22608,
+    "longitude": 14.61083,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Assessment of damage to bridges",
+    "description": "Assessment of the level of damage to bridges in the municipality.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "The Section for Bridges and Other Civil Engineering Structures",
+    "source_url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zagbridges",
+      "title": "The Section for Bridges and Other Civil Engineering Structures",
+      "url": "https://www.zag.si/en/organizational-units/the-department-of-structures/the-section-for-bridges-and-other-civil-engineering-structures-2/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.06017,
+     46.43657
+    ]
+   },
+   "properties": {
+    "id": "sij_acroni_pavers",
+    "category": "zag_project",
+    "name": "Geopolymer Paving at SIJ Acroni",
+    "name_sl": "Geopolimerni tlakovci, SIJ Acroni",
+    "name_en": "Geopolymer Paving at SIJ Acroni",
+    "object_type": "other",
+    "year": "2024",
+    "municipality": "Jesenice",
+    "locality": "Jesenice",
+    "latitude": 46.43657,
+    "longitude": 14.06017,
+    "zag_involvement_type": "materials testing",
+    "zag_role": "Demonstration of alkali activated paving blocks",
+    "description": "On 24 April 2024 ZAG presented geopolymerisation technology within the GEORIS project. KU Leuven brought a mobile unit and demonstrated production of paving blocks by the geopolymer process, and participants then viewed paving blocks already laid at the SIJ Acroni headquarters.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Company page post announcing the GEORIS geopolymerisation demonstration",
+    "source_url": "https://si.linkedin.com/company/zavod-za-gradbeni%C5%A1tvo-slovenije---slovenian-national-building-and-civil-engineering-institute-%E2%80%93-zag",
+    "source_type": "web",
+    "sources": [
+     {
+      "key": "zag_linkedin_georis",
+      "title": "Company page post announcing the GEORIS geopolymerisation demonstration",
+      "url": "https://si.linkedin.com/company/zavod-za-gradbeni%C5%A1tvo-slovenije---slovenian-national-building-and-civil-engineering-institute-%E2%80%93-zag",
+      "type": "web"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "materials testing"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.45759,
+     46.3137
+    ]
+   },
+   "properties": {
+    "id": "golo_rebro",
+    "category": "zag_project",
+    "name": "Golo Rebro Motorway Tunnel",
+    "name_sl": "Predor Golo Rebro",
+    "name_en": "Golo Rebro Motorway Tunnel",
+    "object_type": "tunnel",
+    "year": "1990-2013",
+    "municipality": "Slovenske Konjice",
+    "locality": "Slovenske Konjice",
+    "latitude": 46.3137,
+    "longitude": 15.45759,
+    "zag_involvement_type": "research",
+    "zag_role": "Geological-geotechnical investigations for the design",
+    "description": "Geological-geotechnical investigations for the design.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Tunnels and underground structures, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_tunnels",
+      "title": "Tunnels and underground structures, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/tunnels-and-underground-structures/",
+      "type": "inst"
+     },
+     {
+      "key": "structurae_golorebro",
+      "title": "Golo Rebro Tunnel (Slovenske Konjice, 1996)",
+      "url": "https://structurae.net/en/structures/golorebrotunnel-1996",
+      "type": "web"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "surveyed",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "research"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.71314,
+     46.4965
+    ]
+   },
+   "properties": {
+    "id": "ratece_cable",
+    "category": "zag_project",
+    "name": "Rateče Cableway Installations",
+    "name_sl": "Žičniške naprave Rateče",
+    "name_en": "Rateče Cableway Installations",
+    "object_type": "cableway",
+    "year": "2012",
+    "municipality": "Kranjska Gora",
+    "locality": "Rateče, Kranjska Gora",
+    "latitude": 46.4965,
+    "longitude": 13.71314,
+    "zag_involvement_type": "inspection",
+    "zag_role": "Special inspections of sub-systems and safety devices of cableway installations",
+    "description": "Special inspections of sub-systems and safety devices of cableway installations.",
+    "image": null,
+    "image_credit": null,
+    "source_title": "Cableway installations, reference list",
+    "source_url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+    "source_type": "inst",
+    "sources": [
+     {
+      "key": "zag_cable",
+      "title": "Cableway installations, reference list",
+      "url": "https://www.zag.si/en/areas-of-expertise/cableway-installations/",
+      "type": "inst"
+     }
+    ],
+    "evidence_level": "documented",
+    "position_precision": "settlement",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": null,
+    "zag_involvement_types": [
+     "inspection"
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.499701,
+     46.050209
+    ]
+   },
+   "properties": {
+    "id": "tr3",
+    "category": "zag_project",
+    "name": "TR3 Tower",
+    "name_sl": "Stolpnica TR3",
+    "name_en": "TR3 Tower",
+    "object_type": "building",
+    "year": "2023",
+    "municipality": "Ljubljana",
+    "locality": "Trg republike 3, Ljubljana",
+    "latitude": 46.050209,
+    "longitude": 14.499701,
+    "zag_involvement_type": null,
+    "zag_role": "Structural and stone analysis, BIM model, KONS TR3 exhibition",
+    "description": null,
+    "image": "img/ph/tr3.webp",
+    "image_credit": null,
+    "source_title": "ZAG Open Day 2026 programme (internal)",
+    "source_url": null,
+    "source_type": "zag_internal",
+    "sources": [],
+    "evidence_level": "referenced",
+    "position_precision": "address",
+    "position_confidence": null,
+    "position_sources": [],
+    "position_note": null,
+    "address": "Trg republike 3, Ljubljana",
+    "story": "tr3",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.6514,
+     46.5529
+    ]
+   },
+   "properties": {
+    "id": "kpd",
+    "category": "zag_project",
+    "name": "Former Maribor Prison",
+    "name_sl": "Nekdanja kaznilnica Maribor",
+    "name_en": "Former Maribor Prison",
+    "object_type": "building",
+    "year": "2025",
+    "municipality": "Maribor",
+    "locality": "Pobreška cesta 20, Maribor",
+    "latitude": 46.5529,
+    "longitude": 15.6514,
+    "zag_involvement_type": null,
+    "zag_role": "CABE project for circular construction, workshop in Maribor",
+    "description": null,
+    "image": "img/ph/kpd.webp",
+    "image_credit": null,
+    "source_title": "ZAG Open Day 2026 programme (internal)",
+    "source_url": null,
+    "source_type": "zag_internal",
+    "sources": [],
+    "evidence_level": "referenced",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/W154880371",
+     "https://mapcarta.com/W87192977",
+     "https://vecer.com/prosti-cas/titova-kaznilnica-maribor-prebuja-specega-velikana-6445487",
+     "https://maribor24.si/lokalno/bivsa-moska-kaznilnica-v-mariboru-bo-kmalu-zazivela-v-novi-preobleki/",
+     "https://rra-podravje.si/agencija/osnovni-podatki",
+     "https://en.wikipedia.org/wiki/Old_Bridge_(Maribor)"
+    ],
+    "position_note": "Point is the OSM building 'Moška kaznilnica' (way 154880371, Wikidata Q60348010, inception 1889; mapcarta gives only 4 decimals). It is about 200 m SSW of the old point. The address Pobreška cesta 20 also houses RRA Podravje. 'KPD' originally meant Kazensko poboljševalni dom and is now reused as Kreativni park Drava (Maribor24). Built 1884–1889 and closed in 1963 (Večer). LOCATION CORRECTION: Večer places the complex between Pobreška cesta, Titova cesta and the railway, with Europark (opened 2000) on its north side, so it is not directly on the Drava bank. It also lies ~450 m EAST of the Old Bridge (46.55556, 15.64583), next to Europark by the Titov most bus stop. The input phrase 'between the Old and Railway bridges' therefore looks wrong (more likely between the Railway bridge and Titov most), but I could not open a source with the railway bridge coordinate to confirm. Location text corrected: the building is not on the Drava bank.",
+    "address": null,
+    "story": "kpd",
+    "zag_involvement_types": []
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.503688,
+     46.047482
+    ]
+   },
+   "properties": {
+    "id": "nuk",
+    "category": "zag_project",
+    "name": "National and University Library",
+    "name_sl": "Narodna in univerzitetna knjižnica",
+    "name_en": "National and University Library",
+    "object_type": "building",
+    "year": "2025",
+    "municipality": "Ljubljana",
+    "locality": "Turjaška ulica 1, Ljubljana",
+    "latitude": 46.047482,
+    "longitude": 14.503688,
+    "zag_involvement_type": "structural assessment",
+    "zag_role": "Condition survey of Plečnik’s façade before the renovation",
+    "description": null,
+    "image": "img/ph/nuk.webp",
+    "image_credit": null,
+    "source_title": "ZAG Open Day 2026 programme (internal)",
+    "source_url": null,
+    "source_type": "zag_internal",
+    "sources": [],
+    "evidence_level": "referenced",
+    "position_precision": "surveyed",
+    "position_confidence": "high",
+    "position_sources": [
+     "https://mapcarta.com/W42423765",
+     "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia"
+    ],
+    "position_note": "Point is the OSM building (way 42423765) via mapcarta. Wikipedia gives a coarser 46.0469, 14.5039 (= the old point, ~65 m south). Building bounded by Turjaška, Gosposka and Vegova ulica; designed by Jože Plečnik, built 1936–1941.",
+    "address": "Turjaška ulica 1, Ljubljana",
+    "story": "nuk",
+    "zag_involvement_types": [
+     "structural assessment"
+    ]
+   }
+  }
+ ]
+}

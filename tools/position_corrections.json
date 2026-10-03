@@ -1,0 +1,779 @@
+{
+ "karavanke_c": {
+  "lat": 46.453408,
+  "lon": 13.990164,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://structurae.net/de/bauwerke/karawankentunnel-autobahn",
+   "https://en.wikipedia.org/wiki/Karawanks_Tunnel_(motorway)",
+   "https://www.dars.si/Infrastrukturni_projekti/Predor_Karavanke_-_druga_cev",
+   "https://www.gov.si/en/news/2026-03-19-new-tube-opens-in-motorway-tunnel-linking-slovenia-and-austria/"
+  ],
+  "note": "Anchor = Slovenian (south) portal at Hrušica, chosen because ZAG's client was DARS, which manages the Slovenian part; the true midpoint lies on the state border under the ridge. Portal coordinates are Structurae's for the 1991 (west) tube; the old dataset point (46.45371, 13.99048) is ~40 m from it, consistent with being the adjacent east-tube portal, but no source confirming which tube that point belongs to was found. The east (second) tube is 7,948 m; per gov.si it opened to traffic on 20 March 2026 and the west tube is now under reconstruction until end-2028. Slovenian side 3,546 m (DARS). Lengths quoted vary (7,864 m tunnel / 8,019 m between portals including portal structures).",
+  "line": [
+   [
+    13.990164,
+    46.453408
+   ],
+   [
+    14.023275,
+    46.519656
+   ]
+  ],
+  "line_labels": [
+   "south portal (Hrušica, Slovenia)",
+   "north portal (Sankt Jakob im Rosental, Austria)"
+  ],
+  "name_sl": "Predor Karavanke (avtocestni)",
+  "name_en": "Karawanks Motorway Tunnel"
+ },
+ "karavanke_r": {
+  "lat": 46.449242,
+  "lon": 14.01555,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://structurae.net/en/structures/karawanks-tunnel-rail",
+   "https://austria-forum.org/af/AustriaWiki/Karawankentunnel_(Eisenbahn)",
+   "https://mapcarta.com/26228020"
+  ],
+  "note": "Old dataset point (46.44924, 14.01555) is exactly the south portal per Structurae; Austria-Forum (de.wikipedia copy) gives 46.449306, 14.015472, ~8 m away, and Mapcarta's GeoNames point (46.44931, 14.01554) agrees. Anchor kept at the Slovenian south portal (Slovenian-side works); midpoint would be on the border. Length: Structurae/Austria-Forum 7,976 m; en.wikipedia quotes 8,176 m.",
+  "line": [
+   [
+    14.01555,
+    46.449242
+   ],
+   [
+    14.025775,
+    46.520486
+   ]
+  ],
+  "line_labels": [
+   "south portal (Jesenice/Hrušica, Slovenia)",
+   "north portal (Rosenbach, Austria)"
+  ],
+  "name_sl": "Karavanški železniški predor",
+  "name_en": "Karawanks Railway Tunnel"
+ },
+ "golovec": {
+  "lat": 46.019563,
+  "lon": 14.561342,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/golovec-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of the two Structurae portal coordinates (derived). Old point was the south portal (matches Structurae to <1 m).",
+  "line": [
+   [
+    14.558933,
+    46.017394
+   ],
+   [
+    14.56375,
+    46.021731
+   ]
+  ],
+  "line_labels": [
+   "south portal (Malence side)",
+   "north portal (Bizovik/Zadobrova side)"
+  ],
+  "name_sl": "Predor Golovec",
+  "name_en": "Golovec Tunnel"
+ },
+ "sentvid": {
+  "lat": 46.094348,
+  "lon": 14.463244,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/sentvid-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived). Old point was the south portal. Tube lengths include the underground Celovska interchange; AARoads Wiki quotes 1,072/1,047 m for the mainline tubes alone, so lengths differ by definition.",
+  "line": [
+   [
+    14.466006,
+    46.100533
+   ],
+   [
+    14.460481,
+    46.088164
+   ]
+  ],
+  "line_labels": [
+   "north portal (Šentvid/Vižmarje side)",
+   "south portal (Koseze/Podutik side)"
+  ],
+  "name_sl": "Predor Šentvid",
+  "name_en": "Šentvid Tunnel"
+ },
+ "trojane": {
+  "lat": 46.186749,
+  "lon": 14.878642,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/trojane-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived). Old point was the west portal.",
+  "line": [
+   [
+    14.860403,
+    46.183647
+   ],
+   [
+    14.896881,
+    46.18985
+   ]
+  ],
+  "line_labels": [
+   "west portal (Blagovica side)",
+   "east portal (Vransko side, at V Zideh)"
+  ],
+  "name_sl": "Predor Trojane",
+  "name_en": "Trojane Tunnel"
+ },
+ "podmilj": {
+  "lat": 46.182301,
+  "lon": 14.845321,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://structurae.net/en/structures/podmilj-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html",
+   "https://en.wikipedia.org/wiki/Podmilj"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived); was the Podmilj settlement centre (~700 m south). East portal is ~0.9 km west of the Trojane west portal, consistent with the dataset description.",
+  "line": [
+   [
+    14.841531,
+    46.183203
+   ],
+   [
+    14.849111,
+    46.1814
+   ]
+  ],
+  "line_labels": [
+   "west portal (Blagovica side)",
+   "east portal (Trojane side)"
+  ],
+  "name_sl": "Predor Podmilj",
+  "name_en": "Podmilj Tunnel"
+ },
+ "kastelec": {
+  "lat": 45.580948,
+  "lon": 13.88629,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/kastelec-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived). Old point was the west portal. Lotsberg gives 2,303/2,195 m.",
+  "line": [
+   [
+    13.873719,
+    45.577239
+   ],
+   [
+    13.898861,
+    45.584656
+   ]
+  ],
+  "line_labels": [
+   "west portal (Črni Kal side)",
+   "east portal (Kozina side)"
+  ],
+  "name_sl": "Predor Kastelec",
+  "name_en": "Kastelec Tunnel"
+ },
+ "dekani": {
+  "lat": 45.552993,
+  "lon": 13.816932,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/dekani-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived). Old point was the east portal.",
+  "line": [
+   [
+    13.830397,
+    45.551611
+   ],
+   [
+    13.803467,
+    45.554375
+   ]
+  ],
+  "line_labels": [
+   "east portal (Črni Kal side)",
+   "west portal (Srmin/Koper side)"
+  ],
+  "name_sl": "Predor Dekani",
+  "name_en": "Dekani Tunnel"
+ },
+ "markovec": {
+  "lat": 45.541261,
+  "lon": 13.702539,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://structurae.net/en/structures/monte-san-marco-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived; Structurae lists it as 'Monte San Marco Tunnel', alt. Markovec). Old point was the east portal. Opened 2013, so ZAG's 1998-2014 quality-control window is consistent.",
+  "line": [
+   [
+    13.715906,
+    45.543178
+   ],
+   [
+    13.689172,
+    45.539344
+   ]
+  ],
+  "line_labels": [
+   "east portal (Koper side)",
+   "west portal (Izola side)"
+  ],
+  "name_sl": "Predor Markovec",
+  "name_en": "Markovec Tunnel"
+ },
+ "cenkova": {
+  "lat": 46.577131,
+  "lon": 15.9389,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://structurae.net/en/structures/cenkova-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html",
+   "https://en.wikipedia.org/wiki/Cenkova"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived); old point was Cenkova village centre (~300 m away). Structurae files it under Lenart; Cenkova village is in the Municipality of Cerkvenjak (en.wikipedia). Lotsberg gives 615/602 m.",
+  "line": [
+   [
+    15.935642,
+    46.575431
+   ],
+   [
+    15.942158,
+    46.578831
+   ]
+  ],
+  "line_labels": [
+   "west portal (Lenart side)",
+   "east portal"
+  ],
+  "name_sl": "Predor Cenkova",
+  "name_en": "Cenkova Tunnel"
+ },
+ "pletovarje": {
+  "lat": 46.294949,
+  "lon": 15.440759,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://structurae.net/en/structures/pletovarje-tunnel",
+   "https://www.lotsberg.net/data/slovenia/list.html",
+   "https://en.wikipedia.org/wiki/Pletovarje"
+  ],
+  "note": "Anchor = midpoint of Structurae portals (derived); old point was Pletovarje village centre (~1.3 km SW). DATASET ERROR: Pletovarje is in the Municipality of Šentjur, not Slovenske Konjice (en.wikipedia). Structurae says the 743 m tube dates from 1976 with a second tube in 1996; Lotsberg instead lists 745 m (1996) and 708 m (1976), so which tube is which length is unresolved.",
+  "line": [
+   [
+    15.43905,
+    46.291903
+   ],
+   [
+    15.442469,
+    46.297994
+   ]
+  ],
+  "line_labels": [
+   "south portal (Dramlje/Celje side)",
+   "north portal (Žiče/Slovenske Konjice side)"
+  ],
+  "name_sl": "Predor Pletovarje",
+  "name_en": "Pletovarje Tunnel"
+ },
+ "sitarjevec": {
+  "lat": 46.0498537,
+  "lon": 14.8296475,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://srce-slovenije.si/en/predmet/mine-sitarjevec-litija/",
+   "https://rudniksitarjevec.si/en/contact-and-information",
+   "https://mapcarta.com/N9173909694",
+   "https://mapcarta.com/N1896706866"
+  ],
+  "note": "Point is the GPS position published by the Srce Slovenije tourist board for the mine at Sitarjevska cesta 46 (the old point, said to be from the same source, was ~90 m off). Visitors enter via the Izvozni rov (export tunnel). Other sourced points: visitor centre/TIC at Valvazorjev trg 10 (mapcarta 46.04978, 14.83038); OSM 'Rudnik svinca in cinka Sitarjevec' mineshaft node 46.05194, 14.82547. The tourist board mentions limonite stalactites and fabrics dyed with mine water, consistent with ZAG's ochre work.",
+  "name_sl": "Rudnik Sitarjevec Litija",
+  "name_en": "Sitarjevec Mine, Litija",
+  "addr": "Sitarjevska cesta 46, 1270 Litija"
+ },
+ "slano_blato": {
+  "lat": 45.913056,
+  "lon": 13.865278,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Slano_Blato_Landslide",
+   "https://nhess.copernicus.org/articles/5/447/2005/"
+  ],
+  "note": "Wikipedia coordinate 45°54'47\"N 13°51'55\"E. The landslide runs along the Grajšček stream from below Čaven (~660 m) down toward Lokavec (~360 m), 1,010–1,300 m long, 60–250 m wide, ~15 ha; NHESS 2005: >1290 m long, 60–200 m wide, 3–11 m deep, ~700,000 m3, toe ~220 m from Lokavec. Wikipedia does not say whether its point is the body centre; ~550 m NW of the old point, which lay nearer Lokavec. Major activation Nov 2000, with a further flow in Sept 2001.",
+  "name_sl": "Plaz Slano blato",
+  "name_en": "Slano Blato Landslide"
+ },
+ "story_kpd": {
+  "lat": 46.5529,
+  "lon": 15.6514,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W154880371",
+   "https://mapcarta.com/W87192977",
+   "https://vecer.com/prosti-cas/titova-kaznilnica-maribor-prebuja-specega-velikana-6445487",
+   "https://maribor24.si/lokalno/bivsa-moska-kaznilnica-v-mariboru-bo-kmalu-zazivela-v-novi-preobleki/",
+   "https://rra-podravje.si/agencija/osnovni-podatki",
+   "https://en.wikipedia.org/wiki/Old_Bridge_(Maribor)"
+  ],
+  "note": "Point is the OSM building 'Moška kaznilnica' (way 154880371, Wikidata Q60348010, inception 1889; mapcarta gives only 4 decimals). It is about 200 m SSW of the old point. The address Pobreška cesta 20 also houses RRA Podravje. 'KPD' originally meant Kazensko poboljševalni dom and is now reused as Kreativni park Drava (Maribor24). Built 1884–1889 and closed in 1963 (Večer). LOCATION CORRECTION: Večer places the complex between Pobreška cesta, Titova cesta and the railway, with Europark (opened 2000) on its north side, so it is not directly on the Drava bank. It also lies ~450 m EAST of the Old Bridge (46.55556, 15.64583), next to Europark by the Titov most bus stop. The input phrase 'between the Old and Railway bridges' therefore looks wrong (more likely between the Railway bridge and Titov most), but I could not open a source with the railway bridge coordinate to confirm.",
+  "name_sl": "Nekdanja moška kaznilnica Maribor (KPD), danes Kreativni park Drava",
+  "name_en": "Former Maribor Men's Prison (KPD), now Creative Park Drava",
+  "addr": "Pobreška cesta 20, 2000 Maribor"
+ },
+ "story_nuk": {
+  "lat": 46.047482,
+  "lon": 14.503688,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W42423765",
+   "https://en.wikipedia.org/wiki/National_and_University_Library_of_Slovenia"
+  ],
+  "note": "Point is the OSM building (way 42423765) via mapcarta. Wikipedia gives a coarser 46.0469, 14.5039 (= the old point, ~65 m south). Building bounded by Turjaška, Gosposka and Vegova ulica; designed by Jože Plečnik, built 1936–1941.",
+  "name_sl": "Narodna in univerzitetna knjižnica (NUK)",
+  "name_en": "National and University Library of Slovenia",
+  "addr": "Turjaška ulica 1, 1000 Ljubljana"
+ },
+ "he_solkan": {
+  "lat": 45.984358,
+  "lon": 13.654795,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W427961750",
+   "https://openinframap.org/stats/area/Slovenia/plants/427961750"
+  ],
+  "note": "Centroid of the OSM power-plant polygon (way 427961750) for HE Solkan on the Soča, operated by Soške elektrarne Nova Gorica; the dam and powerhouse sit together, so this is on the dam/plant complex, not necessarily the exact crest centre. Old point was the Solkan settlement, about 1.6 km to the south. Crest ends not found in an openable source, so no line.",
+  "name_sl": "Hidroelektrarna Solkan",
+  "name_en": "Solkan Hydroelectric Power Plant",
+  "addr": "Soška cesta 44, 5250 Solkan"
+ },
+ "he_zlatolicje": {
+  "lat": 46.448073,
+  "lon": 15.786634,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W170978399",
+   "https://openinframap.org/stats/area/Slovenia/plants/170978399"
+  ],
+  "note": "Centroid of the OSM power-plant polygon (way 170978399), operated by Dravske elektrarne Maribor; agrees with the old point to within about 30 m. This is the powerhouse on the Zlatoličje diversion canal. There is no dam across the Drava here; the weir that feeds it is Jez Melje (see jez_melje). The upgrade ZAG worked on was this plant, so the powerhouse is the right anchor. Dataset issues: 'crosses: Drava' is misleading (it sits on the canal), and OpenInfraMap lists 126 MW, not the 136 MW in 'typ'. The '17.2 km upstream' distance to Melje in the old note was not checked.",
+  "name_sl": "Hidroelektrarna Zlatoličje",
+  "name_en": "Zlatoličje Hydroelectric Power Plant"
+ },
+ "he_vuhred": {
+  "lat": 46.587269,
+  "lon": 15.275795,
+  "confidence": "medium",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W422536532",
+   "https://openinframap.org/stats/area/Slovenia/plants/422536532"
+  ],
+  "note": "Centroid of the OSM power-plant polygon (way 422536532), operated by DEM; same as the old point. Vuhred is a dam-type plant on the Drava, so the polygon covers the weir and powerhouse, but the point is a polygon centroid, not a surveyed crest centre. Crest ends not sourced. The polygon lies in the Municipality of Podvelka, so the dataset's 'Vuhred, Radlje ob Dravi' is not quite right for the structure. The 'built: 1956' year was not verified.",
+  "name_sl": "Hidroelektrarna Vuhred",
+  "name_en": "Vuhred Hydroelectric Power Plant"
+ },
+ "he_vrhovo": {
+  "lat": 46.044155,
+  "lon": 15.223618,
+  "confidence": "medium",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W288156826",
+   "https://openinframap.org/stats/area/Slovenia/plants/288156826"
+  ],
+  "note": "Centroid of the OSM plant polygon (way 288156826), operated by Savske elektrarne Ljubljana; same as the old point. This is a run-of-river dam on the Sava with the powerhouse built into the dam, so the point is on the structure but is not a surveyed crest centre. Crest ends not sourced.",
+  "name_sl": "Hidroelektrarna Vrhovo",
+  "name_en": "Vrhovo Hydroelectric Power Plant"
+ },
+ "jez_melje": {
+  "lat": 46.56027,
+  "lon": 15.67375,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W1250436908",
+   "https://mapcarta.com/W1346871612",
+   "https://openinframap.org/stats/area/Slovenia/plants/1250436908"
+  ],
+  "note": "Centroid of the OSM polygon 'Jez Melje in mala hidroelektrarna Melje' (way 1250436908), which includes the Jez Melje weir on the Drava in Melje, Maribor. The mHE Melje service building is about 80 m away, at 46.559677, 15.674457 (way 1346871612). The old point was the centroid of Maribor municipality, about 2.3 km away. The separate OSM dam way was not reachable, so the crest ends are not sourced. Mapcarta gives 2009 as the start of operation for the small HPP.",
+  "name_sl": "Jez Melje in mala hidroelektrarna Melje",
+  "name_en": "Melje Dam and Melje Small Hydropower Plant"
+ },
+ "he_bostanj": {
+  "lat": 46.01712,
+  "lon": 15.2812,
+  "confidence": "medium",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W965129575",
+   "https://openinframap.org/stats/area/Slovenia/plants/965129575"
+  ],
+  "note": "OSM plant polygon (way 965129575), operated by HESS; same as the old point. Dam-type plant on the Sava. Mapcarta gives the start of operation as 5 June 2006, so ZAG's 2007-2013 work there postdates first operation (the end of construction and monitoring). Crest ends not sourced.",
+  "name_sl": "Hidroelektrarna Boštanj",
+  "name_en": "Boštanj Hydroelectric Power Plant",
+  "addr": "Boštanj 3, 8294 Boštanj"
+ },
+ "he_arto": {
+  "lat": 45.98992,
+  "lon": 15.38142,
+  "confidence": "medium",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W325991561",
+   "https://openinframap.org/stats/area/Slovenia/plants/325991561"
+  ],
+  "note": "OSM plant polygon (way 325991561, tagged 'HE Blanca'), operated by HESS; same as the old point. The dam spans the Sava between Blanca (left bank) and Arto (right bank). Mapcarta gives 3 December 2009 as the start of operation. The polygon is in the Municipality of Krško, not Sevnica; the dataset's 'Blanca, Sevnica' refers to the left-bank village only. Crest ends not sourced.",
+  "name_sl": "Hidroelektrarna Arto - Blanca",
+  "name_en": "Arto-Blanca Hydroelectric Power Plant",
+  "addr": "Arto 23, 8293 Studenec"
+ },
+ "he_krsko": {
+  "lat": 45.974846,
+  "lon": 15.481543,
+  "confidence": "medium",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W651093189",
+   "https://openinframap.org/stats/area/Slovenia/plants/651093189"
+  ],
+  "note": "OSM plant polygon (way 651093189) on the Sava at Krško, 260 m north of Krško Castle; same as the old point. Dam-type plant. Crest ends not sourced. Do not confuse it with Krško Nuclear Power Plant, which is about 4 km to the SE.",
+  "name_sl": "Hidroelektrarna Krško",
+  "name_en": "Krško Hydroelectric Power Plant"
+ },
+ "che_avce": {
+  "lat": 46.10258,
+  "lon": 13.67073,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W689751423",
+   "https://en.wikipedia.org/wiki/Av%C4%8De_Pumped_Storage_Plant",
+   "https://www.seng.si/sl/nase-elektrarne/crpalna-hidroelektrarna/",
+   "https://de.wikipedia.org/wiki/Pumpspeicherkraftwerk_Av%C4%8De",
+   "https://en.wikipedia.org/wiki/Kanalski_Vrh"
+  ],
+  "note": "Anchor: the powerhouse polygon centroid (OSM way 689751423); SENG puts the machine hall on the left bank of the Soča at the mouth of the Avšček stream. Upper-reservoir end: the only coordinate in the en.wikipedia infobox (46°5'1.89\"N 13°39'59.94\"E). The article does not label it, but it lies about 0.8 km north of Kanalski Vrh village (46.07713, 13.66251), which matches de.wikipedia ('north of Kanalski Vrh on the Banjšice plateau'). It is also about 2.1 km from the powerhouse, consistent with SENG's 697 m intake tunnel plus 1,567 m penstock. So it is treated as the reservoir, with medium confidence. The upper reservoir has two embankment dams (SENG: 23 m and 17 m high), whose positions were not sourced. mojekarte.si gives 46.1013, 13.6837 for the reservoir, but that is in the Soča valley near Avče and is clearly a mis-geocode, so it was rejected. The plant was finished in 2009 and entered commercial operation in April 2010.",
+  "line": [
+   [
+    13.67073,
+    46.10258
+   ],
+   [
+    13.66665,
+    46.0838583
+   ]
+  ],
+  "line_labels": [
+   "powerhouse (left bank of the Soča)",
+   "upper reservoir north of Kanalski Vrh"
+  ],
+  "name_sl": "Črpalna hidroelektrarna Avče",
+  "name_en": "Avče Pumped Storage Plant"
+ },
+ "sz_masts": {
+  "lat": 45.77318,
+  "lon": 14.22167,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://www.sz.si/wp-content/uploads/2024/03/12.-Nova-Proga-POSEBNA-STEVILKA-predogled-.pdf",
+   "https://mapcarta.com/18783596",
+   "https://en.wikipedia.org/wiki/Borovnica_railway_station",
+   "https://mapcarta.com/N275403880"
+  ],
+  "note": "This is not a single structure, so kind stays 'area'. Per SŽ's 'Nova proga' special issue, the February 2014 ice storm hit the overhead line hardest on the Borovnica–Divača section of the Ljubljana–Sežana main line. At Postojna, Logatec and Verd stations, and on the Verd–Logatec and Borovnica–Verd sections, the damage was so severe that a new overhead line had to be built. Lesser damage occurred on the Ljubljana–Jesenice, Ljubljana–Dobova and Zidani Most–Maribor lines. Anchor: Postojna railway station (mapcarta), one of the named worst-hit stations, chosen as a representative point. The line gives the section's extent (Borovnica station from en.wikipedia, Divača station from mapcarta); it is not a structure. The old point (Ljubljana centre) was not on the damaged section. The ZAG source does not say which masts were analysed.",
+  "line": [
+   [
+    14.36778,
+    45.92139
+   ],
+   [
+    13.96548,
+    45.68135
+   ]
+  ],
+  "line_labels": [
+   "Borovnica railway station (start of worst-hit section)",
+   "Divača railway station (end of worst-hit section)"
+  ],
+  "name_sl": "Drogovi voznega omrežja SŽ, odsek Borovnica–Divača (žled 2014)",
+  "name_en": "Railway overhead-line masts, Borovnica–Divača section (2014 ice storm)"
+ },
+ "krvavec": {
+  "lat": 46.28479,
+  "lon": 14.49792,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://www.trailforks.com/trails/kabinska--i-nica-krvavec/",
+   "https://www.hribi.net/izhodisce/spodnja_postaja_zicnice_na_krvavec/46.2849/14.4968",
+   "https://www.rtc-krvavec.si/kako-do-nas",
+   "https://en.wikipedia.org/wiki/Krvavec_Ski_Resort"
+  ],
+  "note": "Point = valley (lower) station of the main Krvavec gondola, from the Trailforks lift entry (OSM-derived) start 46.284790, 14.497920; hribi.net trailhead 'Spodnja postaja žičnice na Krvavec' 46.2849, 14.4968 agrees within ~80 m. The old point (46.28495, 14.49594) is ~150 m west, likely the parking. Top station coordinates not found in an openable source, so no line. Wikipedia: Garaventa circular gondola, opened 1999 (replaced the older lift). Trailforks gives length ~2 km (rounded, not used as a fact).",
+  "name_sl": "Kabinska žičnica Krvavec (krožnokabinska žičnica)",
+  "name_en": "Krvavec gondola lift",
+  "addr": "Grad 76, 4207 Cerklje na Gorenjskem (operator RTC Krvavec, lower station)"
+ },
+ "velikaplanina": {
+  "lat": 46.305534,
+  "lon": 14.608634,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://www.velikaplanina.si/o-nas/kako-nas-najdete/",
+   "https://mapcarta.com/N828760697",
+   "https://mapcarta.com/W446837829"
+  ],
+  "note": "Valley station coordinates and address from the operator's access page (46.305534, 14.6086337), identical to the old point. Top station 'Zgornja postaja' from Mapcarta/OSM (46.303726, 14.625989), the upper end of the OSM way 'Nihalka Velika planina' (elev. ~1410 m). Not the separate Šimnovec–Gradišče chairlift (its top station is at ~46.30025, 14.64009 per komoot.com/highlight/3334443).",
+  "line": [
+   [
+    14.608634,
+    46.305534
+   ],
+   [
+    14.625989,
+    46.303726
+   ]
+  ],
+  "line_labels": [
+   "valley station Kamniška Bistrica",
+   "top station Šimnovec"
+  ],
+  "name_sl": "Nihalka na Veliko planino",
+  "name_en": "Velika Planina aerial tramway (cable car)",
+  "addr": "Kamniška Bistrica 2, 1242 Stahovica"
+ },
+ "grad_vzpenjaca": {
+  "lat": 46.050132,
+  "lon": 14.509677,
+  "confidence": "high",
+  "status": "exact",
+  "sources": [
+   "https://mapcarta.com/W187058682",
+   "https://mapcarta.com/W270479187",
+   "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2005-01-3030/odlok-o-tirni-vzpenjaci-na-ljubljanski-grad",
+   "https://en.wikipedia.org/wiki/Ljubljana_Castle_funicular"
+  ],
+  "note": "Lower and upper stations from Mapcarta/OSM. The 2005 municipal ordinance (Odlok o tirni vzpenjači na Ljubljanski grad, Uradni list) puts the lower station on Krekov trg (294.5 m) and the upper station in the castle's archaeological level (365 m), with a 118.21 m track and 70.05 m rise. These are design figures from the ordinance. English Wikipedia gives '70 m' as the length, which looks like it is actually the height difference. Opened 28 Dec 2006 (Wikipedia).",
+  "line": [
+   [
+    14.509677,
+    46.050132
+   ],
+   [
+    14.509009,
+    46.049267
+   ]
+  ],
+  "line_labels": [
+   "lower station Krekov trg",
+   "upper station (castle)"
+  ],
+  "name_sl": "Tirna vzpenjača na Ljubljanski grad",
+  "name_en": "Ljubljana Castle funicular",
+  "addr": "Krekov trg, 1000 Ljubljana (lower station)"
+ },
+ "golte": {
+  "lat": 46.355978,
+  "lon": 14.931761,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://www.golte.si/en/winter/discover/how-to-reach-us/",
+   "https://www.golte.si/en/winter/discover/pendulum-and-plateau/"
+  ],
+  "note": "Operator golte.si: the gondola runs from the lower station in Žekovec to the upper station at 1410 m 'at Hotel Montis reception', 3265 m long, about 1000 m rise ('longest gondola lift in Slovenia'). Valley point = operator GPS for the lower-station parking (Radegunda 19c), so it is the car park beside the station, not the station building itself. Top point = operator GPS for Hotel Montis, which the operator says is where the upper station is. The geometry checks out: ~3.1 km horizontal for 3265 m of rope with 1000 m rise. 'Radegunda' in the old location is the settlement; the station area is called Žekovec.",
+  "line": [
+   [
+    14.931761,
+    46.355978
+   ],
+   [
+    14.894859,
+    46.368696
+   ]
+  ],
+  "line_labels": [
+   "valley station Žekovec (parking)",
+   "top station at Hotel Montis (1410 m)"
+  ],
+  "name_sl": "Kabinska žičnica Žekovec–Golte",
+  "name_en": "Golte gondola lift (Žekovec–Golte)",
+  "addr": "Radegunda 19c, 3330 Mozirje (lower station parking)"
+ },
+ "kanin_z": {
+  "lat": 46.33392,
+  "lon": 13.5424,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/N89237467",
+   "https://mapcarta.com/W331502261",
+   "https://mapcarta.com/W331502259",
+   "https://en.wikipedia.org/wiki/Kanin-Sella_Nevea_Ski_Resort"
+  ],
+  "note": "ZAG's detail refers to the 'Kanin aerial ropeway' support columns (ATC Kanin d.o.o., 2012), so this is the main ropeway from Bovec. Valley = 'Postaja A - Dvor' and top = 'Postaja D - Podi' (~2200 m), both from Mapcarta/OSM. The line is drawn A→D straight. The real route also passes intermediate stations B and C; C 'Skripi' is at 46.35161, 13.48857 (~1649 m, mapcarta W331502261). Wikipedia says the Slovenian side closed in 2013 and was expected to reopen in 2016/17, so the 2012 inspection predates the closure. The installation may have been modified since then, and the current OSM stations reflect today's layout.",
+  "line": [
+   [
+    13.5424,
+    46.33392
+   ],
+   [
+    13.47665,
+    46.35869
+   ]
+  ],
+  "line_labels": [
+   "station A (Bovec, Dvor)",
+   "station D (Podi, 2200 m)"
+  ],
+  "name_sl": "Kabinska žičnica Bovec–Kanin (postaje A–B–C–D)",
+  "name_en": "Bovec–Kanin gondola / aerial ropeway"
+ },
+ "zag": {
+  "lat": 46.070442,
+  "lon": 14.513951,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/N1665982327",
+   "https://itis.siol.net/zavod-za-gradbenistvo-slovenije",
+   "https://www.zag.si/en/about-us/contacts/",
+   "https://mapcarta.com/W194663488"
+  ],
+  "note": "Point is the OpenStreetMap POI node 1665982327 'Zavod za gradbeništvo Slovenije' (via mapcarta), which sits on the ZAG premises. Cross-checks: the TIS directory geocode of Dimičeva ulica 12 is 46.0703, 14.51387 (about 15 m away), and the Google Maps link on ZAG's own contacts page is centred at 46.069743, 14.513651 (about 80 m away). The old point (46.0657, 14.5128) was about 520 m too far south, so it was not on ZAG. This is a POI node, not a surveyed building centroid. The 'founded 1994, 255 staff' facts in the dataset were not checked here; ZAG's identity-card page gives neither. [old→new shift 535 m]",
+  "name_sl": "Zavod za gradbeništvo Slovenije (ZAG)",
+  "name_en": "Slovenian National Building and Civil Engineering Institute (ZAG)",
+  "addr": "Dimičeva ulica 12, 1000 Ljubljana"
+ },
+ "innorenew": {
+  "lat": 45.530336,
+  "lon": 13.656828,
+  "confidence": "high",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/W931297859",
+   "https://innorenew.eu/contact/"
+  ],
+  "note": "The point is the OSM building outline way 931297859 'InnoRenew Center of Excelence', tagged addr Livade 6A (via mapcarta). The old point (45.53022, 13.64899) came from the Google embed on the contact page, which is labelled 'Livade 6', a different address on the university campus. That point was about 610 m west of the InnoRenew building. The registered address is Livade 6a. [old→new shift 611 m]",
+  "name_sl": "InnoRenew CoE",
+  "name_en": "InnoRenew CoE (Renewable Materials and Healthy Environments Research and Innovation Centre of Excellence)",
+  "addr": "Livade 6a, 6310 Izola"
+ },
+ "ulfgg": {
+  "lat": 46.045752,
+  "lon": 14.494947,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://odpiralnicasi.com/spots/fakulteta-za-gradbenistvo-in-geodezijo-fgg-ljubljana-jamova-cesta-503505d81e",
+   "https://itis.siol.net/zemljevid/X=461284&Y=100299&n=UNIVERZA%20V%20LJUBLJANI,%20FAKULTETA%20ZA%20GRADBENI%C5%A0TVO%20IN%20GEODEZIJO&a=Jamova%20cesta%202,%20Ljubljana&p=&t=&r=0,304498081702971&pid=4558864"
+  ],
+  "note": "The point is the address geocode of Jamova cesta 2 given by odpiralnicasi.com (46.0457523, 14.4949466). The TIS directory gives the same point in D48/GK (X=461284, Y=100299); I converted it to WGS84 with pyproj (EPSG:3912 to 4326) and got 46.045753, 14.494946, so the two agree. The old point was about 40 m away. Caution: OSM/mapcarta 'Fakulteta za gradbeništvo in geodezijo' (way 173139349, 46.0419, 14.49244) is a different FGG building at Hajdrihova ulica 28. Do not use it for the Jamova 2 main building. The dataset's 'five kilometres away' from ZAG is not checked; the straight-line distance between the two points is about 3 km. [old→new shift 44 m]",
+  "name_sl": "Univerza v Ljubljani, Fakulteta za gradbeništvo in geodezijo (UL FGG)",
+  "name_en": "University of Ljubljana, Faculty of Civil and Geodetic Engineering",
+  "addr": "Jamova cesta 2, 1000 Ljubljana"
+ },
+ "ss_kocevje": {
+  "lat": 45.64107,
+  "lon": 14.85788,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://itis.siol.net/gimnazija-in-srednja-sola-kocevje_kocevje_ljubljanska-cesta",
+   "https://gssk.si/kontakti/",
+   "https://www.ribnica24.eu/crna-kronika/pozar-unicil-srednjo-solo-v-kocevju-skode-za-vec-mio-evrov/"
+  ],
+  "note": "The point is the TIS geocode of the school's only listed address, Ljubljanska cesta 12; gssk.si lists just this one location. The fire was in the early morning of 27 December 2012 and destroyed the wooden roof and several rooms of 'the Srednja šola Kočevje building' (ribnica24). The ZAG report year of 2013 is therefore consistent, but the fire was in 2012. Caveat: news reports name 'the building of Srednja šola Kočevje'. I could not confirm that this was the Ljubljanska cesta 12 building rather than a separate vocational-school building, so it is not surveyed. Name fix: 'Gimnazija in srednja šola Kočevje' (the dataset has 'sola' without the háček). [old→new shift 240 m]",
+  "name_sl": "Gimnazija in srednja šola Kočevje",
+  "name_en": "Kočevje Grammar and Secondary School",
+  "addr": "Ljubljanska cesta 12, 1330 Kočevje"
+ },
+ "os_stara_cerkev": {
+  "lat": 45.66936,
+  "lon": 14.84096,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://itis.siol.net/osnovna-sola-stara-cerkev",
+   "https://www.ribnica24.eu/crna-kronika/pozar-unicil-osrednji-del-osnovne-sole-stara-cerkev/"
+  ],
+  "note": "The point is the TIS geocode of Stara Cerkev 21, the school's address, about 80 m from the old point. Stara Cerkev has only one primary school, so the building is unambiguous. The fire was on 9 June 2013 at 03:20 and destroyed the central, prefabricated part of the school: 11 classrooms (about 1,000 m2), the roof, the main staircase and the hall. Damage was over EUR 1.5 million. Name fix: 'Osnovna šola Stara Cerkev' (the dataset has 'sola'). [old→new shift 81 m]",
+  "name_sl": "Osnovna šola Stara Cerkev",
+  "name_en": "Stara Cerkev Primary School",
+  "addr": "Stara Cerkev 21, 1332 Stara Cerkev"
+ },
+ "fibran_sodrazica": {
+  "lat": 45.76607,
+  "lon": 14.62693,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://itis.siol.net/proizvodni-obrat-sodrazica",
+   "https://www.moje-podjetje.net/fibran-nord-doo-proizvodni-obrat-sodrazica/",
+   "https://www.gov.si/assets/ministrstva/MOP/Okolje/CPVO/Javne-razgrnitve/FIBRAN/Javno_naznanilo-obrat_Fibran.pdf",
+   "https://www.rtvslo.si/crna-kronika/pozar-v-tovarni-izolacijskega-materiala/327481"
+  ],
+  "note": "The point is the address geocode of Cesta Notranjskega odreda 45, from TIS and moje-podjetje.net (45.76607, 14.62693). TIS also gives D48/GK X=471354, Y=69160, which I converted with pyproj to the same point. The site spans parcels 2140/1 to 2158/14, k.o. 1619 Sodražica (MOP public notice). The point is an address point, not production hall no. 1 itself. The old point (Sodražica centre) was about 850 m south-east. The plant had a major fire in early September 2013, which matches the dataset's 2013. RTV reports a second, smaller roof fire on 16 January 2014. [old→new shift 879 m]",
+  "name_sl": "Fibran Nord d.o.o., proizvodni obrat Sodražica (danes FIBRAN d.o.o.)",
+  "name_en": "Fibran Nord factory, Sodražica (now FIBRAN d.o.o.)",
+  "addr": "Cesta Notranjskega odreda 45, 1317 Sodražica"
+ },
+ "bovec_quake": {
+  "lat": 46.3386,
+  "lon": 13.5524,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/Bovec",
+   "https://en.wikipedia.org/wiki/List_of_earthquakes_in_Slovenia"
+  ],
+  "note": "This is an area, not a building. The point is a representative centre (Bovec town, from mapcarta), not a site or the epicentre, which was in the Krn mountains. The old point was about 230 m off the town centre. Wikipedia's list of earthquakes in Slovenia gives 12 April 1998, M 5.7, intensity VII–VIII, upper Soča Valley. [old→new shift 230 m]",
+  "name_sl": "Potres v Zgornjem Posočju 12. 4. 1998 (Bovec)",
+  "name_en": "12 April 1998 Upper Soča Valley (Krn–Lepena) earthquake, Bovec area"
+ },
+ "idrija_cherplan": {
+  "lat": 46.0024,
+  "lon": 14.0273,
+  "confidence": "medium",
+  "status": "improved",
+  "sources": [
+   "https://mapcarta.com/Idrija"
+  ],
+  "note": "This is an area (the Municipality of Idrija). The point is a representative centre (Idrija town, from mapcarta), about 420 m from the old point. It is representative only. [old→new shift 420 m]",
+  "name_sl": "CHERPLAN – potresno tveganje stavb v občini Idrija",
+  "name_en": "CHERPLAN – seismic risk to buildings in the Municipality of Idrija"
+ }
+}
