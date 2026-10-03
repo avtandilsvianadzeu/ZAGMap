@@ -110,7 +110,7 @@ function ringArea(ring){const o=ring[0];let a=0;for(let i=0;i<ring.length-1;i++)
 async function buildingData(b,p){
   const m=$('bim'); if(!m||!b) return;
   const area=b.g?polys(b.g).reduce((a,poly)=>a+ringArea(poly[0]),0):0;
-  m.innerHTML=`<h3>Building data (OpenStreetMap footprint)</h3>${kv('Footprint area',area?Math.round(area)+' m²':null)}${kv('Height in map data',b.h?Math.round(b.h)+' m':null)}${kv('Gross floor area, estimate',area&&b.h?Math.round(area*Math.max(1,Math.round(b.h/3)))+' m² ('+Math.max(1,Math.round(b.h/3))+' storeys at 3 m)':null)}`;
+  m.innerHTML=`<h3>Building data (OpenStreetMap footprint)</h3>${kv('Footprint area',area?Math.round(area)+' m²':null)}${kv('Height in map data',b.hknown&&b.h?Math.round(b.h)+' m':null)}${kv('Gross floor area, estimate',area&&b.hknown&&b.h?Math.round(area*Math.max(1,Math.round(b.h/3)))+' m² ('+Math.max(1,Math.round(b.h/3))+' storeys at 3 m)':null)}`;
   if(!b.c) return;
   const [lon,lat]=b.c, d=0.00025;
   try{

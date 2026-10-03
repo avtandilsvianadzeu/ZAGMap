@@ -8,7 +8,7 @@ function syncView(){
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
   $('lyBld').checked=bldOn();
   const t={map:'Map © OpenStreetMap contributors via OpenFreeMap, relief: Mapzen / AWS Terrain Tiles',
-    sat:'Imagery: Esri World Imagery (capture dates vary by area)',dof:'Orthophoto: GURS DOF025, 2020–2022, CC BY 4.0, via Level2.si'}[base];
+    sat:'Imagery: Esri World Imagery (capture dates vary by area)',dof:'Orthophoto: GURS DOF025, 2020-2022, CC BY 4.0, via Level2.si'}[base];
   $('srcnote').textContent=t;
 }
 document.addEventListener('atlas:view',syncView);

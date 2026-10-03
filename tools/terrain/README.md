@@ -1,7 +1,7 @@
 # National terrain for the Atlas
 
 The live map renders relief from the public Mapzen/AWS *Terrain Tiles* (`elevation-tiles-prod`, Terrarium PNG, up to zoom 15).
-Over Slovenia those tiles are built from 25–30 m sources (EU-DEM / SRTM), which is why river banks and embankments look
+Over Slovenia those tiles are built from 25-30 m sources (EU-DEM / SRTM), which is why river banks and embankments look
 smoothed or draped at street zoom. No code change can fix that; only a better DEM can.
 
 ## Why the official lidar DEM cannot simply be copied into this repository
@@ -11,7 +11,7 @@ smoothed or draped at street zoom. No code change can fix that; only a better DE
 | GURS lidar point clouds (LAZ), national | several TB |
 | GURS DMR 1 m GeoTIFF, national | ~80 GB |
 | Terrarium tiles built from a 1 m DEM, zoom ≤ 16, Slovenia only | ~4 GB |
-| Terrarium tiles, zoom ≤ 14 (≈ 10 m per pixel), Slovenia only | ~0.7–1.1 GB |
+| Terrarium tiles, zoom ≤ 14 (≈ 10 m per pixel), Slovenia only | ~0.7-1.1 GB |
 | Terrarium tiles, zoom ≤ 13 (≈ 19 m per pixel), Slovenia only | ~250 MB |
 
 GitHub limits: 100 MB per file, and the repository and the Pages site are each expected to stay under about 1 GB.
@@ -27,7 +27,7 @@ So the full-resolution national model does not fit in `ZAGMap`, and the spec rig
 
 ## What has to be checked by a person with internet access (the sandbox could not reach gov.si)
 
-- Download URLs and format of the GURS DMR (DMR 1 m / DMV 5 m) on https://www.e-prostor.gov.si/ → *Javni dostop*.
+- Download URLs and format of the GURS DMR (DMR 1 m / DMV 5 m) on https://www.e-prostor.gov.si/  to  *Javni dostop*.
 - Licence text for attribution (GURS data are published under CC BY 4.0 according to podatki.gov.si; confirm for the DEM product).
 - Whether GURS offers a WMTS/terrain service that can be used remotely instead of self-hosting; if so, prefer it.
 

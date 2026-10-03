@@ -42,12 +42,12 @@ function findBuilding(lngLat,maxM){
   }
   if(!best||bd>maxM) return null;
   const parts=best.id!=null?feats.filter(f=>f.id===best.id):[best];
-  return {feature:best,parts,g:best.geometry,dist:bd,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
+  return {feature:best,parts,g:best.geometry,dist:bd,id:best.id,h:+(best.properties.render_height||best.properties.height||8),hknown:best.properties.render_height!=null||best.properties.height!=null,b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
 }
 function buildingFromFeature(f){
   let feats=[]; try{feats=map.querySourceFeatures('openmaptiles',{sourceLayer:'building'});}catch(_){}
   const parts=f.id!=null?feats.filter(x=>x.id===f.id):[f]; const best=parts[0]||f;
-  return {feature:best,parts:parts.length?parts:[f],g:best.geometry,dist:0,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
+  return {feature:best,parts:parts.length?parts:[f],g:best.geometry,dist:0,id:best.id,h:+(best.properties.render_height||best.properties.height||8),hknown:best.properties.render_height!=null||best.properties.height!=null,b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
 }
 function showBuilding(b){
   const fc={type:'FeatureCollection',features:b?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+0.6,b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};
