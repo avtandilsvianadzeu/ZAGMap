@@ -40,8 +40,7 @@ async function boot(){
       else if(ev.sourceId==='sat'&&base==='sat'&&!boot.satWarned){boot.satWarned=true;toast('Some satellite tiles failed to load.');}
     });
     const h=decodeURIComponent(location.hash.slice(1));
-    if(h==='kiosk'){home(true);setTimeout(()=>tourStart(0),1800);}
-    else if(ZA.byId[h]){home(true);showInfo(h);}
+    if(ZA.byId[h]){home(true);showInfo(h);}
     else{const s=S.find(x=>x.key===h); if(s){home(true);setTimeout(()=>showInfo(s.entry||s.key),600);} else home(true);}
   });
 }

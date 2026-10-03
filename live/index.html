@@ -18,30 +18,33 @@
     <div><b>ZAG DIGITAL ATLAS</b><span>Buildings · Bridges · Infrastructure · Research · Projects</span></div>
   </div>
   <nav id="nav" aria-label="Atlas sections">
-    <button data-nav="projects" aria-pressed="true" title="All documented ZAG projects">Projects</button>
-    <button data-nav="buildings" aria-pressed="false" title="Show buildings only">Buildings</button>
-    <button data-nav="bridges" aria-pressed="false" title="Show bridges only">Bridges</button>
-    <button data-nav="infrastructure" aria-pressed="false" title="Tunnels, dams, cableways, towers">Infrastructure</button>
-    <button data-nav="about" aria-pressed="false" title="About this atlas and its sources">About</button>
+    <button data-nav="projects" aria-pressed="false" title="All records"><i data-ic="projects"></i>Projects</button>
+    <button data-nav="buildings" aria-pressed="false" title="Buildings and institutions"><i data-ic="buildings"></i>Buildings</button>
+    <button data-nav="bridges" aria-pressed="false" title="Bridges and viaducts"><i data-ic="bridges"></i>Bridges</button>
+    <button data-nav="infrastructure" aria-pressed="false" title="Tunnels, dams, cableways, towers"><i data-ic="infrastructure"></i>Infrastructure</button>
+    <button data-nav="about" aria-pressed="false" title="About this atlas and its sources"><i data-ic="about"></i>About</button>
   </nav>
-  <div class="hsearch">
+  <div class="hsearch"><i data-ic="search"></i>
     <input id="q" type="search" placeholder="Search projects, buildings, bridges, locations…" autocomplete="off" aria-label="Search projects, buildings, bridges, locations" aria-controls="results">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <div class="hright">
     <div class="seg" id="bgSeg" role="group" aria-label="Background">
-      <button data-bg="map" aria-pressed="false" title="Street map">MAP</button>
-      <button data-bg="terrain" aria-pressed="false" title="Map with strong shaded relief">TERRAIN</button>
-      <button data-bg="sat" aria-pressed="true" title="Satellite imagery (Esri World Imagery)">SATELLITE</button>
+      <button data-bg="map" aria-pressed="false" title="Street map with relief"><i data-ic="map"></i>Map</button>
+      <button data-bg="sat" aria-pressed="true" title="Satellite imagery"><i data-ic="satellite"></i>Satellite</button>
     </div>
-    <button class="tgl" id="b3d" aria-pressed="true" title="3D view: terrain relief and buildings. Off = flat top-down view">3D</button>
-    <button class="tgl" id="bLayers" aria-expanded="false" aria-controls="layers" title="Data layers and backgrounds">Layers</button>
+    <button class="tgl" id="b3d" aria-pressed="true" title="3D view: terrain relief and buildings. Off = flat top-down view"><i data-ic="cube"></i>3D</button>
+    <button class="tgl" id="bLayers" aria-expanded="false" aria-controls="layers" title="Data layers and backgrounds"><i data-ic="layers"></i>Layers</button>
   </div>
 </header>
 
 <main id="app">
   <div id="map" role="application" aria-label="Map of Slovenia"></div>
 
+  <aside id="list" class="info list" aria-label="Records" hidden>
+    <header><h2 id="listT"></h2><span id="listN"></span><button class="x" id="listX" aria-label="Close list" title="Close"><i data-ic="close"></i></button></header>
+    <div id="listBody" role="list"></div>
+  </aside>
   <aside id="info" class="info" aria-label="Selected object" aria-live="polite" hidden></aside>
 
   <section id="layers" class="layers" aria-label="Layers" hidden>
@@ -54,8 +57,7 @@
     </fieldset>
     <fieldset>
       <legend>Background</legend>
-      <label><input type="radio" name="lyBg" value="map"> Map</label>
-      <label><input type="radio" name="lyBg" value="terrain"> Terrain <small>shaded relief</small></label>
+      <label><input type="radio" name="lyBg" value="map"> Map <small>OpenStreetMap, shaded relief</small></label>
       <label><input type="radio" name="lyBg" value="sat" checked> Satellite <small>Esri</small></label>
       <label><input type="radio" name="lyBg" value="dof"> Orthophoto <small>GURS DOF025, 25 cm</small></label>
     </fieldset>
@@ -67,62 +69,53 @@
   </section>
 
   <div class="vctl" role="group" aria-label="View controls">
-    <button id="zin" aria-label="Zoom in" title="Zoom in">+</button>
-    <button id="zout" aria-label="Zoom out" title="Zoom out">−</button>
-    <button id="rotL" aria-label="Rotate view left" title="Rotate left">⟲</button>
-    <button id="rotR" aria-label="Rotate view right" title="Rotate right">⟳</button>
-    <button id="tiltU" aria-label="Tilt view up, more oblique" title="Tilt up">▲</button>
-    <button id="tiltD" aria-label="Tilt view down, towards top-down" title="Tilt down">▼</button>
+    <button id="zin" aria-label="Zoom in" title="Zoom in"><i data-ic="plus"></i></button>
+    <button id="zout" aria-label="Zoom out" title="Zoom out"><i data-ic="minus"></i></button>
+    <button id="rotL" aria-label="Rotate view left" title="Rotate left"><i data-ic="rotl"></i></button>
+    <button id="rotR" aria-label="Rotate view right" title="Rotate right"><i data-ic="rotr"></i></button>
+    <button id="tiltU" aria-label="Tilt view up, more oblique" title="Tilt up"><i data-ic="up"></i></button>
+    <button id="tiltD" aria-label="Tilt view down, towards top-down" title="Tilt down"><i data-ic="down"></i></button>
     <button id="north" aria-label="Reset to north" title="Reset to north"><span id="needle">N</span></button>
-    <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia">⌂</button>
+    <button id="zhome" aria-label="Show all of Slovenia" title="All of Slovenia"><i data-ic="home"></i></button>
   </div>
-
-  <section id="tl" class="tl" aria-label="Timeline of ZAG projects">
-    <div class="tl-bar">
-      <div class="tl-axis" id="axis" role="group" aria-label="Show projects up to year"></div>
-      <div class="tl-meta"><span id="tlCount" aria-live="polite"></span>
-        <button id="tour" title="Step through the 14 Open Day 2026 stories">▶ Open Day tour</button>
-        <button id="tlToggle" aria-expanded="true" title="Show or hide the project cards">Cards</button></div>
-    </div>
-    <div class="tl-cards" id="cards" role="list"></div>
-  </section>
 
   <div class="srcnote" id="srcnote"></div>
   <div class="toast" id="toast" role="status"></div>
 </main>
 
 <dialog id="about" aria-labelledby="aboutT">
-  <form method="dialog"><button class="x" aria-label="Close">✕</button></form>
+  <form method="dialog"><button class="x" aria-label="Close"><i data-ic="close"></i></button></form>
   <h2 id="aboutT">About ZAG Digital Atlas</h2>
   <p>A GIS atlas showing where the Slovenian National Building and Civil Engineering Institute (ZAG) has documented involvement: buildings, bridges, tunnels, dams, cableways and research sites, with the type of work and the source for each record.</p>
   <p>It is a digital atlas, <b>not</b> a national BIM database. BIM/IFC information can be linked later where it is publicly available.</p>
   <h3>How records are classified</h3>
   <ul>
-    <li><b>Documented</b>: at least one published source describes ZAG's work (shown as a filled marker).</li>
-    <li><b>Referenced</b>: a named partner or a site mentioned in sources without a described ZAG role (hollow marker).</li>
-    <li><b>ZAG facility</b>: ZAG's own premises (square marker), kept separate from projects.</li>
-    <li>Involvement types are derived from the published description of each record and are open to ZAG review.</li>
-    <li>Position precision is shown for every record. Shaded circles mark approximate positions.</li>
+    <li><b>Documented</b>: at least one published source describes ZAG's work (blue marker).</li>
+    <li><b>Referenced</b>: a named partner or a site mentioned in sources without a described ZAG role (grey marker).</li>
+    <li><b>ZAG facility</b>: ZAG's own premises (dark marker), kept separate from projects.</li>
+    <li>Involvement types follow the published description of each record.</li>
+    <li>Bridges, tunnels and cableways are matched at runtime to the structure in OpenStreetMap and drawn as their real alignment; buildings to their footprint. Where no match is found, the recorded position is shown with its precision and a shaded circle.</li>
   </ul>
   <h3>Data sources</h3>
   <ul id="aboutSrc">
     <li>ZAG publications and the sources cited on each record.</li>
     <li>OpenStreetMap contributors via OpenFreeMap (map and building footprints), Photon geocoder.</li>
     <li>Terrain: Mapzen / AWS Terrain Tiles. Satellite: Esri World Imagery. Optional orthophoto: GURS DOF025 via Level2.si (CC BY).</li>
-    <li>Planned official layers, not yet connected: GURS (cadastre, lidar, GJI register) and DRSI road database (bridges). Their service capabilities have to be verified before use.</li>
+    <li>Building attributes: GURS Kataster nepremičnin (OGC API Features, CC BY 4.0), queried for the selected building.</li>
   </ul>
   <p class="small">Dataset: <a href="../data/zag_projects.geojson" target="_blank" rel="noopener">data/zag_projects.geojson</a></p>
 </dialog>
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="data.js"></script>
+<script src="js/icons.js"></script>
 <script src="js/config.js"></script>
 <script src="js/basemap.js"></script>
 <script src="js/locate.js"></script>
 <script src="js/atlas-data.js"></script>
 <script src="js/layers.js"></script>
 <script src="js/panel.js"></script>
-<script src="js/timeline.js"></script>
+<script src="js/list.js"></script>
 <script src="js/search.js"></script>
 <script src="js/controls.js"></script>
 <script src="js/main.js"></script>

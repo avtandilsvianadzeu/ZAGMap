@@ -7,7 +7,7 @@ function syncView(){
   document.querySelectorAll('input[name=lyBg]').forEach(r=>r.checked=r.value===base);
   document.querySelectorAll('input[name=lyViz]').forEach(r=>r.checked=(r.value==='3d')===is3d);
   $('lyBld').checked=bldOn();
-  const t={map:'Map © OpenStreetMap contributors via OpenFreeMap',terrain:'Map © OpenStreetMap contributors, relief: Mapzen / AWS Terrain Tiles',
+  const t={map:'Map © OpenStreetMap contributors via OpenFreeMap, relief: Mapzen / AWS Terrain Tiles',
     sat:'Imagery: Esri World Imagery (capture dates vary by area)',dof:'Orthophoto: GURS DOF025, 2020–2022, CC BY 4.0, via Level2.si'}[base];
   $('srcnote').textContent=t;
 }
@@ -24,8 +24,9 @@ $('bLayers').onclick=function(){const o=layersEl.hidden;layersEl.hidden=!o;this.
 
 document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
   if(b.dataset.nav==='about'){$('about').showModal();return;}
-  ZA.nav=b.dataset.nav; syncNav(); refreshProjects();
+  ZA.nav=b.dataset.nav; syncNav(); refreshProjects(); openList();
 });
+document.querySelectorAll('[data-ic]').forEach(i=>{ i.innerHTML=ICON[i.dataset.ic]||''; });
 function syncNav(){document.querySelectorAll('#nav button').forEach(b=>{const on=b.dataset.nav===ZA.nav;b.setAttribute('aria-pressed',on&&b.dataset.nav!=='about');});}
 document.addEventListener('atlas:nav',syncNav);
 
@@ -34,7 +35,7 @@ $('rotL').onclick=()=>nudge({b:-30}); $('rotR').onclick=()=>nudge({b:30});
 $('tiltU').onclick=()=>{ if(!is3d) set3d(true); nudge({p:12}); }; $('tiltD').onclick=()=>nudge({p:-12});
 $('north').onclick=()=>map&&map.easeTo({bearing:0,duration:500});
 $('zin').onclick=()=>map&&map.zoomIn(); $('zout').onclick=()=>map&&map.zoomOut();
-$('zhome').onclick=()=>{ if(TOUR.on) tourStop(); closeInfo(); if(map) home(); };
+$('zhome').onclick=()=>{ closeInfo(); closeList(); if(map) home(); };
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!info.hidden&&document.activeElement===document.body) closeInfo(); });
 const fitHeader=()=>document.documentElement.style.setProperty('--hdr',document.querySelector('.hdr').offsetHeight+'px');
 fitHeader();

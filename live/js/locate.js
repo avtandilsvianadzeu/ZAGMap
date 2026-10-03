@@ -42,7 +42,7 @@ function findBuilding(lngLat,maxM){
   }
   if(!best||bd>maxM) return null;
   const parts=best.id!=null?feats.filter(f=>f.id===best.id):[best];
-  return {feature:best,parts,dist:bd,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
+  return {feature:best,parts,g:best.geometry,dist:bd,id:best.id,h:+(best.properties.render_height||best.properties.height||8),b:+(best.properties.render_min_height||0),c:centroid(best.geometry)};
 }
 function showBuilding(b){
   const fc={type:'FeatureCollection',features:b?b.parts.map(f=>({type:'Feature',properties:{h:+(f.properties.render_height||8)+0.6,b:+(f.properties.render_min_height||0)},geometry:f.geometry})):[]};

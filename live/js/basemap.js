@@ -43,7 +43,7 @@ function look(L,T,B){
   else if(id==='building-3d'){o['fill-extrusion-color']=p.bld3;o['fill-extrusion-opacity']=T==='dark'?.92:.88;o['fill-extrusion-vertical-gradient']=true;}
   else if(id==='boundary_2'){o['line-color']=sat?'rgba(255,255,255,.75)':p.border;}
   else if(id==='boundary_3'){o['line-color']=sat?'rgba(255,255,255,.4)':p.border2;}
-  else if(id==='hillshade'){o['hillshade-exaggeration']=B==='terrain'?.9:.42;o['hillshade-shadow-color']=p.hsS;o['hillshade-highlight-color']=p.hsH;o['hillshade-accent-color']=p.hsA;if(sat)vis='none';}
+  else if(id==='hillshade'){o['hillshade-exaggeration']=.5;o['hillshade-shadow-color']=p.hsS;o['hillshade-highlight-color']=p.hsH;o['hillshade-accent-color']=p.hsA;if(sat)vis='none';}
   else if(id==='sat'){vis=B==='sat'?'visible':'none';}
   else if(id==='dof'){vis=B==='dof'?'visible':'none';}
   if(L.type==='symbol'&&L.layout&&L.layout['text-field']&&!/shield/.test(id)){
@@ -78,7 +78,7 @@ function prep(s){
   // remember original values of every property the looks touch, so switching back restores them
   for(const L of s.layers){
     const keys=new Set();
-    for(const T of ['light','dark']) for(const B of ['map','terrain','sat','dof']) Object.keys(look(L,T,B).paint).forEach(k=>keys.add(k));
+    for(const T of ['light','dark']) for(const B of ['map','sat','dof']) Object.keys(look(L,T,B).paint).forEach(k=>keys.add(k));
     TOUCHED[L.id]=[...keys]; ORIG[L.id]=Object.fromEntries([...keys].map(k=>[k,(L.paint||{})[k]]));
     const lk=look(L,theme,base); L.paint=Object.assign({},L.paint||{},lk.paint); L.layout=Object.assign({},L.layout||{},{visibility:lk.vis});
   }
@@ -102,7 +102,7 @@ function applyLook(){
 
 /* ---------- theme / style controls ---------- */
 function setTheme(t){ theme=t; document.documentElement.setAttribute('data-theme',t); applyLook(); }
-function bldOn(){ return bldPref!==null?bldPref:(base==='map'||base==='terrain'); }
+function bldOn(){ return bldPref!==null?bldPref:base==='map'; }
 function setBuildings(on){ bldPref=on; applyLook(); emit('view'); }
 function setBase(b){ base=b; applyLook(); emit('view'); }
 function set3d(on){

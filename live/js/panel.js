@@ -7,19 +7,18 @@ const SRC_KIND={journal:'Journal article',conference:'Conference paper',report:'
 let curId=null;
 
 function closeInfo(){
-  curId=null; info.hidden=true; document.body.classList.remove('has-panel');
+  curId=null; info.hidden=true; if(listEl.hidden) document.body.classList.remove('has-panel'); else renderList();
   clearHL(); setSel(null); showLine(null); emit('selected',null);
 }
 function openShell(html){
-  info.innerHTML=`<button class="x" aria-label="Close panel" title="Close">✕</button>${html}`;
-  info.hidden=false; info.scrollTop=0; document.body.classList.add('has-panel');
-  if(phone()){document.body.classList.add('tl-closed');$('tlToggle').setAttribute('aria-expanded',false);}
+  info.innerHTML=`<button class="x" aria-label="Close panel" title="Close">${ICON.close}</button>${html}`;
+  info.hidden=false; info.scrollTop=0; document.body.classList.add('has-panel'); listEl.hidden=true;
   info.querySelector('.x').onclick=closeInfo;
   info.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>copyText(b.dataset.copy,'Coordinates copied'));
 }
 async function copyText(t,m){try{await navigator.clipboard.writeText(t);toast(m);}catch(_){toast('Copy is not available here');}}
 const kv=(k,v)=>v?`<div class="kv"><span>${esc(k)}</span><span>${esc(v)}</span></div>`:'';
-const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><small class="note">${esc(SRC_KIND[s.type]||s.type)}</small>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source ↗</a>`:''}</div>`;
+const srcLine=s=>`<div class="src"><span>${esc(s.title||s.key)}${s.type?`<br><small class="note">${esc(SRC_KIND[s.type]||s.type)}</small>`:''}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open source ${ICON.ext}</a>`:''}</div>`;
 
 function infoHTML(f){
   const p=f.properties, e=EBY[p.id], st=S.find(s=>s.key===p.story||s.key===p.id), k=kindOf(p);
@@ -46,6 +45,7 @@ function infoHTML(f){
     ${bullets?`<h3>ZAG involvement</h3><ul>${bullets}</ul>`:''}
     ${about?`<h3>About</h3><p>${esc(about)}</p>`:''}
     ${sources}
+    <div id="bim" class="bim"></div>
     <h3>Position</h3>
     <div class="kv"><span>Basis</span><span id="epos">${esc(PREC[p.position_precision]||p.position_precision)}</span></div>
     ${p.position_confidence?kv('Confidence',p.position_confidence):''}
@@ -58,10 +58,10 @@ function infoHTML(f){
   </div>`;
 }
 
-/* select a ZAG record: panel, pin, camera, and the footprint or line of the structure */
+/* select a ZAG record: panel, pin, camera, then the footprint (buildings) or the real alignment (bridges, tunnels, cableways) */
 function showInfo(id,opts){
   const f=ZA.byId[id]; if(!f) return;
-  const p=f.properties; curId=id; stopTourIfUser(opts);
+  const p=f.properties; curId=id;
   openShell(infoHTML(f));
   try{history.replaceState(null,'',location.pathname+location.search+'#'+id);}catch(_){}
   emit('selected',id);
@@ -70,23 +70,62 @@ function showInfo(id,opts){
   setSel({id,ll:[p.longitude,p.latitude],label:p.name_en||p.name,glyph:'pin'});
   showLine(p.line||null);
   if(x.addr) geocodeAddress(x.addr);
-  const done=()=>{ if(curId!==id) return;
+  const snapable=!!SNAP[p.object_type]&&!p.line;
+  const settle=()=>{ if(curId!==id) return;
     locate(x,i=>{ if(curId!==id) return; const m=$('epos'); if(m&&i.state==='done') m.textContent=posText(i,x); const n=$('enote'); if(n&&i.state==='done') n.textContent=[posNote(i,x),p.position_note].filter(Boolean).join(' ');
       if(i.state==='done'&&i.how==='address'&&selMarker) selMarker.setLngLat(i.b&&i.b.c||i.geo.ll);
-      if(i.state==='done'&&opts&&opts.onSettled) opts.onSettled(); }); };
-  if(p.line&&p.line.length>1){
-    const b=p.line.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(p.line[0],p.line[0]));
+      if(i.state==='done'&&i.kind==='building') buildingData(i.b,p); }); };
+  if(p.line&&p.line.length>1){ fitLines([p.line],id,settle); }
+  else if(snapable){
+    // land one zoom level wider than usual so the tiles around an approximate point are loaded, then look for the structure
+    const z=Math.min(zoomFor(x),p.position_precision==='surveyed'?15.5:14.2);
     orbitOn=false; userMoved=false;
-    const cam=map.cameraForBounds(b,{padding:padNow(),maxZoom:16});
-    moveThen('flyTo',{center:cam?cam.center:[p.longitude,p.latitude],zoom:cam?cam.zoom:15,pitch:is3d?55:0,bearing:is3d?bearingFor(id):0,padding:{top:0,bottom:0,left:0,right:0},duration:reduced?0:2200,essential:true},done);
-  } else flyToSite(x,done);
+    moveThen('flyTo',{center:[p.longitude,p.latitude],zoom:z,pitch:is3d?50:0,bearing:0,padding:padNow(),speed:1.3,curve:1.42,essential:true,maxDuration:reduced?1:9000},async()=>{
+      if(curId!==id) return; await waitIdle(); if(curId!==id) return;
+      const hit=snapStructure(p);
+      if(!hit){ settle(); return; }
+      showLine(hit.lines); if(selMarker) selMarker.setLngLat(hit.mid);
+      map.getSource('unc').setData({type:'FeatureCollection',features:[]});
+      const m=$('epos'); if(m) m.textContent='Structure matched in OpenStreetMap';
+      const n=$('enote'); if(n) n.textContent=`Alignment of the ${p.object_type} from OpenStreetMap${hit.props.ref?' (ref '+hit.props.ref+')':''}${hit.props.name?', "'+hit.props.name+'"':''}, ${hit.dist} m from the recorded coordinate.${hit.refOk?' The road reference matches the record.':''}`;
+      structureData(hit,p);
+      fitLines(hit.lines,id,null);
+    });
+  }
+  else flyToSite(x,settle);
+}
+function fitLines(lines,id,cb){
+  const all=lines.flat(), b=all.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(all[0],all[0]));
+  const cam=map.cameraForBounds(b,{padding:padNow(),maxZoom:16.5}); orbitOn=false; userMoved=false;
+  moveThen('flyTo',{center:cam?cam.center:all[0],zoom:cam?cam.zoom:15,pitch:is3d?55:0,bearing:is3d?bearingFor(id):0,padding:{top:0,bottom:0,left:0,right:0},duration:reduced?0:1800,essential:true},cb);
+}
+/* structure attributes from the matched OpenStreetMap feature */
+function structureData(hit,p){
+  const m=$('bim'); if(!m) return; const q=hit.props, L=Math.round(hit.lines.reduce((a,l)=>a+lineLen(l),0));
+  m.innerHTML=`<h3>Structure data (OpenStreetMap)</h3>${kv('Type',q.brunnel?cap(q.brunnel):q.class==='aerialway'?'Aerialway':cap(q.class))}${kv('Road class',q.brunnel?cap(q.class):null)}${kv('Reference',q.ref)}${kv('Name',q.name)}${kv('Mapped length',L?L+' m':null)}${kv('Subclass',q.subclass)}`;
+}
+/* building attributes: footprint from OpenStreetMap, then the GURS cadastre (Kataster nepremičnin) for the same spot */
+const KN='https://ipi.eprostor.gov.si/wfs-si-gurs-kn/ogc/features/collections/SI.GURS.KN:STAVBE/items';
+function ringArea(ring){const o=ring[0];let a=0;for(let i=0;i<ring.length-1;i++){const [x1,y1]=toXY(ring[i],o),[x2,y2]=toXY(ring[i+1],o);a+=x1*y2-x2*y1;}return Math.abs(a)/2;}
+async function buildingData(b,p){
+  const m=$('bim'); if(!m||!b) return;
+  const area=b.g?polys(b.g).reduce((a,poly)=>a+ringArea(poly[0]),0):0;
+  m.innerHTML=`<h3>Building data (OpenStreetMap footprint)</h3>${kv('Footprint area',area?Math.round(area)+' m²':null)}${kv('Height in map data',b.h?Math.round(b.h)+' m':null)}${kv('Gross floor area, estimate',area&&b.h?Math.round(area*Math.max(1,Math.round(b.h/3)))+' m² ('+Math.max(1,Math.round(b.h/3))+' storeys at 3 m)':null)}`;
+  if(!b.c) return;
+  const [lon,lat]=b.c, d=0.00025;
+  try{
+    const r=await within(fetch(`${KN}?f=json&limit=3&bbox=${lon-d},${lat-d},${lon+d},${lat+d}`),8000);
+    if(!r||!r.ok||curId!==p.id) return; const j=await r.json(); const ft=(j.features||[])[0]; if(!ft) return;
+    const rows=Object.entries(ft.properties||{}).filter(([k,v])=>v!=null&&v!==''&&!/^(geom|the_geom)$/i.test(k)).slice(0,14);
+    if(rows.length) m.insertAdjacentHTML('beforeend',`<h3>Cadastre (GURS Kataster nepremičnin)</h3>${rows.map(([k,v])=>kv(k.replace(/_/g,' '),String(v))).join('')}<p class="note">Record nearest to the highlighted footprint, from the GURS OGC API Features service (CC BY 4.0).</p>`);
+  }catch(_){}
 }
 
 /* any address or place found by search */
 function showAddress(f){
   const p=f.properties, ll=f.geometry.coordinates, title=p.housenumber?fmtAddr(p):(p.name||fmtAddr(p));
   const isHouse=!!p.housenumber||p.osm_key==='building';
-  curId=null; stopTourIfUser();
+  curId=null;
   openShell(`<div class="body"><div class="kicker ref">Location</div><h1>${esc(title)}</h1>
     <p class="where">${esc([p.osm_value&&!p.housenumber?p.osm_value:'Address',p.city||p.county].filter(Boolean).join(' · '))}</p>
     <h3>Position</h3><div class="kv"><span>Basis</span><span id="epos">Search result</span></div>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
@@ -102,10 +141,11 @@ function showAddress(f){
 /* a building picked directly on the map */
 function showBuildingPick(ll){
   const tok=++hlToken; const b=findBuilding(ll,3); if(tok!==hlToken) return; showBuilding(b);
-  map.getSource('unc').setData({type:'FeatureCollection',features:[]}); showLine(null); setSel(null); curId=null; stopTourIfUser();
+  map.getSource('unc').setData({type:'FeatureCollection',features:[]}); showLine(null); setSel(null); curId=null;
   openShell(`<div class="body"><div class="kicker ref">Building</div><h1 id="bt">Looking up the nearest address…</h1><p class="where" id="bs"></p>
-    <h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
-    <p class="note">${b?'Footprint from OpenStreetMap building data.':'No footprint found at this point.'} Not a ZAG record unless it is marked as one.</p></div>`);
+    <div id="bim" class="bim"></div><h3>Position</h3>${kv('WGS84',`${ll[1].toFixed(6)}, ${ll[0].toFixed(6)}`)}
+    <p class="note">${b?'Footprint from OpenStreetMap building data.':'No footprint found at this point.'} Not a ZAG record.</p></div>`);
+  if(b) buildingData(b,{id:null});
   fetch(`${PHOTON}/reverse?lon=${ll[0]}&lat=${ll[1]}&limit=1`).then(r=>r.ok?r.json():null).then(j=>{
     if(tok!==hlToken) return; const f=j&&j.features&&j.features[0], t=$('bt'); if(!t) return;
     if(!f){t.textContent='Building';$('bs').textContent='No address found nearby';return;}
